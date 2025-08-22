@@ -1,6 +1,6 @@
 # 🐱 Borzolini - AI-Powered Pet Healthcare for Persian Cats
 
-> **Named after Fariborz, our Persian cat pioneer** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
+> **Named after Borzolini, our Persian cat pioneer** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
 
 ![Borzolini Logo](https://img.shields.io/badge/Borzolini-Persian%20Cat%20Care-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyUzYuNDggMjIgMTIgMjJTMjIgMTcuNTIgMjIgMTJTMTcuNTIgMiAxMiAyWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K)
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
@@ -10,7 +10,7 @@
 
 ## 🌟 About Borzolini
 
-**Borzolini** is an AI-powered pet healthcare platform specifically designed for Persian cats. Named after our beloved Persian cat **Fariborz**, this platform makes pet care simple through:
+**Borzolini** is an AI-powered pet healthcare platform specifically designed for Persian cats. Named after our beloved Persian cat **Borzolini**, this platform makes pet care simple through:
 
 - 🤖 **AI Care Recommendations** - Personalized daily care tips for Persian cats
 - 📅 **Smart Appointment Scheduling** - Easy vet booking with Persian specialists
@@ -126,16 +126,16 @@ web/
 - **Body**: 400 weight
 - **Mobile-first**: Responsive font scaling
 
-## 🐱 The Fariborz Story
+## 🐱 The Borzolini Story
 
-Borzolini was inspired by **Fariborz**, a Persian cat whose healthcare journey highlighted the need for:
+Borzolini was inspired by **Borzolini**, a Persian cat whose healthcare journey highlighted the need for:
 
 - Breed-specific care guidance
 - Easy access to specialized veterinarians
 - Reliable clinic quality information
 - Proactive health management
 
-_"Fariborz isn't just a pet - he's the inspiration and beta tester for the future of Persian cat healthcare!"_
+_"Borzolini isn't just a pet - he's the inspiration and beta tester for the future of Persian cat healthcare!"_
 
 ## 🚀 Deployment
 
@@ -181,7 +181,7 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 
 - [x] Landing page with core features
 - [x] Responsive design
-- [x] Fariborz case study showcase
+- [x] Borzolini case study showcase
 - [x] Persian cat specialization messaging
 
 ### Phase 2 - Core Platform
@@ -212,5 +212,5 @@ This project is private and proprietary to Borzolini.
 
 <div align="center">
   <strong>Made with ❤️ for Persian cats everywhere</strong><br>
-  <em>Inspired by Fariborz 🐱</em>
+  <em>Inspired by Borzolini 🐱</em>
 </div>

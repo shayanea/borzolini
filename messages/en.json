@@ -4,10 +4,10 @@
     "title": "Transform Your Pet's Healthcare from {reactive} to {predictive}",
     "reactive": "Reactive",
     "predictive": "Predictive",
-    "description": "AI monitors your pet's health 24/7, predicts problems before they happen, and connects you with trusted veterinarians. Starting with Persian cats like Fariborz!",
+    "description": "AI monitors your pet's health 24/7, predicts problems before they happen, and connects you with trusted veterinarians. Starting with Persian cats like Borzolini!",
     "savings": "Save $2,000+ Annually",
     "savingsDescription": "Through predictive care vs emergency treatments",
-    "ctaPrimary": "🐱 Start Fariborz's AI Health Journey",
+    "ctaPrimary": "🐱 Start Borzolini's AI Health Journey",
     "ctaSecondary": "📹 Watch Demo (2 min)",
     "trustIndicators": {
       "hipaa": "HIPAA Compliant",
@@ -43,11 +43,11 @@
       "description": "AI matches you with the best veterinarians based on your pet's specific needs and conditions."
     }
   },
-  "fariborz": {
+  "borzolini": {
     "badge": "🐱 Meet Our AI Pioneer",
-    "title": "Fariborz: The World's First Cat with AI Healthcare",
+    "title": "Borzolini: The World's First Cat with AI Healthcare",
     "description": "See how AI transforms Persian cat care through real-time health monitoring and predictive insights",
-    "name": "Fariborz 🐱",
+    "name": "Borzolini 🐱",
     "details": "Persian Mix • Male • 8 months old",
     "healthScore": "Overall Health Score",
     "aiInsights": "🤖 AI Insights This Week",
@@ -92,7 +92,7 @@
   },
   "cta": {
     "title": "Ready to Transform Your Pet's Healthcare?",
-    "description": "Join Fariborz and thousands of pets already benefiting from AI-powered predictive healthcare",
+    "description": "Join Borzolini and thousands of pets already benefiting from AI-powered predictive healthcare",
     "features": {
       "free": "Start with basic monitoring",
       "trial": "Free trial of AI Premium",

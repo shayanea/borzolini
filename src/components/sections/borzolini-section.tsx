@@ -26,9 +26,9 @@ const staggerContainer = {
   },
 };
 
-export function FariborzSection() {
+export function BorzoliniSection() {
   return (
-    <section className='py-20 bg-gradient-to-r from-purple-50 to-blue-50' id='fariborz'>
+    <section className='py-20 bg-gradient-to-r from-purple-50 to-blue-50' id='borzolini'>
       <Container>
         <motion.div
           className='text-center mb-12 lg:mb-16'
@@ -44,17 +44,17 @@ export function FariborzSection() {
             🐾 Meet Our Beta Tester
           </Badge>
           <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4 lg:mb-6'>
-            Meet Fariborz: Our Pet Beta Tester
+            Meet Borzolini: Our Pet Beta Tester
           </h2>
           <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4'>
-            See how Borzolini helps Fariborz get better care through smart recommendations, easy vet scheduling, and
+            See how Borzolini helps Borzolini get better care through smart recommendations, easy vet scheduling, and
             quality clinic ratings. Simple, effective, and made for all pets!
           </p>
         </motion.div>
 
         <div className='bg-white rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto'>
           <div className='grid lg:grid-cols-2 min-h-[600px]'>
-            {/* Left: Fariborz Photo */}
+            {/* Left: Borzolini Photo */}
             <motion.div
               className='relative'
               initial='initial'
@@ -62,18 +62,18 @@ export function FariborzSection() {
               viewport={{ once: true }}
               variants={fadeInLeft}
             >
-              {/* Fariborz Hero Photo */}
+              {/* Borzolini Hero Photo */}
               <div
                 className='w-full h-full min-h-[500px] bg-gradient-to-br from-gray-100 to-gray-300 bg-cover bg-center bg-no-repeat relative'
                 style={{
-                  backgroundImage: `url('/images/fariborz-hero.webp')`,
+                  backgroundImage: `url('/images/borzolini-hero.webp')`,
                 }}
               >
                 {/* Fallback content if image doesn't load */}
                 <div className='absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100'>
                   <div className='text-center text-gray-700'>
                     <div className='text-8xl mb-4'>🐱</div>
-                    <p className='text-2xl font-bold mb-2'>Fariborz</p>
+                    <p className='text-2xl font-bold mb-2'>Borzolini</p>
                     <p className='text-lg opacity-75'>The Original Borzolini</p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export function FariborzSection() {
 
                 {/* Cat info overlay with trendy Poppins font */}
                 <div className='absolute bottom-6 left-6 text-white'>
-                  <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>Fariborz 😎</h3>
+                  <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>Borzolini 😎</h3>
                   <p className='text-xl opacity-95 font-poppins font-semibold drop-shadow-md'>
                     Cat • Male • 8 months old
                   </p>
@@ -103,7 +103,7 @@ export function FariborzSection() {
               variants={staggerContainer}
             >
               <motion.div variants={fadeInUp}>
-                <h3 className='text-2xl font-bold text-gray-900 mb-4'>Fariborz's Care Dashboard</h3>
+                <h3 className='text-2xl font-bold text-gray-900 mb-4'>Borzolini's Care Dashboard</h3>
                 <p className='text-gray-600'>Smart recommendations and vet scheduling for comprehensive pet care</p>
               </motion.div>
 
@@ -187,18 +187,18 @@ export function FariborzSection() {
                 </div>
               </motion.div>
 
-              {/* Fariborz's Story */}
+              {/* Borzolini's Story */}
               <motion.div className='bg-gray-50 rounded-2xl p-6 border border-gray-200' variants={fadeInUp}>
                 <h4 className='font-semibold text-gray-900 mb-3 flex items-center gap-2'>
                   <Heart className='w-5 h-5 text-red-500' />
-                  Fariborz's Story
+                  Borzolini's Story
                 </h4>
                 <p className='text-sm text-gray-600 leading-relaxed'>
-                  "As a pet owner, finding the right vet and knowing what care Fariborz needed was overwhelming.
+                  "As a pet owner, finding the right vet and knowing what care Borzolini needed was overwhelming.
                   Borzolini makes it simple - I get personalized tips, easy vet scheduling, and can see which clinics
                   really understand different pet needs. It's exactly what every pet owner needs!"
                 </p>
-                <p className='text-xs text-gray-500 mt-3 italic'>- Shayan, Fariborz's human & Borzolini founder</p>
+                <p className='text-xs text-gray-500 mt-3 italic'>- Shayan, Borzolini's human & Borzolini founder</p>
               </motion.div>
             </motion.div>
           </div>

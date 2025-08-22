@@ -7,7 +7,7 @@ import { Feature, Language, PricingPlan, Testimonial } from '@/types';
 export const SITE_CONFIG = {
   name: 'Borzolini',
   description:
-    'Smart Pet Healthcare Platform - Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
+    'Smart Pet Healthcare Platform - Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
   url: 'https://borzolini.com',
   ogImage: 'https://borzolini.com/og.jpg',
   links: {
@@ -185,7 +185,7 @@ export const FAQ_ITEMS = [
     id: 'breeds',
     question: 'What breeds does the AI specialize in?',
     answer:
-      "We're starting with Persian cats (like Fariborz!) and expanding to other breeds. Our AI has specialized knowledge of breed-specific health patterns, genetic predispositions, and optimal care routines. We'll be adding more breeds based on user demand.",
+      "We're starting with Persian cats (like Borzolini!) and expanding to other breeds. Our AI has specialized knowledge of breed-specific health patterns, genetic predispositions, and optimal care routines. We'll be adding more breeds based on user demand.",
   },
   {
     id: 'savings',

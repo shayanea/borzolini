@@ -11,7 +11,7 @@ import { Logo } from '@/components/ui/logo';
 const navigationItems = [
   { title: 'Features', href: '#features' },
   { title: 'How it Works', href: '#how-it-works' },
-  { title: 'Fariborz', href: '#fariborz' },
+  { title: 'Borzolini', href: '#borzolini' },
   { title: 'Get Started', href: '#cta' },
 ];
 

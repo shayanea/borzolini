@@ -74,7 +74,7 @@ function HeroDescription() {
       variants={fadeInUp}
     >
       Get personalized care recommendations, easily schedule vet appointments, and find the best clinics for any pet.
-      Starting with Fariborz!
+      Starting with Borzolini!
     </motion.p>
   );
 }
@@ -162,12 +162,12 @@ function HeroImage() {
     <div
       className='w-full h-96 rounded-2xl bg-cover bg-center bg-no-repeat relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200'
       style={{
-        backgroundImage: `url('/images/fariborz-hero.webp')`,
+        backgroundImage: `url('/images/borzolini-hero.webp')`,
       }}
     >
       <div className='absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent'></div>
       <div className='absolute bottom-4 left-4 text-white'>
-        <p className='text-lg font-bold drop-shadow-lg'>Fariborz 😎</p>
+        <p className='text-lg font-bold drop-shadow-lg'>Borzolini 😎</p>
         <p className='text-sm opacity-90 drop-shadow-md'>Our Pet Hero</p>
       </div>
     </div>
@@ -187,7 +187,7 @@ function AIHealthDashboard() {
           <Brain className='w-6 h-6 text-slate-700' />
         </div>
         <div>
-          <p className='font-semibold text-slate-900'>Fariborz's Care Dashboard</p>
+          <p className='font-semibold text-slate-900'>Borzolini's Care Dashboard</p>
           <p className='text-sm text-slate-500'>Smart recommendations</p>
         </div>
       </div>

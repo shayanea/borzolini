@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Smart pet healthcare platform for all pets. Get personalized care recommendations, easy vet scheduling, and quality clinic ratings. Named after Fariborz, our beloved companion.",
+  "description": "Smart pet healthcare platform for all pets. Get personalized care recommendations, easy vet scheduling, and quality clinic ratings. Named after Borzolini, our beloved companion.",
   "keywords": [
     "pet healthcare",
     "care recommendations",
@@ -15,7 +15,7 @@
     "clinic ratings",
     "telemedicine",
     "pet care",
-    "Fariborz",
+    "Borzolini",
     "Borzolini"
   ],
   "author": {

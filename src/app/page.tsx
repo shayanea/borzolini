@@ -1,5 +1,5 @@
+import { BorzoliniSection } from '@/components/sections/borzolini-section';
 import { CTASection } from '@/components/sections/cta-section';
-import { FariborzSection } from '@/components/sections/fariborz-section';
 import { FeaturesSection } from '@/components/sections/features-section';
 import { Footer } from '@/components/sections/footer';
 import { HeroSection } from '@/components/sections/hero-section';
@@ -13,7 +13,7 @@ export default function HomePage() {
         <HeroSection />
         <FeaturesSection />
         <HowItWorksSection />
-        <FariborzSection />
+        <BorzoliniSection />
         <CTASection />
         <Footer />
       </main>

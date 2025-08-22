@@ -21,7 +21,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Borzolini - Smart Pet Healthcare for All Pets',
   description:
-    'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Fariborz! Borzolini is named after our beloved companion.',
+    'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Borzolini! Borzolini is named after our beloved companion.',
   keywords: [
     'pet healthcare',
     'care recommendations',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     'appointment scheduling',
     'clinic ratings',
     'Borzolini',
-    'Fariborz',
+    'Borzolini',
   ],
   authors: [{ name: 'Borzolini' }],
   creator: 'Borzolini',
@@ -54,14 +54,14 @@ export const metadata: Metadata = {
     url: 'https://borzolini.com',
     title: 'Borzolini - Smart Pet Healthcare for All Pets',
     description:
-      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
+      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
     siteName: 'Borzolini',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Borzolini - Smart Pet Healthcare for All Pets',
     description:
-      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
+      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
     creator: '@borzolini',
   },
   icons: {

@@ -36,8 +36,8 @@ export function Footer() {
               <Logo size='lg' className='text-white' />
             </div>
             <p className='text-gray-400 mb-6 max-w-md'>
-              Smart pet healthcare platform for all pets. Named after Fariborz, making pet care simple with personalized
-              recommendations and easy vet scheduling.
+              Smart pet healthcare platform for all pets. Named after Borzolini, making pet care simple with
+              personalized recommendations and easy vet scheduling.
             </p>
             <div className='flex gap-4'>
               <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
@@ -65,8 +65,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href='#fariborz' className='hover:text-white transition-colors'>
-                  Fariborz Story
+                <a href='#borzolini' className='hover:text-white transition-colors'>
+                  Borzolini Story
                 </a>
               </li>
               <li>
@@ -117,7 +117,7 @@ export function Footer() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <p className='text-gray-400 text-sm'>© 2024 Borzolini. All rights reserved. Named after Fariborz 🐱</p>
+          <p className='text-gray-400 text-sm'>© 2024 Borzolini. All rights reserved. Named after Borzolini 🐱</p>
           <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-gray-400 mt-4 md:mt-0'>
             <span className='flex items-center gap-2'>
               <Shield className='w-4 h-4 flex-shrink-0' />

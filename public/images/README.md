@@ -1,11 +1,11 @@
 # Images Directory
 
-## Fariborz Hero Image
+## Borzolini Hero Image
 
 Please save the British Shorthair cat image with sunglasses as:
-`fariborz-hero.webp`
+`borzolini-hero.webp`
 
-This image will be used as the background in both the Hero and Fariborz sections of the landing page.
+This image will be used as the background in both the Hero and Borzolini sections of the landing page.
 
 ### Image Requirements:
 
@@ -19,13 +19,13 @@ This image will be used as the background in both the Hero and Fariborz sections
 The image is referenced in:
 
 - `src/components/sections/hero-section.tsx` (Early Detection Rate banner)
-- `src/components/sections/fariborz-section.tsx` (Main background)
-- Background image path: `/images/fariborz-hero.webp`
+- `src/components/sections/borzolini-section.tsx` (Main background)
+- Background image path: `/images/borzolini-hero.webp`
 
 ### Converting to WebP:
 
 You can convert your JPG/PNG to WebP using:
 
 - **Online**: Use online converters like CloudConvert or Squoosh
-- **Command Line**: `cwebp input.jpg -q 85 -o fariborz-hero.webp`
+- **Command Line**: `cwebp input.jpg -q 85 -o borzolini-hero.webp`
 - **Photoshop**: Export as WebP with 85% quality

@@ -107,7 +107,7 @@ Usage examples:
 
 ## 🎯 **Alternative Concepts**
 
-### **Concept 2: "Fariborz Silhouette"**
+### **Concept 2: "Borzolini Silhouette"**
 
 - Minimalist cat silhouette with medical cross
 - More personal, honors the inspiration
