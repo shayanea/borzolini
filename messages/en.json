@@ -23,7 +23,7 @@
       "description": "AI continuously analyzes your pet's health patterns, detecting subtle changes that humans might miss."
     },
     "predictiveAnalytics": {
-      "title": "Predictive Health Analytics", 
+      "title": "Predictive Health Analytics",
       "description": "Forecast health issues 6-18 months before symptoms appear, enabling preventive care."
     },
     "aiVetAssistant": {
@@ -39,7 +39,7 @@
       "description": "Personalized nutrition plans based on breed, age, health conditions, and activity level."
     },
     "smartClinicMatching": {
-      "title": "Smart Clinic Matching", 
+      "title": "Smart Clinic Matching",
       "description": "AI matches you with the best veterinarians based on your pet's specific needs and conditions."
     }
   },
@@ -48,7 +48,7 @@
     "title": "Fariborz: The World's First Cat with AI Healthcare",
     "description": "See how AI transforms Persian cat care through real-time health monitoring and predictive insights",
     "name": "Fariborz 🐱",
-    "details": "Persian Mix • Male • 3 years old",
+    "details": "Persian Mix • Male • 8 months old",
     "healthScore": "Overall Health Score",
     "aiInsights": "🤖 AI Insights This Week",
     "predictiveAlerts": "Predictive Health Alerts"
@@ -69,7 +69,7 @@
       "popular": "🔥 Most Popular"
     },
     "pro": {
-      "name": "Pro Health", 
+      "name": "Pro Health",
       "price": "$39.99",
       "interval": "/month",
       "description": "For serious pet health optimization"
@@ -81,7 +81,7 @@
     "description": "See how our AI has helped prevent health issues and save thousands in vet bills",
     "stats": {
       "accuracy": "Early Detection Accuracy",
-      "savings": "Average Annual Savings", 
+      "savings": "Average Annual Savings",
       "reduction": "Reduction in Emergency Visits",
       "monitoring": "Continuous Health Monitoring"
     }
@@ -95,7 +95,7 @@
     "description": "Join Fariborz and thousands of pets already benefiting from AI-powered predictive healthcare",
     "features": {
       "free": "Start with basic monitoring",
-      "trial": "Free trial of AI Premium", 
+      "trial": "Free trial of AI Premium",
       "guarantee": "Money-back guarantee"
     },
     "ctaPrimary": "🚀 Start Free Trial",
@@ -109,14 +109,14 @@
     "copyright": "© 2024 PetAI Health. All rights reserved.",
     "compliance": {
       "hipaa": "HIPAA Compliant",
-      "vetApproved": "Vet Approved", 
+      "vetApproved": "Vet Approved",
       "madeWithLove": "Made with ❤️ for pets"
     }
   },
   "navigation": {
     "features": "Features",
     "howItWorks": "How it Works",
-    "pricing": "Pricing", 
+    "pricing": "Pricing",
     "testimonials": "Testimonials",
     "faq": "FAQ"
   }

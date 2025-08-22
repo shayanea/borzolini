@@ -1,36 +1,201 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐱 Borzolini - AI-Powered Pet Healthcare for Persian Cats
 
-## Getting Started
+> **Named after Fariborz, our Persian cat pioneer** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
 
-First, run the development server:
+![Borzolini Logo](https://img.shields.io/badge/Borzolini-Persian%20Cat%20Care-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyUzYuNDggMjIgMTIgMjJTMjIgMTcuNTIgMjIgMTJTMTcuNTIgMiAxMiAyWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.0-ff69b4?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+
+## 🌟 About Borzolini
+
+**Borzolini** is an AI-powered pet healthcare platform specifically designed for Persian cats. Named after our beloved Persian cat **Fariborz**, this platform makes pet care simple through:
+
+- 🤖 **AI Care Recommendations** - Personalized daily care tips for Persian cats
+- 📅 **Smart Appointment Scheduling** - Easy vet booking with Persian specialists
+- 🎥 **Video Vet Consultations** - Quick health assessments and advice
+- ⭐ **Clinic Quality Scores** - Ratings focused on Persian cat expertise
+
+## 🚀 Features
+
+### MVP Core Features
+- **AI Health Recommendations**: Get breed-specific care tips and reminders
+- **Vet Appointment Scheduling**: Find and book with Persian cat specialists
+- **Video Consultations**: Connect with qualified veterinarians instantly
+- **Clinic Ratings**: Quality scores and reviews from Persian cat owners
+
+### Persian Cat Specialization
+- Breed-specific health patterns and care routines
+- Dental care reminders (Persian cats are prone to dental issues)
+- Grooming schedules for long coats
+- Eye care tracking for tear staining prevention
+- Respiratory health monitoring for flat-faced breeds
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS 4.0
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Components**: Radix UI primitives
+
+### Development Tools
+- **Package Manager**: pnpm
+- **Build Tool**: Turbopack (Next.js 15)
+- **Code Quality**: ESLint + TypeScript
+- **Version Control**: Git with conventional commits
+
+## 🏁 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- pnpm (recommended package manager)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repository
+git clone https://github.com/shayanea/borzolini.git
+cd borzolini/web
+
+# Install dependencies
+pnpm install
+
+# Start development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Development server with Turbopack
+pnpm dev
 
-## Learn More
+# Production build
+pnpm build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+pnpm start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Type checking
+pnpm type-check
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+web/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── globals.css     # Global styles
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Homepage
+│   ├── components/         # React components
+│   │   ├── ui/            # Reusable UI components
+│   │   └── sections/      # Page sections
+│   ├── constants/         # App constants
+│   ├── lib/              # Utility functions
+│   └── types/            # TypeScript definitions
+├── public/               # Static assets
+└── messages/            # Internationalization (future)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Color Palette
+- **Primary Navy**: `#14213d` - Trust and healthcare authority
+- **Accent Orange**: `#fca311` - Warmth and energy (Persian cat inspired)
+- **Pure White**: `#ffffff` - Clarity and cleanliness
+- **Success Green**: `#059669` - Health and positive outcomes
+
+### Typography
+- **Font**: Inter (optimized with Next.js)
+- **Headings**: 700-600 weight
+- **Body**: 400 weight
+- **Mobile-first**: Responsive font scaling
+
+## 🐱 The Fariborz Story
+
+Borzolini was inspired by **Fariborz**, a Persian cat whose healthcare journey highlighted the need for:
+- Breed-specific care guidance
+- Easy access to specialized veterinarians
+- Reliable clinic quality information
+- Proactive health management
+
+*"Fariborz isn't just a pet - he's the inspiration and beta tester for the future of Persian cat healthcare!"*
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Deploy to Vercel
+vercel --prod
+```
+
+### Manual Deployment
+```bash
+# Build the application
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Commit Convention
+We use [Conventional Commits](https://www.conventionalcommits.org/):
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation updates
+- `style:` - Code formatting
+- `refactor:` - Code refactoring
+- `test:` - Adding tests
+
+## 📊 Roadmap
+
+### Phase 1 (Current) - MVP Landing Page
+- [x] Landing page with core features
+- [x] Responsive design
+- [x] Fariborz case study showcase
+- [x] Persian cat specialization messaging
+
+### Phase 2 - Core Platform
+- [ ] User authentication
+- [ ] Pet profile creation
+- [ ] AI recommendation engine
+- [ ] Vet appointment booking system
+
+### Phase 3 - Advanced Features
+- [ ] Video consultation integration
+- [ ] Clinic rating system
+- [ ] Mobile app development
+- [ ] Multi-language support
+
+## 📄 License
+
+This project is private and proprietary to Borzolini.
+
+## 📞 Contact
+
+- **Website**: [borzolini.com](https://borzolini.com)
+- **Email**: hello@borzolini.com
+- **GitHub**: [@shayanea](https://github.com/shayanea)
+
+---
+
+<div align="center">
+  <strong>Made with ❤️ for Persian cats everywhere</strong><br>
+  <em>Inspired by Fariborz 🐱</em>
+</div>

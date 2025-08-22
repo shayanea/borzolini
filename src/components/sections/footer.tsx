@@ -1,9 +1,10 @@
 'use client';
 
-import { Facebook, Heart, Instagram, Linkedin, Shield, Twitter, Award } from 'lucide-react';
+import { Award, Facebook, Heart, Instagram, Linkedin, Shield, Twitter } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
+import { Logo } from '@/components/ui/logo';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
@@ -14,7 +15,7 @@ const fadeInUp = {
 
 export function Footer() {
   return (
-    <footer className='bg-gray-900 text-white py-16'>
+    <footer className='bg-gray-900 text-white py-20'>
       <Container>
         <motion.div
           className='grid lg:grid-cols-4 gap-8 mb-12'
@@ -31,15 +32,10 @@ export function Footer() {
         >
           {/* Company Info */}
           <motion.div className='lg:col-span-2' variants={fadeInUp}>
-            <div className='flex items-center gap-3 mb-6'>
-              <div className='w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center'>
-                <Heart className='w-6 h-6 text-white' />
-              </div>
-              <span className='text-2xl font-bold'>Borzolini</span>
+            <div className='mb-6'>
+              <Logo size='lg' className='text-white' />
             </div>
-            <p className='text-gray-400 mb-6 max-w-md'>
-              The world's first AI-powered predictive healthcare platform for pets. Named after Fariborz, transforming pet care from reactive to predictive, one Persian cat at a time.
-            </p>
+            <p className='text-gray-400 mb-6 max-w-md'>Smart pet healthcare platform for all pets. Named after Fariborz, making pet care simple with personalized recommendations and easy vet scheduling.</p>
             <div className='flex gap-4'>
               <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
                 <Twitter className='w-5 h-5' />
@@ -58,7 +54,7 @@ export function Footer() {
 
           {/* Product Links */}
           <motion.div variants={fadeInUp}>
-            <h3 className='font-semibold mb-4'>Product</h3>
+            <h3 className='font-semibold mb-4 text-white'>Product</h3>
             <ul className='space-y-3 text-gray-400'>
               <li>
                 <a href='#features' className='hover:text-white transition-colors'>
@@ -72,7 +68,7 @@ export function Footer() {
               </li>
               <li>
                 <a href='#' className='hover:text-white transition-colors'>
-                  Persian Cat Care
+                  Pet Care Tips
                 </a>
               </li>
               <li>
@@ -85,7 +81,7 @@ export function Footer() {
 
           {/* Support Links */}
           <motion.div variants={fadeInUp}>
-            <h3 className='font-semibold mb-4'>Support</h3>
+            <h3 className='font-semibold mb-4 text-white'>Support</h3>
             <ul className='space-y-3 text-gray-400'>
               <li>
                 <a href='#' className='hover:text-white transition-colors'>
@@ -111,13 +107,7 @@ export function Footer() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className='border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center'
-          initial='initial'
-          whileInView='animate'
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <motion.div className='border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
           <p className='text-gray-400 text-sm'>© 2024 Borzolini. All rights reserved. Named after Fariborz 🐱</p>
           <div className='flex items-center gap-6 text-sm text-gray-400 mt-4 md:mt-0'>
             <span className='flex items-center gap-2'>
@@ -130,7 +120,7 @@ export function Footer() {
             </span>
             <span className='flex items-center gap-2'>
               <Heart className='w-4 h-4' />
-              Made with ❤️ for Persian cats
+              Made with ❤️ for all pets
             </span>
           </div>
         </motion.div>

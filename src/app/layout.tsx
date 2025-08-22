@@ -1,6 +1,8 @@
 import './globals.css';
 
-import { Inter } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
+
+import { Header } from '@/components/sections/header';
 import type { Metadata } from 'next';
 
 const inter = Inter({
@@ -9,10 +11,17 @@ const inter = Inter({
   display: 'swap',
 });
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
-  title: 'Borzolini - AI-Powered Predictive Healthcare for Pets',
-  description: "Transform your pet's healthcare from reactive to predictive with 24/7 AI monitoring and breed-specific insights. Starting with Persian cats like Fariborz! Borzolini is named after our Persian cat pioneer.",
-  keywords: ['pet healthcare', 'AI', 'predictive care', 'veterinary', 'Persian cats', 'health monitoring', 'Borzolini', 'Fariborz'],
+  title: 'Borzolini - Smart Pet Healthcare for All Pets',
+  description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Fariborz! Borzolini is named after our beloved companion.',
+  keywords: ['pet healthcare', 'care recommendations', 'veterinary', 'all pets', 'dogs', 'cats', 'appointment scheduling', 'clinic ratings', 'Borzolini', 'Fariborz'],
   authors: [{ name: 'Borzolini' }],
   creator: 'Borzolini',
   publisher: 'Borzolini',
@@ -31,20 +40,28 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://borzolini.com',
-    title: 'Borzolini - AI-Powered Predictive Healthcare for Pets',
-    description: "Transform your pet's healthcare from reactive to predictive with 24/7 AI monitoring and breed-specific insights. Named after Fariborz, our Persian cat pioneer.",
+    title: 'Borzolini - Smart Pet Healthcare for All Pets',
+    description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
     siteName: 'Borzolini',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Borzolini - AI-Powered Predictive Healthcare for Pets',
-    description: "Transform your pet's healthcare from reactive to predictive with 24/7 AI monitoring and breed-specific insights. Named after Fariborz, our Persian cat pioneer.",
+    title: 'Borzolini - Smart Pet Healthcare for All Pets',
+    description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
     creator: '@borzolini',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/app-icon.svg',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -54,7 +71,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

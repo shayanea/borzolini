@@ -1,7 +1,31 @@
 {
-  "name": "web",
+  "name": "borzolini",
   "version": "0.1.0",
   "private": true,
+    "description": "Smart pet healthcare platform for all pets. Get personalized care recommendations, easy vet scheduling, and quality clinic ratings. Named after Fariborz, our beloved companion.",
+  "keywords": [
+    "pet healthcare",
+    "care recommendations", 
+    "all pets",
+    "dogs",
+    "cats", 
+    "veterinary",
+    "appointment scheduling",
+    "clinic ratings",
+    "telemedicine",
+    "pet care",
+    "Fariborz",
+    "Borzolini"
+  ],
+  "author": {
+    "name": "Shayan",
+    "email": "hello@borzolini.com"
+  },
+  "homepage": "https://borzolini.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shayanea/borzolini.git"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -19,11 +43,12 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "tailwindcss": "^4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }

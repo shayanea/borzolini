@@ -6,7 +6,7 @@ import { Feature, PricingPlan, Testimonial, Language } from "@/types";
 
 export const SITE_CONFIG = {
   name: "Borzolini",
-  description: "AI-Powered Predictive Healthcare for Pets - Transform your pet's healthcare from reactive to predictive with 24/7 AI monitoring and breed-specific insights. Named after Fariborz, our Persian cat pioneer.",
+  description: "Smart Pet Healthcare Platform - Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.",
   url: "https://borzolini.com",
   ogImage: "https://borzolini.com/og.jpg",
   links: {
@@ -26,69 +26,47 @@ export const NAVIGATION_ITEMS = [
 
 export const FEATURES: Feature[] = [
   {
-    id: "ai-monitoring",
-    title: "24/7 AI Health Monitoring",
-    description: "AI continuously analyzes your pet's health patterns, detecting subtle changes that humans might miss.",
-    icon: "Clock",
+    id: "care-recommendations",
+    title: "Smart Care Recommendations",
+    description: "Get personalized health tips and care recommendations based on your pet's daily patterns and breed-specific needs.",
+    icon: "Brain",
     benefits: [
-      "Daily health pattern analysis",
-      "Breed-specific monitoring",
-      "Early warning system"
+      "Daily care recommendations",
+      "Breed-specific care tips",
+      "Health pattern insights"
     ]
   },
   {
-    id: "predictive-analytics",
-    title: "Predictive Health Analytics",
-    description: "Forecast health issues 6-18 months before symptoms appear, enabling preventive care.",
-    icon: "TrendingUp",
+    id: "appointment-scheduling",
+    title: "Easy Appointment Scheduling",
+    description: "Simple scheduling with local veterinarians who understand your pet's specific needs, with smart timing suggestions.",
+    icon: "Calendar",
     benefits: [
-      "Disease risk predictions",
-      "Treatment outcome forecasting",
-      "Personalized prevention plans"
+      "One-click vet booking",
+      "Pet specialist matching",
+      "Smart timing suggestions"
     ]
   },
   {
-    id: "ai-vet-assistant",
-    title: "AI Veterinary Assistant",
-    description: "Get instant health consultations and triage recommendations from our AI vet assistant.",
+    id: "vet-consultations",
+    title: "Video Vet Consultations",
+    description: "Connect with qualified veterinarians through secure video calls for quick health assessments and advice for any pet.",
     icon: "MessageCircle",
     benefits: [
-      "Instant symptom analysis",
-      "Urgency level assessment",
-      "Care recommendations"
+      "Instant vet access",
+      "Secure video calls",
+      "Quick health assessments"
     ]
   },
   {
-    id: "computer-vision",
-    title: "Computer Vision Analysis",
-    description: "AI analyzes photos and videos to detect skin conditions, eye problems, and behavioral changes.",
-    icon: "Camera",
+    id: "clinic-scoring",
+    title: "Clinic Quality Scores",
+    description: "See ratings and reviews of local veterinary clinics with focus on various pet care expertise and success rates.",
+    icon: "Award",
     benefits: [
-      "Skin condition detection",
-      "Eye health monitoring",
-      "Gait analysis"
-    ]
-  },
-  {
-    id: "nutrition-optimization",
-    title: "AI Nutrition Optimization",
-    description: "Personalized nutrition plans based on breed, age, health conditions, and activity level.",
-    icon: "Apple",
-    benefits: [
-      "Breed-specific meal plans",
-      "Health-optimized nutrition",
-      "Supplement recommendations"
-    ]
-  },
-  {
-    id: "smart-clinic-matching",
-    title: "Smart Clinic Matching",
-    description: "AI matches you with the best veterinarians based on your pet's specific needs and conditions.",
-    icon: "MapPin",
-    benefits: [
-      "Breed specialization matching",
-      "Success rate optimization",
-      "Real-time availability"
+      "Verified clinic ratings",
+      "Pet care expertise scores",
+      "Real owner reviews"
     ]
   }
 ];
