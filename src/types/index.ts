@@ -21,7 +21,7 @@ export interface PricingPlan {
   name: string;
   price: number;
   currency: string;
-  interval: "month" | "year";
+  interval: 'month' | 'year';
   features: string[];
   popular?: boolean;
   description: string;
@@ -42,13 +42,13 @@ export interface Testimonial {
 export interface HealthMetric {
   label: string;
   value: string | number;
-  status: "excellent" | "good" | "warning" | "critical";
-  trend?: "up" | "down" | "stable";
+  status: 'excellent' | 'good' | 'warning' | 'critical';
+  trend?: 'up' | 'down' | 'stable';
 }
 
 export interface AIInsight {
   id: string;
-  type: "positive" | "warning" | "info";
+  type: 'positive' | 'warning' | 'info';
   title: string;
   description: string;
   icon: string;

@@ -20,12 +20,14 @@
 ## 🚀 Features
 
 ### MVP Core Features
+
 - **AI Health Recommendations**: Get breed-specific care tips and reminders
 - **Vet Appointment Scheduling**: Find and book with Persian cat specialists
 - **Video Consultations**: Connect with qualified veterinarians instantly
 - **Clinic Ratings**: Quality scores and reviews from Persian cat owners
 
 ### Persian Cat Specialization
+
 - Breed-specific health patterns and care routines
 - Dental care reminders (Persian cats are prone to dental issues)
 - Grooming schedules for long coats
@@ -35,6 +37,7 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Framework**: Next.js 14+ with App Router
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS 4.0
@@ -43,6 +46,7 @@
 - **Components**: Radix UI primitives
 
 ### Development Tools
+
 - **Package Manager**: pnpm
 - **Build Tool**: Turbopack (Next.js 15)
 - **Code Quality**: ESLint + TypeScript
@@ -51,7 +55,8 @@
 ## 🏁 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - pnpm (recommended package manager)
 
 ### Installation
@@ -108,12 +113,14 @@ web/
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary Navy**: `#14213d` - Trust and healthcare authority
 - **Accent Orange**: `#fca311` - Warmth and energy (Persian cat inspired)
 - **Pure White**: `#ffffff` - Clarity and cleanliness
 - **Success Green**: `#059669` - Health and positive outcomes
 
 ### Typography
+
 - **Font**: Inter (optimized with Next.js)
 - **Headings**: 700-600 weight
 - **Body**: 400 weight
@@ -122,22 +129,25 @@ web/
 ## 🐱 The Fariborz Story
 
 Borzolini was inspired by **Fariborz**, a Persian cat whose healthcare journey highlighted the need for:
+
 - Breed-specific care guidance
 - Easy access to specialized veterinarians
 - Reliable clinic quality information
 - Proactive health management
 
-*"Fariborz isn't just a pet - he's the inspiration and beta tester for the future of Persian cat healthcare!"*
+_"Fariborz isn't just a pet - he's the inspiration and beta tester for the future of Persian cat healthcare!"_
 
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 # Deploy to Vercel
 vercel --prod
 ```
 
 ### Manual Deployment
+
 ```bash
 # Build the application
 pnpm build
@@ -155,7 +165,9 @@ pnpm start
 5. Open a Pull Request
 
 ### Commit Convention
+
 We use [Conventional Commits](https://www.conventionalcommits.org/):
+
 - `feat:` - New features
 - `fix:` - Bug fixes
 - `docs:` - Documentation updates
@@ -166,18 +178,21 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 ## 📊 Roadmap
 
 ### Phase 1 (Current) - MVP Landing Page
+
 - [x] Landing page with core features
 - [x] Responsive design
 - [x] Fariborz case study showcase
 - [x] Persian cat specialization messaging
 
 ### Phase 2 - Core Platform
+
 - [ ] User authentication
 - [ ] Pet profile creation
 - [ ] AI recommendation engine
 - [ ] Vet appointment booking system
 
 ### Phase 3 - Advanced Features
+
 - [ ] Video consultation integration
 - [ ] Clinic rating system
 - [ ] Mobile app development

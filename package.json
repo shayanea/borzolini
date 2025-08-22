@@ -2,13 +2,14 @@
   "name": "borzolini",
   "version": "0.1.0",
   "private": true,
-    "description": "Smart pet healthcare platform for all pets. Get personalized care recommendations, easy vet scheduling, and quality clinic ratings. Named after Fariborz, our beloved companion.",
+  "type": "module",
+  "description": "Smart pet healthcare platform for all pets. Get personalized care recommendations, easy vet scheduling, and quality clinic ratings. Named after Fariborz, our beloved companion.",
   "keywords": [
     "pet healthcare",
-    "care recommendations", 
+    "care recommendations",
     "all pets",
     "dogs",
-    "cats", 
+    "cats",
     "veterinary",
     "appointment scheduling",
     "clinic ratings",
@@ -29,7 +30,16 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky",
+    "pre-commit": "lint-staged",
+    "commit": "git add . && git commit",
+    "clean": "rm -rf .next out dist node_modules/.cache"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -43,12 +53,43 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "prettier --write"
+    ]
   }
 }

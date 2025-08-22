@@ -1,10 +1,10 @@
 'use client';
 
-import { Brain, Calendar, Droplets, Heart, TrendingUp, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Brain, Calendar, Heart, Zap } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Container } from '@/components/ui/container';
-import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -14,12 +14,6 @@ const fadeInUp = {
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -60 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8, ease: 'easeOut' },
-};
-
-const fadeInRight = {
-  initial: { opacity: 0, x: 60 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.8, ease: 'easeOut' },
 };
@@ -36,18 +30,38 @@ export function FariborzSection() {
   return (
     <section className='py-20 bg-gradient-to-r from-purple-50 to-blue-50' id='fariborz'>
       <Container>
-        <motion.div className='text-center mb-16' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-          <Badge variant='info' className='bg-orange-50 text-orange-600 px-6 py-3 rounded-full text-lg mb-6 border border-orange-200'>
+        <motion.div
+          className='text-center mb-12 lg:mb-16'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Badge
+            variant='info'
+            className='bg-orange-50 text-orange-600 px-4 sm:px-6 py-3 rounded-full text-base sm:text-lg mb-4 lg:mb-6 border border-orange-200'
+          >
             🐾 Meet Our Beta Tester
           </Badge>
-          <h2 className='text-4xl font-bold text-gray-900 mb-6'>Meet Fariborz: Our Pet Beta Tester</h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>See how Borzolini helps Fariborz get better care through smart recommendations, easy vet scheduling, and quality clinic ratings. Simple, effective, and made for all pets!</p>
+          <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4 lg:mb-6'>
+            Meet Fariborz: Our Pet Beta Tester
+          </h2>
+          <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4'>
+            See how Borzolini helps Fariborz get better care through smart recommendations, easy vet scheduling, and
+            quality clinic ratings. Simple, effective, and made for all pets!
+          </p>
         </motion.div>
 
         <div className='bg-white rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto'>
           <div className='grid lg:grid-cols-2 min-h-[600px]'>
             {/* Left: Fariborz Photo */}
-            <motion.div className='relative' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInLeft}>
+            <motion.div
+              className='relative'
+              initial='initial'
+              whileInView='animate'
+              viewport={{ once: true }}
+              variants={fadeInLeft}
+            >
               {/* Fariborz Hero Photo */}
               <div
                 className='w-full h-full min-h-[500px] bg-gradient-to-br from-gray-100 to-gray-300 bg-cover bg-center bg-no-repeat relative'
@@ -70,14 +84,24 @@ export function FariborzSection() {
                 {/* Cat info overlay with trendy Poppins font */}
                 <div className='absolute bottom-6 left-6 text-white'>
                   <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>Fariborz 😎</h3>
-                  <p className='text-xl opacity-95 font-poppins font-semibold drop-shadow-md'>Cat • Male • 8 months old</p>
-                  <p className='text-base opacity-85 mt-2 font-poppins font-medium drop-shadow-md'>The inspiration behind Borzolini</p>
+                  <p className='text-xl opacity-95 font-poppins font-semibold drop-shadow-md'>
+                    Cat • Male • 8 months old
+                  </p>
+                  <p className='text-base opacity-85 mt-2 font-poppins font-medium drop-shadow-md'>
+                    The inspiration behind Borzolini
+                  </p>
                 </div>
               </div>
             </motion.div>
 
             {/* Right: AI Dashboard */}
-            <motion.div className='p-8 lg:p-12 space-y-8' initial='initial' whileInView='animate' viewport={{ once: true }} variants={staggerContainer}>
+            <motion.div
+              className='p-8 lg:p-12 space-y-8'
+              initial='initial'
+              whileInView='animate'
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
               <motion.div variants={fadeInUp}>
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>Fariborz's Care Dashboard</h3>
                 <p className='text-gray-600'>Smart recommendations and vet scheduling for comprehensive pet care</p>
@@ -170,8 +194,9 @@ export function FariborzSection() {
                   Fariborz's Story
                 </h4>
                 <p className='text-sm text-gray-600 leading-relaxed'>
-                  "As a pet owner, finding the right vet and knowing what care Fariborz needed was overwhelming. Borzolini makes it simple - I get personalized tips, easy vet scheduling, and can see which clinics really understand different
-                  pet needs. It's exactly what every pet owner needs!"
+                  "As a pet owner, finding the right vet and knowing what care Fariborz needed was overwhelming.
+                  Borzolini makes it simple - I get personalized tips, easy vet scheduling, and can see which clinics
+                  really understand different pet needs. It's exactly what every pet owner needs!"
                 </p>
                 <p className='text-xs text-gray-500 mt-3 italic'>- Shayan, Fariborz's human & Borzolini founder</p>
               </motion.div>

@@ -1,9 +1,9 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Brain, Calendar, CheckCircle, Clock, Shield, Users } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
-import { motion } from 'framer-motion';
 
 const steps = [
   {
@@ -17,7 +17,7 @@ const steps = [
   {
     icon: Brain,
     title: '2. Get Smart Tips',
-    description: 'Receive personalized care recommendations based on your pet\'s profile',
+    description: "Receive personalized care recommendations based on your pet's profile",
     color: 'from-green-500 to-green-600',
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
@@ -25,7 +25,7 @@ const steps = [
   {
     icon: Calendar,
     title: '3. Schedule Appointments',
-    description: 'Book vet consultations with specialists who understand your pet\'s needs',
+    description: "Book vet consultations with specialists who understand your pet's needs",
     color: 'from-purple-500 to-purple-600',
     bgColor: 'bg-purple-50',
     borderColor: 'border-purple-200',
@@ -33,7 +33,7 @@ const steps = [
   {
     icon: Shield,
     title: '4. Track Progress',
-    description: 'Monitor your pet\'s health improvements and care milestones',
+    description: "Monitor your pet's health improvements and care milestones",
     color: 'from-orange-500 to-orange-600',
     bgColor: 'bg-orange-50',
     borderColor: 'border-orange-200',
@@ -58,12 +58,26 @@ export function HowItWorksSection() {
   return (
     <section id='how-it-works' className='py-20 bg-gradient-to-br from-slate-50 to-blue-50'>
       <Container>
-        <motion.div className='text-center mb-16' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-          <h2 className='text-4xl font-bold text-gray-900 mb-6'>How Borzolini Works</h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>Simple 4-step process to get your pet the care they deserve</p>
+        <motion.div
+          className='text-center mb-12 lg:mb-16'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4 lg:mb-6'>How Borzolini Works</h2>
+          <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4'>
+            Simple 4-step process to get your pet the care they deserve
+          </p>
         </motion.div>
 
-        <motion.div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8' initial='initial' whileInView='animate' viewport={{ once: true }} variants={staggerContainer}>
+        <motion.div
+          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 px-4 sm:px-0'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             return (
@@ -73,19 +87,27 @@ export function HowItWorksSection() {
                 variants={fadeInUp}
                 whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <IconComponent className='w-8 h-8 text-white' />
+                <div
+                  className={`w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6`}
+                >
+                  <IconComponent className='w-6 h-6 lg:w-8 lg:h-8 text-white' />
                 </div>
 
-                <h3 className='text-xl font-bold text-gray-900 mb-4'>{step.title}</h3>
-                <p className='text-gray-600'>{step.description}</p>
+                <h3 className='text-lg lg:text-xl font-bold text-gray-900 mb-3 lg:mb-4'>{step.title}</h3>
+                <p className='text-sm lg:text-base text-gray-600'>{step.description}</p>
               </motion.div>
             );
           })}
         </motion.div>
 
         {/* Trust indicators */}
-        <motion.div className='text-center mt-16' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+        <motion.div
+          className='text-center mt-16'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
           <div className='bg-white rounded-3xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-gray-900 mb-6'>Trusted by Pet Owners</h3>
             <div className='grid md:grid-cols-3 gap-8'>

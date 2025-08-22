@@ -1,11 +1,11 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Award, Facebook, Heart, Instagram, Linkedin, Shield, Twitter } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { Logo } from '@/components/ui/logo';
-import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ export function Footer() {
     <footer className='bg-gray-900 text-white py-20'>
       <Container>
         <motion.div
-          className='grid lg:grid-cols-4 gap-8 mb-12'
+          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
@@ -35,7 +35,10 @@ export function Footer() {
             <div className='mb-6'>
               <Logo size='lg' className='text-white' />
             </div>
-            <p className='text-gray-400 mb-6 max-w-md'>Smart pet healthcare platform for all pets. Named after Fariborz, making pet care simple with personalized recommendations and easy vet scheduling.</p>
+            <p className='text-gray-400 mb-6 max-w-md'>
+              Smart pet healthcare platform for all pets. Named after Fariborz, making pet care simple with personalized
+              recommendations and easy vet scheduling.
+            </p>
             <div className='flex gap-4'>
               <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
                 <Twitter className='w-5 h-5' />
@@ -107,19 +110,25 @@ export function Footer() {
           </motion.div>
         </motion.div>
 
-        <motion.div className='border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+        <motion.div
+          className='border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
           <p className='text-gray-400 text-sm'>© 2024 Borzolini. All rights reserved. Named after Fariborz 🐱</p>
-          <div className='flex items-center gap-6 text-sm text-gray-400 mt-4 md:mt-0'>
+          <div className='flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-gray-400 mt-4 md:mt-0'>
             <span className='flex items-center gap-2'>
-              <Shield className='w-4 h-4' />
+              <Shield className='w-4 h-4 flex-shrink-0' />
               HIPAA Compliant
             </span>
             <span className='flex items-center gap-2'>
-              <Award className='w-4 h-4' />
+              <Award className='w-4 h-4 flex-shrink-0' />
               Vet Approved
             </span>
             <span className='flex items-center gap-2'>
-              <Heart className='w-4 h-4' />
+              <Heart className='w-4 h-4 flex-shrink-0' />
               Made with ❤️ for all pets
             </span>
           </div>

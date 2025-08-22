@@ -1,9 +1,9 @@
 import './globals.css';
 
+import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
 import { Header } from '@/components/sections/header';
-import type { Metadata } from 'next';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -20,8 +20,20 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Borzolini - Smart Pet Healthcare for All Pets',
-  description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Fariborz! Borzolini is named after our beloved companion.',
-  keywords: ['pet healthcare', 'care recommendations', 'veterinary', 'all pets', 'dogs', 'cats', 'appointment scheduling', 'clinic ratings', 'Borzolini', 'Fariborz'],
+  description:
+    'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Fariborz! Borzolini is named after our beloved companion.',
+  keywords: [
+    'pet healthcare',
+    'care recommendations',
+    'veterinary',
+    'all pets',
+    'dogs',
+    'cats',
+    'appointment scheduling',
+    'clinic ratings',
+    'Borzolini',
+    'Fariborz',
+  ],
   authors: [{ name: 'Borzolini' }],
   creator: 'Borzolini',
   publisher: 'Borzolini',
@@ -41,13 +53,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://borzolini.com',
     title: 'Borzolini - Smart Pet Healthcare for All Pets',
-    description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
+    description:
+      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
     siteName: 'Borzolini',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Borzolini - Smart Pet Healthcare for All Pets',
-    description: 'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
+    description:
+      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Fariborz, our beloved companion.',
     creator: '@borzolini',
   },
   icons: {

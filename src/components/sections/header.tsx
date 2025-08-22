@@ -2,11 +2,11 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { Logo } from '@/components/ui/logo';
-import { useState } from 'react';
 
 const navigationItems = [
   { title: 'Features', href: '#features' },
@@ -28,7 +28,8 @@ export function Header() {
         <div className='flex items-center justify-between h-16 lg:h-20'>
           {/* Logo */}
           <div className='flex items-center'>
-            <Logo variant='full' size='md' />
+            <Logo variant='full' size='sm' className='lg:hidden' />
+            <Logo variant='full' size='md' className='hidden lg:block' />
           </div>
 
           {/* CTA Buttons */}
@@ -42,7 +43,11 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={toggleMobileMenu} className='lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors' aria-label='Toggle mobile menu'>
+          <button
+            onClick={toggleMobileMenu}
+            className='lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors'
+            aria-label='Toggle mobile menu'
+          >
             {isMobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
         </div>
@@ -50,10 +55,20 @@ export function Header() {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className='lg:hidden border-t border-gray-100'>
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className='lg:hidden border-t border-gray-100'
+            >
               <div className='py-4 space-y-4'>
                 {navigationItems.map((item) => (
-                  <a key={item.title} href={item.href} className='block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200' onClick={() => setIsMobileMenuOpen(false)}>
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    className='block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200'
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     {item.title}
                   </a>
                 ))}
