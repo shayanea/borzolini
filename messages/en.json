@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "🤖 World's First AI-Powered Pet Healthcare Platform",
+    "title": "Transform Your Pet's Healthcare from {reactive} to {predictive}",
+    "reactive": "Reactive",
+    "predictive": "Predictive",
+    "description": "AI monitors your pet's health 24/7, predicts problems before they happen, and connects you with trusted veterinarians. Starting with Persian cats like Fariborz!",
+    "savings": "Save $2,000+ Annually",
+    "savingsDescription": "Through predictive care vs emergency treatments",
+    "ctaPrimary": "🐱 Start Fariborz's AI Health Journey",
+    "ctaSecondary": "📹 Watch Demo (2 min)",
+    "trustIndicators": {
+      "hipaa": "HIPAA Compliant",
+      "vetApproved": "Vet Approved",
+      "catSpecialized": "Cat Specialized"
+    }
+  },
+  "features": {
+    "title": "Revolutionary AI Features",
+    "description": "Advanced artificial intelligence that understands your pet's unique health patterns",
+    "aiMonitoring": {
+      "title": "24/7 Health Monitoring",
+      "description": "AI continuously analyzes your pet's health patterns, detecting subtle changes that humans might miss."
+    },
+    "predictiveAnalytics": {
+      "title": "Predictive Health Analytics", 
+      "description": "Forecast health issues 6-18 months before symptoms appear, enabling preventive care."
+    },
+    "aiVetAssistant": {
+      "title": "AI Veterinary Assistant",
+      "description": "Get instant health consultations and triage recommendations from our AI vet assistant."
+    },
+    "computerVision": {
+      "title": "Computer Vision Analysis",
+      "description": "AI analyzes photos and videos to detect skin conditions, eye problems, and behavioral changes."
+    },
+    "nutritionOptimization": {
+      "title": "AI Nutrition Optimization",
+      "description": "Personalized nutrition plans based on breed, age, health conditions, and activity level."
+    },
+    "smartClinicMatching": {
+      "title": "Smart Clinic Matching", 
+      "description": "AI matches you with the best veterinarians based on your pet's specific needs and conditions."
+    }
+  },
+  "fariborz": {
+    "badge": "🐱 Meet Our AI Pioneer",
+    "title": "Fariborz: The World's First Cat with AI Healthcare",
+    "description": "See how AI transforms Persian cat care through real-time health monitoring and predictive insights",
+    "name": "Fariborz 🐱",
+    "details": "Persian Mix • Male • 3 years old",
+    "healthScore": "Overall Health Score",
+    "aiInsights": "🤖 AI Insights This Week",
+    "predictiveAlerts": "Predictive Health Alerts"
+  },
+  "pricing": {
+    "title": "Choose Your Pet's AI Health Plan",
+    "description": "Start with our free basic monitoring, upgrade for advanced AI features",
+    "basic": {
+      "name": "Basic Monitoring",
+      "price": "Free",
+      "description": "Perfect for getting started"
+    },
+    "premium": {
+      "name": "AI Premium",
+      "price": "$19.99",
+      "interval": "/month",
+      "description": "Advanced AI health intelligence",
+      "popular": "🔥 Most Popular"
+    },
+    "pro": {
+      "name": "Pro Health", 
+      "price": "$39.99",
+      "interval": "/month",
+      "description": "For serious pet health optimization"
+    },
+    "guarantee": "30-day money-back guarantee"
+  },
+  "testimonials": {
+    "title": "Transforming Pet Lives with AI",
+    "description": "See how our AI has helped prevent health issues and save thousands in vet bills",
+    "stats": {
+      "accuracy": "Early Detection Accuracy",
+      "savings": "Average Annual Savings", 
+      "reduction": "Reduction in Emergency Visits",
+      "monitoring": "Continuous Health Monitoring"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about AI-powered pet healthcare"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Pet's Healthcare?",
+    "description": "Join Fariborz and thousands of pets already benefiting from AI-powered predictive healthcare",
+    "features": {
+      "free": "Start with basic monitoring",
+      "trial": "Free trial of AI Premium", 
+      "guarantee": "Money-back guarantee"
+    },
+    "ctaPrimary": "🚀 Start Free Trial",
+    "ctaSecondary": "📞 Schedule Demo",
+    "disclaimer": "No credit card required • Cancel anytime • HIPAA compliant"
+  },
+  "footer": {
+    "description": "The world's first AI-powered predictive healthcare platform for pets. Transforming pet care from reactive to predictive, one pet at a time.",
+    "product": "Product",
+    "support": "Support",
+    "copyright": "© 2024 PetAI Health. All rights reserved.",
+    "compliance": {
+      "hipaa": "HIPAA Compliant",
+      "vetApproved": "Vet Approved", 
+      "madeWithLove": "Made with ❤️ for pets"
+    }
+  },
+  "navigation": {
+    "features": "Features",
+    "howItWorks": "How it Works",
+    "pricing": "Pricing", 
+    "testimonials": "Testimonials",
+    "faq": "FAQ"
+  }
+}
