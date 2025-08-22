@@ -40,7 +40,7 @@ const staggerContainer = {
 // Hero Section Components
 function HeroBadge() {
   return (
-    <motion.div initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+    <motion.div initial='initial' animate='animate' variants={fadeInUp}>
       <Badge
         variant='info'
         className='bg-orange-50 text-orange-600 px-6 py-3 rounded-full border border-orange-200 text-base font-semibold'
@@ -56,8 +56,7 @@ function HeroTitle() {
     <motion.h1
       className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={fadeInUp}
     >
       Smart Pet Care Made <span className='text-blue-600'>Simple</span> for{' '}
@@ -71,8 +70,7 @@ function HeroDescription() {
     <motion.p
       className='text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={fadeInUp}
     >
       Get personalized care recommendations, easily schedule vet appointments, and find the best clinics for any pet.
@@ -83,7 +81,7 @@ function HeroDescription() {
 
 function CostSavingsHighlight() {
   return (
-    <motion.div initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+    <motion.div initial='initial' animate='animate' variants={fadeInUp}>
       <Card className='bg-white rounded-2xl p-6 shadow-lg border border-gray-100'>
         <div className='flex items-center gap-4'>
           <div className='bg-green-100 p-3 rounded-full'>
@@ -101,13 +99,7 @@ function CostSavingsHighlight() {
 
 function HeroCTAButtons() {
   return (
-    <motion.div
-      className='flex flex-col sm:flex-row gap-4'
-      initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
-      variants={fadeInUp}
-    >
+    <motion.div className='flex flex-col sm:flex-row gap-4' initial='initial' animate='animate' variants={fadeInUp}>
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <Button
           size='lg'
@@ -140,8 +132,7 @@ function TrustIndicators() {
     <motion.div
       className='flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-500'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={fadeInUp}
     >
       {indicators.map(({ icon: Icon, text }, index) => (
@@ -156,13 +147,7 @@ function TrustIndicators() {
 
 function HeroVisual() {
   return (
-    <motion.div
-      className='relative'
-      initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
-      variants={slideUp}
-    >
+    <motion.div className='relative' initial='initial' animate='animate' variants={slideUp}>
       <Card className='relative bg-white rounded-3xl shadow-2xl p-8'>
         <HeroImage />
         <AIHealthDashboard />
@@ -194,8 +179,7 @@ function AIHealthDashboard() {
     <motion.div
       className='absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 max-w-xs'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={scaleIn}
     >
       <div className='flex items-center gap-3 mb-4'>
@@ -232,8 +216,7 @@ function FloatingStats() {
     <motion.div
       className='absolute -top-6 -left-6 bg-white rounded-2xl shadow-lg p-4'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={scaleIn}
     >
       <div className='text-center'>
@@ -251,8 +234,7 @@ function ScrollIndicator() {
     <motion.div
       className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
       initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
+      animate='animate'
       variants={fadeInUp}
     >
       <button
@@ -273,13 +255,7 @@ export function HeroSection() {
       <Container size='xl' className='relative z-10'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           {/* Left Column - Content */}
-          <motion.div
-            className='space-y-8'
-            initial='initial'
-            whileInView='animate'
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
+          <motion.div className='space-y-8' initial='initial' animate='animate' variants={staggerContainer}>
             <HeroBadge />
             <HeroTitle />
             <HeroDescription />
