@@ -1,0 +1,231 @@
+{
+  "site": {
+    "name": "Borzolini",
+    "description": "Smart Pet Healthcare Platform - Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.",
+    "url": "https://borzolini.com"
+  },
+  "navigation": {
+    "features": "Features",
+    "howItWorks": "How it Works",
+    "clinicManagement": "Clinic Management",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Smart Pet Healthcare for All Pets",
+    "subtitle": "Get personalized care recommendations, easily schedule vet appointments, and find the best clinics for any pet.",
+    "description": "Starting with Borzolini! Borzolini is named after our beloved companion.",
+    "cta": "🐾 Join Beta Waitlist (Free)",
+    "secondaryCta": "📧 Get Updates"
+  },
+  "features": {
+    "title": "Simple Smart Pet Care for All Your Pets",
+    "subtitle": "Get personalized recommendations, easy vet scheduling, and quality clinic ratings - for dogs, cats, and all beloved pets",
+    "careRecommendations": {
+      "title": "Smart Care Recommendations",
+      "description": "Get personalized health tips and care recommendations based on your pet's daily patterns and breed-specific needs.",
+      "benefits": ["Daily care recommendations", "Breed-specific care tips", "Health pattern insights"]
+    },
+    "appointmentScheduling": {
+      "title": "Easy Appointment Scheduling",
+      "description": "Simple scheduling with local veterinarians who understand your pet's specific needs, with smart timing suggestions.",
+      "benefits": ["One-click vet booking", "Pet specialist matching", "Smart timing suggestions"]
+    },
+    "vetConsultations": {
+      "title": "Video Vet Consultations",
+      "description": "Connect with qualified veterinarians through secure video calls for quick health assessments and advice for any pet.",
+      "benefits": ["Instant vet access", "Secure video calls", "Quick health assessments"]
+    },
+    "clinicScoring": {
+      "title": "Clinic Quality Scores",
+      "description": "See ratings and reviews of local veterinary clinics with focus on various pet care expertise and success rates.",
+      "benefits": ["Verified clinic ratings", "Pet care expertise scores", "Real owner reviews"]
+    },
+    "cta": {
+      "title": "Ready to Get Smart Care Recommendations for Your Pet?",
+      "description": "Join the beta to get personalized care tips, easy vet scheduling, and quality clinic ratings for any pet. Completely free!",
+      "primaryButton": "🐾 Join Beta Waitlist (Free)",
+      "secondaryButton": "📧 Get Updates"
+    }
+  },
+  "howItWorks": {
+    "title": "How Borzolini Works",
+    "subtitle": "Simple, smart, and effective pet healthcare in three easy steps",
+    "step1": {
+      "title": "Connect Your Pet",
+      "description": "Add your pet's profile with breed, age, and health history for personalized recommendations"
+    },
+    "step2": {
+      "title": "Get AI Insights",
+      "description": "Receive daily health tips, care reminders, and early warning alerts powered by AI"
+    },
+    "step3": {
+      "title": "Find Quality Care",
+      "description": "Discover top-rated clinics, schedule appointments, and get expert veterinary care"
+    }
+  },
+  "clinicManagement": {
+    "title": "Comprehensive Clinic Management System",
+    "subtitle": "Our advanced clinic management platform provides everything you need to run a successful veterinary practice. From multi-role dashboards to comprehensive service management, we've got you covered.",
+    "multiRoleSystem": {
+      "title": "Multi-Role Clinic System",
+      "subtitle": "Role-based dashboards designed for every member of your veterinary team",
+      "admin": {
+        "title": "Admin Dashboard",
+        "features": ["Clinic Management", "Staff Oversight", "Financial Reports", "System Configuration"]
+      },
+      "doctor": {
+        "title": "Doctor Dashboard",
+        "features": ["Patient Records", "Appointment Management", "Treatment Plans", "Medical History"]
+      },
+      "assistant": {
+        "title": "Assistant Dashboard",
+        "features": ["Appointment Scheduling", "Patient Check-in", "Basic Records", "Communication"]
+      }
+    },
+    "advancedSearch": {
+      "title": "Advanced Search & Filtering",
+      "subtitle": "Find the perfect veterinary clinic with our intelligent search system that considers location, ratings, specializations, and more.",
+      "features": [
+        "Location-based search with radius filtering",
+        "Rating and review-based sorting",
+        "Specialization and service filtering",
+        "Operating hours and availability",
+        "Verification status and credentials"
+      ],
+      "searchPlaceholder": "Search clinics...",
+      "filters": {
+        "location": "Location",
+        "rating": "Rating",
+        "specialization": "Specialization",
+        "services": "Services"
+      }
+    },
+    "staffManagement": {
+      "title": "Comprehensive Staff Management",
+      "subtitle": "Manage your veterinary team with detailed profiles, specializations, and performance tracking",
+      "features": [
+        {
+          "title": "Detailed Staff Profiles",
+          "description": "Complete professional information including education, certifications, and experience"
+        },
+        {
+          "title": "Role-Based Access",
+          "description": "Secure access control based on staff roles and responsibilities"
+        },
+        {
+          "title": "Specialization Tracking",
+          "description": "Track staff expertise areas and specializations for better patient matching"
+        },
+        {
+          "title": "Performance Metrics",
+          "description": "Monitor staff performance and patient satisfaction ratings"
+        }
+      ],
+      "staffDirectory": "Staff Directory"
+    },
+    "serviceCategories": {
+      "title": "Comprehensive Service Categories",
+      "subtitle": "Organize and manage all your veterinary services with detailed categorization and pricing",
+      "preventive": {
+        "title": "Preventive Care",
+        "description": "Routine care to keep pets healthy",
+        "services": ["Wellness Exams", "Vaccinations", "Parasite Prevention", "Nutrition Counseling"]
+      },
+      "diagnostic": {
+        "title": "Diagnostic Services",
+        "description": "Advanced diagnostic testing",
+        "services": ["Blood Tests", "X-Rays", "Ultrasound", "Lab Work"]
+      },
+      "surgical": {
+        "title": "Surgical Procedures",
+        "description": "Surgical interventions and procedures",
+        "services": ["Spay/Neuter", "Dental Surgery", "Orthopedic Surgery", "Emergency Surgery"]
+      },
+      "emergency": {
+        "title": "Emergency Care",
+        "description": "Urgent and emergency services",
+        "services": ["24/7 Emergency", "Trauma Care", "Critical Care", "Emergency Surgery"]
+      }
+    },
+    "reviewSystem": {
+      "title": "Verified Review & Rating System",
+      "subtitle": "Build trust with verified reviews and comprehensive rating systems that help pet owners make informed decisions",
+      "features": [
+        {
+          "title": "Verified Reviews",
+          "description": "All reviews are verified to ensure authenticity and prevent fake feedback"
+        },
+        {
+          "title": "Comprehensive Ratings",
+          "description": "Multi-category ratings including care quality, staff friendliness, and facility cleanliness"
+        },
+        {
+          "title": "Photo Reviews",
+          "description": "Pet owners can share photos and detailed experiences"
+        },
+        {
+          "title": "Response Management",
+          "description": "Clinics can respond to reviews and address concerns professionally"
+        }
+      ],
+      "clinicRatings": "Clinic Ratings & Reviews",
+      "verified": "Verified",
+      "reviews": "reviews"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Veterinary Practice?",
+      "description": "Join the beta to access our comprehensive clinic management system with multi-role dashboards, advanced search capabilities, and verified review systems. Completely free for early adopters!",
+      "primaryButton": "🏥 Join Clinic Beta (Free)",
+      "secondaryButton": "📋 Request Demo"
+    }
+  },
+  "borzolini": {
+    "title": "Meet Borzolini",
+    "subtitle": "The Persian cat who inspired our mission",
+    "description": "Borzolini is our beloved Persian cat who showed us how important personalized pet care really is. His unique health needs and gentle personality inspired us to create a platform that provides the same level of attention and care for every pet.",
+    "features": [
+      "AI-powered health monitoring",
+      "Personalized care recommendations",
+      "Easy vet appointment scheduling",
+      "Quality clinic ratings"
+    ],
+    "nearbyClinics": "Nearby Clinics",
+    "testimonial": "Borzolini makes it simple - I get personalized tips, easy vet scheduling, and can see which clinics are best for my Persian cat. No more guessing about his care needs!"
+  },
+  "cta": {
+    "title": "Ready to Give Your Pet the Best Care?",
+    "subtitle": "Join thousands of pet owners who trust Borzolini for smart, personalized pet healthcare",
+    "primaryButton": "🐾 Start Free Trial",
+    "secondaryButton": "📧 Learn More"
+  },
+  "footer": {
+    "description": "Smart pet healthcare platform providing personalized care recommendations, easy vet scheduling, and quality clinic ratings for all pets.",
+    "links": {
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "social": {
+      "twitter": "Follow us on Twitter",
+      "instagram": "Follow us on Instagram",
+      "facebook": "Follow us on Facebook"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© 2024 Borzolini. All rights reserved."
+  },
+  "languageSelector": {
+    "title": "Select Language",
+    "en": "English",
+    "fr": "Français",
+    "fa": "فارسی",
+    "ar": "العربية"
+  }
+}

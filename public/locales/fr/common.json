@@ -1,0 +1,258 @@
+{
+  "site": {
+    "name": "Borzolini",
+    "description": "Plateforme de Soins Vétérinaires Intelligents - Obtenez des recommandations de soins personnalisées, une planification facile des rendez-vous vétérinaires et des évaluations de qualité des cliniques pour tous vos animaux de compagnie. Nommé d'après Borzolini, notre compagnon bien-aimé.",
+    "url": "https://borzolini.com"
+  },
+  "navigation": {
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "clinicManagement": "Gestion des Cliniques",
+    "pricing": "Tarifs",
+    "testimonials": "Témoignages",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Soins Vétérinaires Intelligents pour Tous les Animaux",
+    "subtitle": "Obtenez des recommandations de soins personnalisées, planifiez facilement des rendez-vous vétérinaires et trouvez les meilleures cliniques pour n'importe quel animal.",
+    "description": "En commençant par Borzolini ! Borzolini est nommé d'après notre compagnon bien-aimé.",
+    "cta": "🐾 Rejoindre la Liste d'Attente Bêta (Gratuit)",
+    "secondaryCta": "📧 Recevoir des Mises à Jour"
+  },
+  "features": {
+    "title": "Soins Intelligents Simples pour Tous Vos Animaux",
+    "subtitle": "Obtenez des recommandations personnalisées, une planification facile des rendez-vous vétérinaires et des évaluations de qualité des cliniques - pour les chiens, les chats et tous les animaux bien-aimés",
+    "careRecommendations": {
+      "title": "Recommandations de Soins Intelligentes",
+      "description": "Obtenez des conseils de santé personnalisés et des recommandations de soins basés sur les habitudes quotidiennes de votre animal et ses besoins spécifiques à la race.",
+      "benefits": [
+        "Recommandations de soins quotidiennes",
+        "Conseils de soins spécifiques à la race",
+        "Aperçus des modèles de santé"
+      ]
+    },
+    "appointmentScheduling": {
+      "title": "Planification Facile des Rendez-vous",
+      "description": "Planification simple avec des vétérinaires locaux qui comprennent les besoins spécifiques de votre animal, avec des suggestions de timing intelligentes.",
+      "benefits": [
+        "Réservation vétérinaire en un clic",
+        "Correspondance avec des spécialistes d'animaux",
+        "Suggestions de timing intelligentes"
+      ]
+    },
+    "vetConsultations": {
+      "title": "Consultations Vétérinaires par Vidéo",
+      "description": "Connectez-vous avec des vétérinaires qualifiés par des appels vidéo sécurisés pour des évaluations de santé rapides et des conseils pour n'importe quel animal.",
+      "benefits": ["Accès vétérinaire instantané", "Appels vidéo sécurisés", "Évaluations de santé rapides"]
+    },
+    "clinicScoring": {
+      "title": "Scores de Qualité des Cliniques",
+      "description": "Voyez les évaluations et avis des cliniques vétérinaires locales avec un accent sur diverses expertises en soins d'animaux et taux de réussite.",
+      "benefits": [
+        "Évaluations de cliniques vérifiées",
+        "Scores d'expertise en soins d'animaux",
+        "Avis réels des propriétaires"
+      ]
+    },
+    "cta": {
+      "title": "Prêt à Obtenir des Recommandations de Soins Intelligentes pour Votre Animal ?",
+      "description": "Rejoignez la bêta pour obtenir des conseils de soins personnalisés, une planification facile des rendez-vous vétérinaires et des évaluations de qualité des cliniques pour n'importe quel animal. Complètement gratuit !",
+      "primaryButton": "🐾 Rejoindre la Liste d'Attente Bêta (Gratuit)",
+      "secondaryButton": "📧 Recevoir des Mises à Jour"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment Fonctionne Borzolini",
+    "subtitle": "Soins vétérinaires simples, intelligents et efficaces en trois étapes faciles",
+    "step1": {
+      "title": "Connectez Votre Animal",
+      "description": "Ajoutez le profil de votre animal avec la race, l'âge et l'historique de santé pour des recommandations personnalisées"
+    },
+    "step2": {
+      "title": "Obtenez des Aperçus IA",
+      "description": "Recevez des conseils de santé quotidiens, des rappels de soins et des alertes d'avertissement précoce alimentés par l'IA"
+    },
+    "step3": {
+      "title": "Trouvez des Soins de Qualité",
+      "description": "Découvrez des cliniques hautement évaluées, planifiez des rendez-vous et obtenez des soins vétérinaires experts"
+    }
+  },
+  "clinicManagement": {
+    "title": "Système de Gestion de Clinique Complet",
+    "subtitle": "Notre plateforme de gestion de clinique avancée fournit tout ce dont vous avez besoin pour gérer une pratique vétérinaire réussie. Des tableaux de bord multi-rôles à la gestion complète des services, nous avons tout couvert.",
+    "multiRoleSystem": {
+      "title": "Système de Clinique Multi-Rôles",
+      "subtitle": "Tableaux de bord basés sur les rôles conçus pour chaque membre de votre équipe vétérinaire",
+      "admin": {
+        "title": "Tableau de Bord Administrateur",
+        "features": [
+          "Gestion de Clinique",
+          "Supervision du Personnel",
+          "Rapports Financiers",
+          "Configuration du Système"
+        ]
+      },
+      "doctor": {
+        "title": "Tableau de Bord Médecin",
+        "features": ["Dossiers des Patients", "Gestion des Rendez-vous", "Plans de Traitement", "Historique Médical"]
+      },
+      "assistant": {
+        "title": "Tableau de Bord Assistant",
+        "features": [
+          "Planification des Rendez-vous",
+          "Enregistrement des Patients",
+          "Dossiers de Base",
+          "Communication"
+        ]
+      }
+    },
+    "advancedSearch": {
+      "title": "Recherche et Filtrage Avancés",
+      "subtitle": "Trouvez la clinique vétérinaire parfaite avec notre système de recherche intelligent qui considère l'emplacement, les évaluations, les spécialisations et plus encore.",
+      "features": [
+        "Recherche basée sur l'emplacement avec filtrage par rayon",
+        "Tri basé sur les évaluations et avis",
+        "Filtrage par spécialisation et service",
+        "Heures d'ouverture et disponibilité",
+        "Statut de vérification et accréditations"
+      ],
+      "searchPlaceholder": "Rechercher des cliniques...",
+      "filters": {
+        "location": "Emplacement",
+        "rating": "Évaluation",
+        "specialization": "Spécialisation",
+        "services": "Services"
+      }
+    },
+    "staffManagement": {
+      "title": "Gestion Complète du Personnel",
+      "subtitle": "Gérez votre équipe vétérinaire avec des profils détaillés, des spécialisations et un suivi des performances",
+      "features": [
+        {
+          "title": "Profils de Personnel Détaillés",
+          "description": "Informations professionnelles complètes incluant l'éducation, les certifications et l'expérience"
+        },
+        {
+          "title": "Accès Basé sur les Rôles",
+          "description": "Contrôle d'accès sécurisé basé sur les rôles et responsabilités du personnel"
+        },
+        {
+          "title": "Suivi des Spécialisations",
+          "description": "Suivez les domaines d'expertise et les spécialisations du personnel pour une meilleure correspondance des patients"
+        },
+        {
+          "title": "Métriques de Performance",
+          "description": "Surveillez les performances du personnel et les évaluations de satisfaction des patients"
+        }
+      ],
+      "staffDirectory": "Répertoire du Personnel"
+    },
+    "serviceCategories": {
+      "title": "Catégories de Services Complètes",
+      "subtitle": "Organisez et gérez tous vos services vétérinaires avec une catégorisation détaillée et des prix",
+      "preventive": {
+        "title": "Soins Préventifs",
+        "description": "Soins de routine pour maintenir les animaux en bonne santé",
+        "services": ["Examens de Bien-être", "Vaccinations", "Prévention des Parasites", "Conseils Nutritionnels"]
+      },
+      "diagnostic": {
+        "title": "Services de Diagnostic",
+        "description": "Tests de diagnostic avancés",
+        "services": ["Analyses de Sang", "Radiographies", "Échographies", "Travaux de Laboratoire"]
+      },
+      "surgical": {
+        "title": "Procédures Chirurgicales",
+        "description": "Interventions et procédures chirurgicales",
+        "services": [
+          "Stérilisation/Stérilisation",
+          "Chirurgie Dentaire",
+          "Chirurgie Orthopédique",
+          "Chirurgie d'Urgence"
+        ]
+      },
+      "emergency": {
+        "title": "Soins d'Urgence",
+        "description": "Services urgents et d'urgence",
+        "services": ["Urgence 24/7", "Soins de Traumatologie", "Soins Critiques", "Chirurgie d'Urgence"]
+      }
+    },
+    "reviewSystem": {
+      "title": "Système d'Avis et d'Évaluation Vérifiés",
+      "subtitle": "Construisez la confiance avec des avis vérifiés et des systèmes d'évaluation complets qui aident les propriétaires d'animaux à prendre des décisions éclairées",
+      "features": [
+        {
+          "title": "Avis Vérifiés",
+          "description": "Tous les avis sont vérifiés pour assurer l'authenticité et prévenir les commentaires faux"
+        },
+        {
+          "title": "Évaluations Complètes",
+          "description": "Évaluations multi-catégories incluant la qualité des soins, l'amabilité du personnel et la propreté des installations"
+        },
+        {
+          "title": "Avis avec Photos",
+          "description": "Les propriétaires d'animaux peuvent partager des photos et des expériences détaillées"
+        },
+        {
+          "title": "Gestion des Réponses",
+          "description": "Les cliniques peuvent répondre aux avis et traiter les préoccupations professionnellement"
+        }
+      ],
+      "clinicRatings": "Évaluations et Avis des Cliniques",
+      "verified": "Vérifié",
+      "reviews": "avis"
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Pratique Vétérinaire ?",
+      "description": "Rejoignez la bêta pour accéder à notre système de gestion de clinique complet avec des tableaux de bord multi-rôles, des capacités de recherche avancées et des systèmes d'avis vérifiés. Complètement gratuit pour les adoptants précoces !",
+      "primaryButton": "🏥 Rejoindre la Bêta Clinique (Gratuit)",
+      "secondaryButton": "📋 Demander une Démo"
+    }
+  },
+  "borzolini": {
+    "title": "Rencontrez Borzolini",
+    "subtitle": "Le chat persan qui a inspiré notre mission",
+    "description": "Borzolini est notre chat persan bien-aimé qui nous a montré à quel point les soins personnalisés des animaux sont vraiment importants. Ses besoins de santé uniques et sa personnalité douce nous ont inspirés à créer une plateforme qui fournit le même niveau d'attention et de soins pour chaque animal.",
+    "features": [
+      "Surveillance de santé alimentée par l'IA",
+      "Recommandations de soins personnalisées",
+      "Planification facile des rendez-vous vétérinaires",
+      "Évaluations de qualité des cliniques"
+    ],
+    "nearbyClinics": "Cliniques à Proximité",
+    "testimonial": "Borzolini rend tout simple - j'obtiens des conseils personnalisés, une planification facile des rendez-vous vétérinaires et je peux voir quelles cliniques sont les meilleures pour mon chat persan. Plus de devinettes sur ses besoins de soins !"
+  },
+  "cta": {
+    "title": "Prêt à Donner à Votre Animal les Meilleurs Soins ?",
+    "subtitle": "Rejoignez des milliers de propriétaires d'animaux qui font confiance à Borzolini pour des soins vétérinaires intelligents et personnalisés",
+    "primaryButton": "🐾 Commencer l'Essai Gratuit",
+    "secondaryButton": "📧 En Savoir Plus"
+  },
+  "footer": {
+    "description": "Plateforme de soins vétérinaires intelligents fournissant des recommandations de soins personnalisées, une planification facile des rendez-vous vétérinaires et des évaluations de qualité des cliniques pour tous les animaux.",
+    "links": {
+      "product": "Produit",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "about": "À Propos",
+      "contact": "Contact"
+    },
+    "social": {
+      "twitter": "Suivez-nous sur Twitter",
+      "instagram": "Suivez-nous sur Instagram",
+      "facebook": "Suivez-nous sur Facebook"
+    },
+    "legal": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions de Service",
+      "cookies": "Politique des Cookies"
+    },
+    "copyright": "© 2024 Borzolini. Tous droits réservés."
+  },
+  "languageSelector": {
+    "title": "Sélectionner la Langue",
+    "en": "English",
+    "fr": "Français",
+    "fa": "فارسی",
+    "ar": "العربية"
+  }
+}

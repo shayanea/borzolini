@@ -2,21 +2,26 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
+import { LanguageSelector } from '@/components/ui/language-selector';
 import { Logo } from '@/components/ui/logo';
-
-const navigationItems = [
-  { title: 'Features', href: '#features' },
-  { title: 'How it Works', href: '#how-it-works' },
-  { title: 'Borzolini', href: '#borzolini' },
-  { title: 'Get Started', href: '#cta' },
-];
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslations();
+
+  const navigationItems = [
+    { title: t('navigation.features'), href: '#features' },
+    { title: t('navigation.howItWorks'), href: '#how-it-works' },
+    { title: t('navigation.clinicManagement'), href: '#clinic-management' },
+    { title: t('navigation.pricing'), href: '#pricing' },
+    { title: t('navigation.testimonials'), href: '#testimonials' },
+    { title: t('navigation.faq'), href: '#faq' },
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,6 +39,7 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className='hidden lg:flex items-center space-x-4'>
+            <LanguageSelector />
             <Button variant='ghost' size='sm' className='text-gray-700 hover:text-blue-600'>
               Sign In
             </Button>
@@ -73,6 +79,9 @@ export function Header() {
                   </a>
                 ))}
                 <div className='pt-4 border-t border-gray-100 space-y-3'>
+                  <div className='flex justify-center'>
+                    <LanguageSelector />
+                  </div>
                   <Button variant='ghost' size='sm' className='w-full text-gray-700 hover:text-blue-600'>
                     Sign In
                   </Button>
