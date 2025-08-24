@@ -1,9 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Facebook, Heart, Instagram, Linkedin, Shield, Twitter } from 'lucide-react';
+import { Award, Heart, Shield } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { Logo } from '@/components/ui/logo';
 
@@ -39,20 +38,6 @@ export function Footer() {
               Smart pet healthcare platform for all pets. Named after Borzolini, making pet care simple with
               personalized recommendations and easy vet scheduling.
             </p>
-            <div className='flex gap-4'>
-              <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
-                <Twitter className='w-5 h-5' />
-              </Button>
-              <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
-                <Instagram className='w-5 h-5' />
-              </Button>
-              <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
-                <Facebook className='w-5 h-5' />
-              </Button>
-              <Button variant='ghost' size='sm' className='text-gray-400 hover:text-white'>
-                <Linkedin className='w-5 h-5' />
-              </Button>
-            </div>
           </motion.div>
 
           {/* Product Links */}

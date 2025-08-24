@@ -20,6 +20,7 @@ export const SITE_CONFIG = {
 export const NAVIGATION_ITEMS = [
   { title: 'Features', href: '#features' },
   { title: 'How it Works', href: '#how-it-works' },
+  { title: 'Clinic Management', href: '#clinic-management' },
   { title: 'Pricing', href: '#pricing' },
   { title: 'Testimonials', href: '#testimonials' },
   { title: 'FAQ', href: '#faq' },

@@ -1,4 +1,5 @@
 import { BorzoliniSection } from '@/components/sections/borzolini-section';
+import { ClinicManagementSection } from '@/components/sections/clinic-management-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { FeaturesSection } from '@/components/sections/features-section';
 import { Footer } from '@/components/sections/footer';
@@ -13,6 +14,7 @@ export default function HomePage() {
         <HeroSection />
         <FeaturesSection />
         <HowItWorksSection />
+        <ClinicManagementSection />
         <BorzoliniSection />
         <CTASection />
         <Footer />
