@@ -23,7 +23,7 @@ export function Header() {
   };
 
   return (
-    <header className='sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm'>
+    <header className='sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm'>
       <Container>
         <div className='flex items-center justify-between h-16 lg:h-20'>
           {/* Logo */}
@@ -32,12 +32,32 @@ export function Header() {
             <Logo variant='full' size='md' className='hidden lg:block' />
           </div>
 
+          {/* Desktop Navigation */}
+          <nav className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.slice(0, -1).map((item) => (
+              <a
+                key={item.title}
+                href={item.href}
+                className='text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-sm'
+              >
+                {item.title}
+              </a>
+            ))}
+          </nav>
+
           {/* CTA Buttons */}
           <div className='hidden lg:flex items-center space-x-4'>
-            <Button variant='ghost' size='sm' className='text-gray-700 hover:text-blue-600'>
+            <Button
+              variant='ghost'
+              size='sm'
+              className='text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium'
+            >
               Sign In
             </Button>
-            <Button size='sm' className='bg-blue-600 hover:bg-blue-700 text-white'>
+            <Button
+              size='sm'
+              className='bg-slate-900 hover:bg-slate-800 text-white font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200'
+            >
               Get Started
             </Button>
           </div>
@@ -45,7 +65,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className='lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors'
+            className='lg:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all duration-200'
             aria-label='Toggle mobile menu'
           >
             {isMobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
@@ -59,24 +79,28 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className='lg:hidden border-t border-gray-100'
+              className='lg:hidden border-t border-slate-200/50 bg-white/95 backdrop-blur-sm'
             >
-              <div className='py-4 space-y-4'>
+              <div className='py-6 space-y-4'>
                 {navigationItems.map((item) => (
                   <a
                     key={item.title}
                     href={item.href}
-                    className='block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200'
+                    className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.title}
                   </a>
                 ))}
-                <div className='pt-4 border-t border-gray-100 space-y-3'>
-                  <Button variant='ghost' size='sm' className='w-full text-gray-700 hover:text-blue-600'>
+                <div className='pt-4 border-t border-slate-200/50 space-y-3 px-4'>
+                  <Button
+                    variant='ghost'
+                    size='sm'
+                    className='w-full text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium'
+                  >
                     Sign In
                   </Button>
-                  <Button size='sm' className='w-full bg-blue-600 hover:bg-blue-700 text-white'>
+                  <Button size='sm' className='w-full bg-slate-900 hover:bg-slate-800 text-white font-medium shadow-lg'>
                     Get Started
                   </Button>
                 </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import {
   Award,
   Building2,
@@ -11,6 +12,7 @@ import {
   Search,
   Settings,
   Shield,
+  Sparkles,
   Star,
   Stethoscope,
   UserCheck,
@@ -20,19 +22,18 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
-import { gradients } from '@/lib/design-system';
 
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -40,13 +41,13 @@ const staggerContainer = {
 const slideInLeft = {
   initial: { opacity: 0, x: -60 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
 
 const slideInRight = {
   initial: { opacity: 0, x: 60 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
 
 // Mock clinic data for demonstration
@@ -97,14 +98,24 @@ const mockClinics = [
 function ClinicManagementHeader() {
   return (
     <motion.div
-      className='text-center mb-16'
+      className='text-center mb-20'
       initial='initial'
       whileInView='animate'
       viewport={{ once: true }}
       variants={fadeInUp}
     >
-      <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-6'>Comprehensive Clinic Management System</h2>
-      <p className='text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto px-4'>
+      <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 px-6 py-3 rounded-full border border-blue-200/50 text-sm font-semibold shadow-sm mb-8'>
+        <Sparkles className='w-4 h-4 text-blue-500' />
+        Clinic Management
+      </div>
+      <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight tracking-tight'>
+        Comprehensive{' '}
+        <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
+          Clinic Management
+        </span>{' '}
+        System
+      </h2>
+      <p className='text-xl sm:text-2xl text-slate-600 max-w-5xl mx-auto px-4 font-medium leading-relaxed'>
         Our advanced clinic management platform provides everything you need to run a successful veterinary practice.
         From multi-role dashboards to comprehensive service management, we've got you covered.
       </p>
@@ -134,17 +145,17 @@ function MultiRoleSystem() {
     },
   ];
   return (
-    <motion.div className='mb-20' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-      <div className='text-center mb-12'>
-        <div className='inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4'>
-          <Building2 className='w-8 h-8 text-blue-600' />
+    <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+      <div className='text-center mb-16'>
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl mb-6 shadow-lg'>
+          <Building2 className='w-10 h-10 text-blue-600' />
         </div>
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>Multi-Role Clinic System</h3>
-        <p className='text-gray-600 max-w-2xl mx-auto'>
+        <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>Multi-Role Clinic System</h3>
+        <p className='text-slate-600 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
           Role-based dashboards designed for every member of your veterinary team
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
         {roles.map((role) => (
           <motion.div
             key={role.role}
@@ -153,17 +164,17 @@ function MultiRoleSystem() {
             whileInView='animate'
             viewport={{ once: true }}
           >
-            <Card className='p-6 text-center border-2 hover:border-blue-200 transition-colors'>
+            <Card className='p-8 text-center border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-2'>
               <div
-                className={`inline-flex items-center justify-center w-12 h-12 bg-${role.color}-100 rounded-full mb-4`}
+                className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-${role.color}-100 to-${role.color}-200 rounded-2xl mb-6 shadow-lg`}
               >
-                <role.icon className={`w-6 h-6 text-${role.color}-600`} />
+                <role.icon className={`w-8 h-8 text-${role.color}-600`} />
               </div>
-              <h4 className='text-xl font-semibold text-gray-900 mb-3'>{role.role} Dashboard</h4>
-              <ul className='text-sm text-gray-600 space-y-2'>
+              <h4 className='text-2xl font-semibold text-slate-900 mb-4 leading-tight'>{role.role} Dashboard</h4>
+              <ul className='text-slate-600 space-y-3 font-medium'>
                 {role.features.map((feature, idx) => (
                   <li key={idx} className='flex items-center justify-center'>
-                    <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
+                    <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
                     {feature}
                   </li>
                 ))}
@@ -185,60 +196,62 @@ function AdvancedSearchAndFiltering() {
     { icon: Shield, text: 'Verification status and credentials' },
   ];
   return (
-    <motion.div className='mb-20' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+    <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         <motion.div variants={slideInLeft}>
-          <div className='inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4'>
-            <Search className='w-8 h-8 text-green-600' />
+          <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl mb-6 shadow-lg'>
+            <Search className='w-10 h-10 text-green-600' />
           </div>
-          <h3 className='text-2xl font-bold text-gray-900 mb-4'>Advanced Search & Filtering</h3>
-          <p className='text-gray-600 mb-6'>
+          <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
+            Advanced Search & Filtering
+          </h3>
+          <p className='text-slate-600 mb-8 text-lg font-medium leading-relaxed'>
             Find the perfect veterinary clinic with our intelligent search system that considers location, ratings,
             specializations, and more.
           </p>
-          <div className='space-y-4'>
+          <div className='space-y-5'>
             {searchFeatures.map((item, idx) => (
-              <div key={idx} className='flex items-start space-x-3'>
-                <div className='flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center'>
+              <div key={idx} className='flex items-start space-x-4'>
+                <div className='flex-shrink-0 w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center'>
                   <item.icon className='w-4 h-4 text-green-600' />
                 </div>
-                <span className='text-gray-700'>{item.text}</span>
+                <span className='text-slate-700 font-medium leading-relaxed'>{item.text}</span>
               </div>
             ))}
           </div>
         </motion.div>
         <motion.div variants={slideInRight}>
-          <Card className='p-6 border-2 border-green-200'>
-            <div className='space-y-4'>
-              <div className='flex space-x-2'>
+          <Card className='p-8 border-2 border-green-200/50 shadow-lg'>
+            <div className='space-y-6'>
+              <div className='flex space-x-3'>
                 <div className='flex-1'>
                   <input
                     type='text'
                     placeholder='Search clinics...'
-                    className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent'
+                    className='w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent font-medium'
                   />
                 </div>
-                <Button className='bg-green-600 hover:bg-green-700'>
-                  <Search className='w-4 h-4' />
+                <Button className='bg-green-600 hover:bg-green-700 px-6 py-3 rounded-xl'>
+                  <Search className='w-5 h-5' />
                 </Button>
               </div>
-              <div className='grid grid-cols-2 gap-3'>
-                <select className='px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500'>
+              <div className='grid grid-cols-2 gap-4'>
+                <select className='px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-green-500 font-medium'>
                   <option>Location</option>
                   <option>Downtown</option>
                   <option>Westside</option>
                 </select>
-                <select className='px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500'>
+                <select className='px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-green-500 font-medium'>
                   <option>Rating</option>
                   <option>4.5+ Stars</option>
                   <option>4.0+ Stars</option>
                 </select>
-                <select className='px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500'>
+                <select className='px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-green-500 font-medium'>
                   <option>Specialization</option>
                   <option>Feline Medicine</option>
                   <option>Canine Medicine</option>
                 </select>
-                <select className='px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500'>
+                <select className='px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-green-500 font-medium'>
                   <option>Services</option>
                   <option>Emergency Care</option>
                   <option>Surgery</option>
@@ -276,45 +289,50 @@ function StaffManagement() {
     },
   ];
   return (
-    <motion.div className='mb-20' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-      <div className='text-center mb-12'>
-        <div className='inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4'>
-          <Users className='w-8 h-8 text-purple-600' />
+    <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+      <div className='text-center mb-16'>
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl mb-6 shadow-lg'>
+          <Users className='w-10 h-10 text-purple-600' />
         </div>
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>Comprehensive Staff Management</h3>
-        <p className='text-gray-600 max-w-2xl mx-auto'>
+        <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
+          Comprehensive Staff Management
+        </h3>
+        <p className='text-slate-600 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
           Manage your veterinary team with detailed profiles, specializations, and performance tracking
         </p>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         <motion.div variants={slideInLeft}>
-          <div className='space-y-6'>
+          <div className='space-y-8'>
             {staffFeatures.map((feature, idx) => (
-              <div key={idx} className='flex items-start space-x-4'>
-                <div className='flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center'>
-                  <feature.icon className='w-6 h-6 text-purple-600' />
+              <div key={idx} className='flex items-start space-x-5'>
+                <div className='flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center shadow-lg'>
+                  <feature.icon className='w-7 h-7 text-purple-600' />
                 </div>
                 <div>
-                  <h4 className='font-semibold text-gray-900 mb-1'>{feature.title}</h4>
-                  <p className='text-gray-600 text-sm'>{feature.description}</p>
+                  <h4 className='font-semibold text-slate-900 mb-2 text-lg'>{feature.title}</h4>
+                  <p className='text-slate-600 text-base leading-relaxed font-medium'>{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </motion.div>
         <motion.div variants={slideInRight}>
-          <Card className='p-6 border-2 border-purple-200'>
-            <h4 className='font-semibold text-gray-900 mb-4 text-center'>Staff Directory</h4>
-            <div className='space-y-4'>
+          <Card className='p-8 border-2 border-purple-200/50 shadow-lg'>
+            <h4 className='font-semibold text-slate-900 mb-6 text-center text-xl'>Staff Directory</h4>
+            <div className='space-y-5'>
               {mockClinics[0].staff.map((member, idx) => (
-                <div key={idx} className='flex items-center space-x-3 p-3 bg-gray-50 rounded-lg'>
-                  <div className='w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center'>
-                    <Users className='w-5 h-5 text-purple-600' />
+                <div
+                  key={idx}
+                  className='flex items-center space-x-4 p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl border border-purple-200/50'
+                >
+                  <div className='w-12 h-12 bg-gradient-to-br from-purple-200 to-purple-300 rounded-xl flex items-center justify-center shadow-sm'>
+                    <Users className='w-6 h-6 text-purple-600' />
                   </div>
                   <div className='flex-1'>
-                    <div className='font-medium text-gray-900'>{member.name}</div>
-                    <div className='text-sm text-gray-600'>{member.role}</div>
-                    <div className='text-xs text-purple-600'>{member.specialization}</div>
+                    <div className='font-medium text-slate-900 text-lg'>{member.name}</div>
+                    <div className='text-slate-600 font-medium'>{member.role}</div>
+                    <div className='text-sm text-purple-600 font-semibold'>{member.specialization}</div>
                   </div>
                 </div>
               ))}
@@ -358,17 +376,19 @@ function ServiceCategories() {
     },
   ];
   return (
-    <motion.div className='mb-20' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-      <div className='text-center mb-12'>
-        <div className='inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4'>
-          <Stethoscope className='w-8 h-8 text-orange-600' />
+    <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+      <div className='text-center mb-16'>
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl mb-6 shadow-lg'>
+          <Stethoscope className='w-10 h-10 text-orange-600' />
         </div>
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>Comprehensive Service Categories</h3>
-        <p className='text-gray-600 max-w-2xl mx-auto'>
+        <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
+          Comprehensive Service Categories
+        </h3>
+        <p className='text-slate-600 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
           Organize and manage all your veterinary services with detailed categorization and pricing
         </p>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
         {categories.map((category) => (
           <motion.div
             key={category.category}
@@ -377,18 +397,18 @@ function ServiceCategories() {
             whileInView='animate'
             viewport={{ once: true }}
           >
-            <Card className='p-6 text-center border-2 hover:border-orange-200 transition-colors'>
+            <Card className='p-8 text-center border-2 hover:border-orange-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-2'>
               <div
-                className={`inline-flex items-center justify-center w-12 h-12 bg-${category.color}-100 rounded-full mb-4`}
+                className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-${category.color}-100 to-${category.color}-200 rounded-2xl mb-6 shadow-lg`}
               >
-                <category.icon className={`w-6 h-6 text-${category.color}-600`} />
+                <category.icon className={`w-8 h-8 text-${category.color}-600`} />
               </div>
-              <h4 className='text-lg font-semibold text-gray-900 mb-2'>{category.category}</h4>
-              <p className='text-sm text-gray-600 mb-4'>{category.description}</p>
-              <ul className='text-xs text-gray-600 space-y-1'>
+              <h4 className='text-xl font-semibold text-slate-900 mb-3 leading-tight'>{category.category}</h4>
+              <p className='text-slate-600 mb-5 font-medium leading-relaxed'>{category.description}</p>
+              <ul className='text-slate-600 space-y-2 font-medium'>
                 {category.services.map((service, idx) => (
                   <li key={idx} className='flex items-center justify-center'>
-                    <CheckCircle className='w-3 h-3 text-green-500 mr-1' />
+                    <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
                     {service}
                   </li>
                 ))}
@@ -425,59 +445,64 @@ function ReviewAndRatingSystem() {
     },
   ];
   return (
-    <motion.div className='mb-20' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
-      <div className='text-center mb-12'>
-        <div className='inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4'>
-          <Star className='w-8 h-8 text-yellow-600' />
+    <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
+      <div className='text-center mb-16'>
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl mb-6 shadow-lg'>
+          <Star className='w-10 h-10 text-yellow-600' />
         </div>
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>Verified Review & Rating System</h3>
-        <p className='text-gray-600 max-w-2xl mx-auto'>
+        <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
+          Verified Review & Rating System
+        </h3>
+        <p className='text-slate-600 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
           Build trust with verified reviews and comprehensive rating systems that help pet owners make informed
           decisions
         </p>
       </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
         <motion.div variants={slideInLeft}>
-          <div className='space-y-6'>
+          <div className='space-y-8'>
             {reviewFeatures.map((feature, idx) => (
-              <div key={idx} className='flex items-start space-x-4'>
-                <div className='flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center'>
-                  <feature.icon className='w-6 h-6 text-yellow-600' />
+              <div key={idx} className='flex items-start space-x-5'>
+                <div className='flex-shrink-0 w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl flex items-center justify-center shadow-lg'>
+                  <feature.icon className='w-7 h-7 text-yellow-600' />
                 </div>
                 <div>
-                  <h4 className='font-semibold text-gray-900 mb-1'>{feature.title}</h4>
-                  <p className='text-gray-600 text-sm'>{feature.description}</p>
+                  <h4 className='font-semibold text-slate-900 mb-2 text-lg'>{feature.title}</h4>
+                  <p className='text-slate-600 text-base leading-relaxed font-medium'>{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </motion.div>
         <motion.div variants={slideInRight}>
-          <Card className='p-6 border-2 border-yellow-200'>
-            <h4 className='font-semibold text-gray-900 mb-4 text-center'>Clinic Ratings & Reviews</h4>
-            <div className='space-y-4'>
+          <Card className='p-8 border-2 border-yellow-200/50 shadow-lg'>
+            <h4 className='font-semibold text-slate-900 mb-6 text-center text-xl'>Clinic Ratings & Reviews</h4>
+            <div className='space-y-5'>
               {mockClinics.map((clinic) => (
-                <div key={clinic.id} className='p-4 bg-gray-50 rounded-lg'>
-                  <div className='flex items-center justify-between mb-2'>
-                    <h5 className='font-medium text-gray-900'>{clinic.name}</h5>
-                    <div className='flex items-center space-x-1'>
-                      <Star className='w-4 h-4 text-yellow-500 fill-current' />
-                      <span className='font-medium text-gray-900'>{clinic.rating}</span>
+                <div
+                  key={clinic.id}
+                  className='p-5 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-xl border border-yellow-200/50'
+                >
+                  <div className='flex items-center justify-between mb-3'>
+                    <h5 className='font-medium text-slate-900 text-lg'>{clinic.name}</h5>
+                    <div className='flex items-center space-x-2'>
+                      <Star className='w-5 h-5 text-yellow-500 fill-current' />
+                      <span className='font-medium text-slate-900 text-lg'>{clinic.rating}</span>
                     </div>
                   </div>
-                  <div className='flex items-center space-x-4 text-sm text-gray-600 mb-2'>
+                  <div className='flex items-center space-x-5 text-sm text-slate-600 mb-3 font-medium'>
                     <span>{clinic.totalReviews} reviews</span>
                     <span>{clinic.location}</span>
                     {clinic.verified && (
-                      <span className='flex items-center text-green-600'>
-                        <Shield className='w-3 h-3 mr-1' />
+                      <span className='flex items-center text-green-600 font-semibold'>
+                        <Shield className='w-4 h-4 mr-2' />
                         Verified
                       </span>
                     )}
                   </div>
-                  <div className='flex flex-wrap gap-1'>
+                  <div className='flex flex-wrap gap-2'>
                     {clinic.specializations.slice(0, 2).map((spec, idx) => (
-                      <span key={idx} className='px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full'>
+                      <span key={idx} className='px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium'>
                         {spec}
                       </span>
                     ))}
@@ -501,26 +526,28 @@ function ClinicManagementCTA() {
       viewport={{ once: true }}
       variants={fadeInUp}
     >
-      <div className={`${gradients.primary} rounded-3xl p-8 border border-blue-100`}>
-        <h3 className='text-2xl font-bold text-gray-900 mb-4'>Ready to Transform Your Veterinary Practice?</h3>
-        <p className='text-gray-600 mb-6 max-w-2xl mx-auto'>
+      <div className='bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-12 border border-slate-200/50 shadow-xl'>
+        <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
+          Ready to Transform Your Veterinary Practice?
+        </h3>
+        <p className='text-slate-600 mb-8 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
           Join the beta to access our comprehensive clinic management system with multi-role dashboards, advanced search
           capabilities, and verified review systems. Completely free for early adopters!
         </p>
-        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button
               size='lg'
-              className='bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg transition-colors'
+              className='bg-slate-900 hover:bg-slate-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1'
             >
               🏥 Join Clinic Beta (Free)
             </Button>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button
               variant='outline'
               size='lg'
-              className='border-2 border-slate-800 text-slate-800 hover:bg-slate-50 px-8 py-4 rounded-xl text-lg font-semibold transition-colors'
+              className='border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl'
             >
               📋 Request Demo
             </Button>
@@ -536,7 +563,7 @@ export function ClinicManagementSection() {
   // WARNING: This function is large and may be difficult to maintain.
   // Consider splitting each section into its own file/component.
   return (
-    <section className='py-20 bg-gray-50' id='clinic-management'>
+    <section className='py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50' id='clinic-management'>
       <Container size='xl'>
         <ClinicManagementHeader />
         <MultiRoleSystem />

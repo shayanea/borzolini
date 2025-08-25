@@ -33,15 +33,21 @@ interface FeatureIconProps {
 
 export function FeatureIcon({ icon, variant = 'blue', size = 'lg', className, ...props }: FeatureIconProps) {
   const variantClasses = {
-    blue: 'text-blue-600 bg-blue-600',
-    green: 'text-green-600 bg-green-600',
-    purple: 'text-purple-600 bg-purple-600',
-    orange: 'text-orange-600 bg-orange-600',
+    blue: 'text-blue-600 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200/50',
+    green: 'text-green-600 bg-gradient-to-br from-green-50 to-green-100 border border-green-200/50',
+    purple: 'text-purple-600 bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200/50',
+    orange: 'text-orange-600 bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200/50',
   };
 
   return (
-    <div className={cn('w-16 h-16 rounded-2xl flex items-center justify-center', variantClasses[variant], className)}>
-      <Icon icon={icon} size={size} className='text-white' {...props} />
+    <div
+      className={cn(
+        'w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm',
+        variantClasses[variant],
+        className
+      )}
+    >
+      <Icon icon={icon} size={size} {...props} />
     </div>
   );
 }

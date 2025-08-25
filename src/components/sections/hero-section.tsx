@@ -1,38 +1,37 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Award, Brain, DollarSign, Heart, Shield } from 'lucide-react';
+import { ArrowDown, Award, Brain, DollarSign, Heart, Shield, Sparkles } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
 import { useScrollTo } from '@/hooks/use-scroll-to';
-import { gradients } from '@/lib/design-system';
 
 // Animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
 
 const slideUp = {
   initial: { opacity: 0, y: 80 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: 'easeOut' },
+  transition: { duration: 1, ease: [0.4, 0, 0.2, 1] },
 };
 
 const scaleIn = {
   initial: { opacity: 0, scale: 0.8 },
   animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.6, ease: 'easeOut' },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -43,9 +42,10 @@ function HeroBadge() {
     <motion.div initial='initial' animate='animate' variants={fadeInUp}>
       <Badge
         variant='info'
-        className='bg-orange-50 text-orange-600 px-6 py-3 rounded-full border border-orange-200 text-base font-semibold'
+        className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 px-6 py-3 rounded-full border border-blue-200/50 text-sm font-semibold shadow-sm'
       >
-        🐾 Smart Pet Healthcare Platform for All Pets
+        <Sparkles className='w-4 h-4 text-blue-500' />
+        Smart Pet Healthcare Platform for All Pets
       </Badge>
     </motion.div>
   );
@@ -54,13 +54,14 @@ function HeroBadge() {
 function HeroTitle() {
   return (
     <motion.h1
-      className='text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight'
+      className='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-tight tracking-tight'
       initial='initial'
       animate='animate'
       variants={fadeInUp}
     >
-      Smart Pet Care Made <span className='text-blue-600'>Simple</span> for{' '}
-      <span className='text-orange-500'>All Pets</span>
+      Smart Pet Care Made{' '}
+      <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>Simple</span> for{' '}
+      <span className='bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent'>All Pets</span>
     </motion.h1>
   );
 }
@@ -68,7 +69,7 @@ function HeroTitle() {
 function HeroDescription() {
   return (
     <motion.p
-      className='text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl'
+      className='text-xl sm:text-2xl text-slate-600 leading-relaxed max-w-3xl font-medium'
       initial='initial'
       animate='animate'
       variants={fadeInUp}
@@ -82,14 +83,14 @@ function HeroDescription() {
 function CostSavingsHighlight() {
   return (
     <motion.div initial='initial' animate='animate' variants={fadeInUp}>
-      <Card className='bg-white rounded-2xl p-6 shadow-lg border border-gray-100'>
+      <Card className='bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200/50 shadow-lg hover:shadow-xl transition-all duration-300'>
         <div className='flex items-center gap-4'>
-          <div className='bg-green-100 p-3 rounded-full'>
+          <div className='bg-green-100 p-3 rounded-xl'>
             <DollarSign className='w-8 h-8 text-green-600' />
           </div>
           <div>
-            <p className='text-2xl font-bold text-green-600'>Better Care, Less Stress</p>
-            <p className='text-gray-600'>Find the right vet and get smart care tips instantly</p>
+            <p className='text-2xl font-bold text-green-700'>Better Care, Less Stress</p>
+            <p className='text-green-600 font-medium'>Find the right vet and get smart care tips instantly</p>
           </div>
         </div>
       </Card>
@@ -100,19 +101,19 @@ function CostSavingsHighlight() {
 function HeroCTAButtons() {
   return (
     <motion.div className='flex flex-col sm:flex-row gap-4' initial='initial' animate='animate' variants={fadeInUp}>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
         <Button
           size='lg'
-          className='bg-slate-800 hover:bg-slate-900 text-white shadow-lg text-base sm:text-lg px-6 py-3'
+          className='bg-slate-900 hover:bg-slate-800 text-white shadow-xl hover:shadow-2xl text-base sm:text-lg px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:-translate-y-1'
         >
           🐾 Get Care Tips for My Pet
         </Button>
       </motion.div>
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
         <Button
           variant='outline'
           size='lg'
-          className='border-2 border-slate-800 text-slate-800 hover:bg-slate-50 text-base sm:text-lg px-6 py-3'
+          className='border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 text-base sm:text-lg px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl'
         >
           📅 Find a Vet Nearby
         </Button>
@@ -123,22 +124,24 @@ function HeroCTAButtons() {
 
 function TrustIndicators() {
   const indicators = [
-    { icon: Shield, text: 'HIPAA Compliant' },
-    { icon: Award, text: 'Vet Approved' },
-    { icon: Heart, text: 'All Pet Breeds Supported' },
+    { icon: Shield, text: 'HIPAA Compliant', color: 'text-blue-600' },
+    { icon: Award, text: 'Vet Approved', color: 'text-green-600' },
+    { icon: Heart, text: 'All Pet Breeds Supported', color: 'text-pink-600' },
   ];
 
   return (
     <motion.div
-      className='flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-500'
+      className='flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 text-sm text-slate-500'
       initial='initial'
       animate='animate'
       variants={fadeInUp}
     >
-      {indicators.map(({ icon: Icon, text }, index) => (
-        <div key={index} className='flex items-center gap-2'>
-          <Icon className='w-5 h-5 flex-shrink-0' />
-          <span>{text}</span>
+      {indicators.map(({ icon: Icon, text, color }, index) => (
+        <div key={index} className='flex items-center gap-3'>
+          <div className={`p-2 rounded-lg bg-slate-100 ${color}`}>
+            <Icon className='w-5 h-5' />
+          </div>
+          <span className='font-medium'>{text}</span>
         </div>
       ))}
     </motion.div>
@@ -148,7 +151,7 @@ function TrustIndicators() {
 function HeroVisual() {
   return (
     <motion.div className='relative' initial='initial' animate='animate' variants={slideUp}>
-      <Card className='relative bg-white rounded-3xl shadow-2xl p-8'>
+      <Card className='relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-slate-200/50'>
         <HeroImage />
         <AIHealthDashboard />
       </Card>
@@ -160,12 +163,12 @@ function HeroVisual() {
 function HeroImage() {
   return (
     <div
-      className='w-full h-96 rounded-2xl bg-cover bg-center bg-no-repeat relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200'
+      className='w-full h-96 rounded-2xl bg-cover bg-center bg-no-repeat relative overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200'
       style={{
         backgroundImage: `url('/images/borzolini-hero.webp')`,
       }}
     >
-      <div className='absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent'></div>
+      <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent'></div>
       <div className='absolute bottom-4 left-4 text-white'>
         <p className='text-lg font-bold drop-shadow-lg'>Borzolini 😎</p>
         <p className='text-sm opacity-90 drop-shadow-md'>Our Pet Hero</p>
@@ -177,14 +180,14 @@ function HeroImage() {
 function AIHealthDashboard() {
   return (
     <motion.div
-      className='absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 max-w-xs'
+      className='absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-slate-200/50 max-w-xs'
       initial='initial'
       animate='animate'
       variants={scaleIn}
     >
       <div className='flex items-center gap-3 mb-4'>
-        <div className='w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center'>
-          <Brain className='w-6 h-6 text-slate-700' />
+        <div className='w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center'>
+          <Brain className='w-6 h-6 text-blue-600' />
         </div>
         <div>
           <p className='font-semibold text-slate-900'>Borzolini's Care Dashboard</p>
@@ -197,12 +200,12 @@ function AIHealthDashboard() {
           <span className='text-sm text-slate-600'>Early Detection Rate</span>
           <span className='text-lg font-bold text-green-600'>98%</span>
         </div>
-        <div className='w-full bg-gray-200 rounded-full h-2'>
-          <div className='bg-green-500 h-2 rounded-full w-full' />
+        <div className='w-full bg-slate-200 rounded-full h-2'>
+          <div className='bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full w-full' />
         </div>
       </div>
 
-      <div className='mt-4 p-3 bg-orange-50 rounded-lg border border-orange-200'>
+      <div className='mt-4 p-3 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200/50'>
         <p className='text-sm text-orange-700 font-medium'>
           💡 Care Tip: Water intake increased 15% - excellent for pet health!
         </p>
@@ -214,14 +217,16 @@ function AIHealthDashboard() {
 function FloatingStats() {
   return (
     <motion.div
-      className='absolute -top-6 -left-6 bg-white rounded-2xl shadow-lg p-4'
+      className='absolute -top-6 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 border border-slate-200/50'
       initial='initial'
       animate='animate'
       variants={scaleIn}
     >
       <div className='text-center'>
-        <p className='text-2xl font-bold text-orange-500'>98%</p>
-        <p className='text-sm text-gray-600'>Early Detection Rate</p>
+        <p className='text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent'>
+          98%
+        </p>
+        <p className='text-sm text-slate-600 font-medium'>Early Detection Rate</p>
       </div>
     </motion.div>
   );
@@ -239,7 +244,7 @@ function ScrollIndicator() {
     >
       <button
         onClick={() => scrollToSection('features')}
-        className='text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full hover:bg-white/20'
+        className='text-slate-400 hover:text-slate-600 transition-colors p-3 rounded-full hover:bg-white/20 backdrop-blur-sm'
         aria-label='Scroll to features'
       >
         <ArrowDown className='w-6 h-6 animate-bounce' />
@@ -251,11 +256,11 @@ function ScrollIndicator() {
 // Main Hero Section Component
 export function HeroSection() {
   return (
-    <section className={`relative pt-20 pb-20 ${gradients.hero} flex items-center overflow-hidden`}>
+    <section className='relative pt-24 pb-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center overflow-hidden'>
       <Container size='xl' className='relative z-10'>
-        <div className='grid lg:grid-cols-2 gap-12 items-center'>
+        <div className='grid lg:grid-cols-2 gap-16 items-center'>
           {/* Left Column - Content */}
-          <motion.div className='space-y-8' initial='initial' animate='animate' variants={staggerContainer}>
+          <motion.div className='space-y-10' initial='initial' animate='animate' variants={staggerContainer}>
             <HeroBadge />
             <HeroTitle />
             <HeroDescription />
