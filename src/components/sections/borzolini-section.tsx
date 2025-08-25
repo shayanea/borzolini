@@ -83,7 +83,7 @@ export function BorzoliniSection() {
                 <Heart className='w-8 h-8 text-blue-600' />
               </div>
               <h4 className='font-semibold text-slate-900 text-lg mb-2'>All Pets Welcome</h4>
-              <p className='text-slate-600 text-sm'>Dogs, cats, birds, reptiles, and exotic pets</p>
+              <p className='text-slate-600 text-sm'>Dogs, pets, birds, reptiles, and exotic pets</p>
             </div>
           </motion.div>
 
@@ -113,7 +113,7 @@ export function BorzoliniSection() {
                 <Sparkles className='w-8 h-8 text-orange-600' />
               </div>
               <h4 className='font-semibold text-slate-900 text-lg mb-2'>Always Available</h4>
-              <p className='text-slate-600 text-sm'>24/7 access to care resources</p>
+              <p className='text-slate-600 text-sm'>24/7 access to care resources for all pets</p>
             </div>
           </motion.div>
         </motion.div>
@@ -147,13 +147,13 @@ export function BorzoliniSection() {
                 {/* Enhanced overlay gradient */}
                 <div className='absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/20 to-transparent'></div>
 
-                {/* Cat info overlay with trendy Poppins font */}
+                {/* Pet info overlay with trendy Poppins font */}
                 <div className='absolute bottom-6 left-6 text-white'>
                   <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>
                     Borzolini <Sparkles className='inline w-7 h-7 text-yellow-400' />
                   </h3>
                   <p className='text-xl opacity-95 font-poppins font-semibold drop-shadow-md'>
-                    Cat • Male • 8 months old
+                    Beloved Companion • 8 months old
                   </p>
                   <p className='text-base opacity-85 mt-2 font-poppins font-medium drop-shadow-md'>
                     The inspiration behind Borzolini
@@ -276,7 +276,7 @@ export function BorzoliniSection() {
                   <div className='flex justify-between items-center bg-white/50 rounded-lg p-3'>
                     <div>
                       <span className='font-medium text-slate-800'>City Vet Hospital</span>
-                      <p className='text-slate-600'>Cat specialist • 1.2 miles</p>
+                      <p className='text-slate-600'>Pet specialist • 1.2 miles</p>
                     </div>
                     <span className='font-medium text-blue-600'>
                       4.7

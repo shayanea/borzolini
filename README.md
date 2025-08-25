@@ -1,8 +1,8 @@
-# 🐱 Borzolini - AI-Powered Pet Healthcare for Pets.
+# 🐾 Borzolini - AI-Powered Pet Healthcare for All Pets.
 
-> **Named after Borzolini, our cat pioneer** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
+> **Named after Borzolini, our beloved companion** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
 
-![Borzolini Logo](https://img.shields.io/badge/Borzolini-Persian%20Cat%20Care-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyUzYuNDggMjIgMTIgMjJTMjIgMTcuNTIgMjIgMTJTMTcuNTIgMiAxMiAyWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K)
+![Borzolini Logo](https://img.shields.io/badge/Borzolini-All%20Pet%20Care-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyUzYuNDggMjIgMTIgMjJTMjIgMTcuNTIgMjIgMTJTMTcuNTIgMiAxMiAyWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K)
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
@@ -10,7 +10,7 @@
 
 ## 🌟 About Borzolini
 
-**Borzolini** is an AI-powered pet healthcare platform specifically designed for pets. Named after our beloved cat **Borzolini**, this platform makes pet care simple through:
+**Borzolini** is an AI-powered pet healthcare platform designed for all pets. Named after our beloved companion **Borzolini**, this platform makes pet care simple through:
 
 - 🤖 **AI Care Recommendations** - Personalized daily care tips for pets
 - 📅 **Smart Appointment Scheduling** - Easy vet booking with pets specialists
@@ -28,11 +28,11 @@
 
 ### Pet Specialization
 
-- Breed-specific health patterns and care routines
-- Dental care reminders (Pet are prone to dental issues)
-- Grooming schedules for long coats
-- Eye care tracking for tear staining prevention
-- Respiratory health monitoring for flat-faced breeds
+- Breed-specific health patterns and care routines for all pets
+- Dental care reminders (pets are prone to dental issues)
+- Grooming schedules and maintenance
+- Health monitoring and preventive care
+- Personalized care recommendations
 
 ## 🛠️ Tech Stack
 
@@ -115,7 +115,7 @@ web/
 ### Color Palette
 
 - **Primary Navy**: `#14213d` - Trust and healthcare authority
-- **Accent Orange**: `#fca311` - Warmth and energy 
+- **Accent Orange**: `#fca311` - Warmth and energy
 - **Pure White**: `#ffffff` - Clarity and cleanliness
 - **Success Green**: `#059669` - Health and positive outcomes
 
@@ -126,16 +126,16 @@ web/
 - **Body**: 400 weight
 - **Mobile-first**: Responsive font scaling
 
-## 🐱 The Borzolini Story
+## 🐾 The Borzolini Story
 
-Borzolini was inspired by **Borzolini**, a cat whose healthcare journey highlighted the need for:
+Borzolini was inspired by **Borzolini**, a beloved companion whose healthcare journey highlighted the need for:
 
 - Breed-specific care guidance
 - Easy access to specialized veterinarians
 - Reliable clinic quality information
 - Proactive health management
 
-_"Borzolini isn't just a pet - he's the inspiration and beta tester for the future of cat healthcare!"_
+_"Borzolini isn't just a companion - they're the inspiration and beta tester for the future of pet healthcare!"_
 
 ## 🚀 Deployment
 
@@ -182,7 +182,7 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 - [x] Landing page with core features
 - [x] Responsive design
 - [x] Borzolini case study showcase
-- [x] Pet specialization messaging
+- [x] Pet specialization messaging for all pets
 
 ### Phase 2 - Core Platform
 
@@ -212,5 +212,5 @@ This project is private and proprietary to Borzolini.
 
 <div align="center">
   <strong>Made with ❤️ for pets everywhere</strong><br>
-  <em>Inspired by Borzolini 🐱</em>
+  <em>Inspired by Borzolini 🐾</em>
 </div>

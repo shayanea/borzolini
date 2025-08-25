@@ -118,7 +118,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah M.',
     role: "Luna's Mom",
     petName: 'Luna',
-    petBreed: 'Persian Cat',
+    petBreed: 'All Pets',
     avatar: '/images/testimonial-1.jpg',
     content:
       "The AI detected Luna's kidney issues 4 months before any symptoms appeared. We started preventive treatment early and saved over $3,000 in emergency costs. Luna is healthy and happy!",
@@ -186,7 +186,7 @@ export const FAQ_ITEMS = [
     id: 'breeds',
     question: 'What breeds does the AI specialize in?',
     answer:
-      "We're starting with Persian cats (like Borzolini!) and expanding to other breeds. Our AI has specialized knowledge of breed-specific health patterns, genetic predispositions, and optimal care routines. We'll be adding more breeds based on user demand.",
+      "Our AI-powered platform serves all pets with specialized knowledge of breed-specific health patterns, genetic predispositions, and optimal care routines. We're continuously expanding our knowledge base to cover more breeds and species.",
   },
   {
     id: 'savings',

@@ -2,7 +2,7 @@
 
 ## Borzolini Hero Image
 
-Please save the British Shorthair cat image with sunglasses as:
+Please save the pet image with sunglasses as:
 `borzolini-hero.webp`
 
 This image will be used as the background in both the Hero and Borzolini sections of the landing page.

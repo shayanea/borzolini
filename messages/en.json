@@ -4,7 +4,7 @@
     "title": "Transform Your Pet's Healthcare from {reactive} to {predictive}",
     "reactive": "Reactive",
     "predictive": "Predictive",
-    "description": "AI monitors your pet's health 24/7, predicts problems before they happen, and connects you with trusted veterinarians. Starting with Persian cats like Borzolini!",
+    "description": "AI monitors your pet's health 24/7, predicts problems before they happen, and connects you with trusted veterinarians. Starting with Borzolini!",
     "savings": "Save $2,000+ Annually",
     "savingsDescription": "Through predictive care vs emergency treatments",
     "ctaPrimary": "🐱 Start Borzolini's AI Health Journey",
@@ -12,7 +12,7 @@
     "trustIndicators": {
       "hipaa": "HIPAA Compliant",
       "vetApproved": "Vet Approved",
-      "catSpecialized": "Cat Specialized"
+      "petSpecialized": "Pet Specialized"
     }
   },
   "features": {
@@ -45,10 +45,10 @@
   },
   "borzolini": {
     "badge": "🐱 Meet Our AI Pioneer",
-    "title": "Borzolini: The World's First Cat with AI Healthcare",
-    "description": "See how AI transforms Persian cat care through real-time health monitoring and predictive insights",
+    "title": "Borzolini: The World's First Pet with AI Healthcare",
+    "description": "See how AI transforms pet care through real-time health monitoring and predictive insights",
     "name": "Borzolini 🐱",
-    "details": "Persian Mix • Male • 8 months old",
+    "details": "Beloved Companion • 8 months old",
     "healthScore": "Overall Health Score",
     "aiInsights": "🤖 AI Insights This Week",
     "predictiveAlerts": "Predictive Health Alerts"

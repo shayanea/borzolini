@@ -8,7 +8,7 @@ import { animations, commonAnimationProps } from '@/lib/animations';
 const borzoliniFeatures = [
   {
     title: 'All Pets Welcome',
-    description: 'Dogs, cats, birds, reptiles, and exotic pets',
+    description: 'Dogs, pets, birds, reptiles, and exotic pets',
     icon: Heart,
     bgColor: 'bg-blue-100',
     iconColor: 'text-blue-600',

@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Calendar, Shield, Sparkles } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Container } from '@/components/ui/container';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -14,7 +14,7 @@ const fadeInUp = {
 
 export function CTASection() {
   return (
-    <section className='py-24 bg-gradient-to-br from-slate-50 to-blue-50'>
+    <section className='py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800'>
       <Container>
         <motion.div
           className='text-center max-w-4xl mx-auto'
@@ -36,17 +36,17 @@ export function CTASection() {
           </motion.div>
 
           <motion.h2
-            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight'
+            className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight'
             variants={fadeInUp}
           >
             Ready to Give Your Pet the{' '}
-            <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
+            <span className='bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent'>
               Best Care
             </span>{' '}
             Possible?
           </motion.h2>
 
-          <motion.p className='text-xl text-slate-600 mb-8 max-w-2xl mx-auto' variants={fadeInUp}>
+          <motion.p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto' variants={fadeInUp}>
             Join thousands of pet owners who trust our platform for smarter, more affordable pet healthcare.
           </motion.p>
 
@@ -61,7 +61,7 @@ export function CTASection() {
             }}
           >
             <motion.div
-              className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50'
+              className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 shadow-xl'
               variants={fadeInUp}
             >
               <div className='w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -72,7 +72,7 @@ export function CTASection() {
             </motion.div>
 
             <motion.div
-              className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50'
+              className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 shadow-xl'
               variants={fadeInUp}
             >
               <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -83,7 +83,7 @@ export function CTASection() {
             </motion.div>
 
             <motion.div
-              className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50'
+              className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 shadow-xl'
               variants={fadeInUp}
             >
               <div className='w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>

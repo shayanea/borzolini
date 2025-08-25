@@ -107,7 +107,7 @@ export function Footer() {
           variants={fadeInUp}
         >
           <p className='text-slate-400 text-base font-medium'>
-            © 2024 Borzolini. All rights reserved. Named after Borzolini 🐱
+            © 2024 Borzolini. All rights reserved. Named after Borzolini 🐾
           </p>
           <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-sm text-slate-400 mt-6 md:mt-0'>
             <span className='flex items-center gap-3 bg-slate-800/50 px-4 py-2 rounded-lg'>

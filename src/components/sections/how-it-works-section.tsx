@@ -113,7 +113,7 @@ export function HowItWorksSection() {
                 </div>
                 <div className='text-left'>
                   <div className='text-3xl font-bold text-slate-900'>24/7</div>
-                  <div className='text-slate-600 font-medium'>Support available</div>
+                  <div className='text-slate-600 font-medium'>AI health monitoring</div>
                 </div>
               </div>
               <div className='flex items-center gap-4'>

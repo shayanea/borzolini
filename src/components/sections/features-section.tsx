@@ -32,7 +32,7 @@ const FeaturesHeader = (): React.JSX.Element => {
         </span>
       </h2>
       <p className='text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
-        Get personalized recommendations, easy vet scheduling, and quality clinic ratings - for dogs, cats, and all
+        Get personalized recommendations, easy vet scheduling, and quality clinic ratings - for dogs, pets, and all
         beloved pets
       </p>
     </motion.div>

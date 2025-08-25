@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'veterinary',
     'all pets',
     'dogs',
-    'cats',
+    'pets',
     'appointment scheduling',
     'clinic ratings',
     'Borzolini',

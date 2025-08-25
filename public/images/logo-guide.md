@@ -109,9 +109,9 @@ Usage examples:
 
 ### **Concept 2: "Borzolini Silhouette"**
 
-- Minimalist cat silhouette with medical cross
+- Minimalist pet silhouette with medical cross
 - More personal, honors the inspiration
-- Colors: Orange cat + Navy cross
+- Colors: Orange pet + Navy cross
 
 ### **Concept 3: "Digital Paw"**
 
