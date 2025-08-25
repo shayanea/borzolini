@@ -14,7 +14,7 @@ const fadeInUp = {
 
 export function CTASection() {
   return (
-    <section className='py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800'>
+    <section className='py-24 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700'>
       <Container>
         <motion.div
           className='text-center max-w-4xl mx-auto'
