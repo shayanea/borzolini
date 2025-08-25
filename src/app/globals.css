@@ -113,7 +113,17 @@ html {
 }
 
 body {
-  background: var(--background);
+  /* Minimal subtle pattern background */
+  background-color: var(--background);
+  background-image:
+    radial-gradient(rgba(2, 6, 23, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(2, 6, 23, 0.03) 1px, transparent 1px);
+  background-position:
+    0 0,
+    12px 12px;
+  background-size:
+    24px 24px,
+    24px 24px;
   color: var(--text-primary);
   font-family:
     var(--font-inter),
@@ -129,6 +139,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar */
@@ -268,13 +283,4 @@ h3 {
 /* Modern Transitions */
 .transition-modern {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Modern Spacing */
-.section-padding {
-  @apply py-16 sm:py-20 lg:py-24;
-}
-
-.section-margin {
-  @apply my-16 sm:my-20 lg:my-24;
 }
