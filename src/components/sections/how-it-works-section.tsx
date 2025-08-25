@@ -1,44 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Brain, Calendar, CheckCircle, Clock, Shield, Sparkles, Users } from 'lucide-react';
+import { Brain, Calendar, Clock, Search, Shield, Sparkles, Users } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
-
-const steps = [
-  {
-    icon: CheckCircle,
-    title: '1. Add Your Pet',
-    description: 'Create a profile for your pet with breed, age, and health history',
-    color: 'from-blue-500 to-blue-600',
-    bgColor: 'bg-gradient-to-br from-blue-50 to-blue-100',
-    borderColor: 'border-blue-200/50',
-  },
-  {
-    icon: Brain,
-    title: '2. Get Smart Tips',
-    description: "Receive personalized care recommendations based on your pet's profile",
-    color: 'from-green-500 to-green-600',
-    bgColor: 'bg-gradient-to-br from-green-50 to-green-100',
-    borderColor: 'border-green-200/50',
-  },
-  {
-    icon: Calendar,
-    title: '3. Schedule Appointments',
-    description: "Book vet consultations with specialists who understand your pet's needs",
-    color: 'from-purple-500 to-purple-600',
-    bgColor: 'bg-gradient-to-br from-purple-50 to-purple-100',
-    borderColor: 'border-purple-200/50',
-  },
-  {
-    icon: Shield,
-    title: '4. Track Progress',
-    description: "Monitor your pet's health improvements and care milestones",
-    color: 'from-orange-500 to-orange-600',
-    bgColor: 'bg-gradient-to-br from-orange-50 to-orange-100',
-    borderColor: 'border-orange-200/50',
-  },
-];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -82,32 +47,44 @@ export function HowItWorksSection() {
         </motion.div>
 
         <motion.div
-          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 px-4 sm:px-0'
+          className='grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            return (
-              <motion.div
-                key={index}
-                className={`${step.bgColor} rounded-2xl p-8 border ${step.borderColor} text-center shadow-sm hover:shadow-lg transition-all duration-300`}
-                variants={fadeInUp}
-                whileHover={{ scale: 1.02, y: -4, transition: { duration: 0.3 } }}
-              >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
-                >
-                  <IconComponent className='w-8 h-8 text-white' />
-                </div>
+          <motion.div className='text-center group' variants={fadeInUp}>
+            <div className='w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+              <Search className='w-10 h-10 text-blue-600' />
+            </div>
+            <h3 className='text-2xl font-bold text-slate-900 mb-4'>Find Your Perfect Vet</h3>
+            <p className='text-slate-600 leading-relaxed'>
+              Search through our curated list of top-rated veterinary clinics, filtered by location, specialty, and pet
+              type.
+            </p>
+          </motion.div>
 
-                <h3 className='text-xl font-bold text-slate-900 mb-4 leading-tight'>{step.title}</h3>
-                <p className='text-slate-600 font-medium leading-relaxed'>{step.description}</p>
-              </motion.div>
-            );
-          })}
+          <motion.div className='text-center group' variants={fadeInUp}>
+            <div className='w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+              <Calendar className='w-10 h-10 text-green-600' />
+            </div>
+            <h3 className='text-2xl font-bold text-slate-900 mb-4'>Book Appointments Instantly</h3>
+            <p className='text-slate-600 leading-relaxed'>
+              Schedule visits with real-time availability, get reminders, and manage your pet's care calendar
+              effortlessly.
+            </p>
+          </motion.div>
+
+          <motion.div className='text-center group' variants={fadeInUp}>
+            <div className='w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+              <Brain className='w-10 h-10 text-purple-600' />
+            </div>
+            <h3 className='text-2xl font-bold text-slate-900 mb-4'>Get Smart Care Tips</h3>
+            <p className='text-slate-600 leading-relaxed'>
+              Receive personalized health recommendations, nutrition advice, and preventive care reminders tailored to
+              your pet.
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Trust indicators */}

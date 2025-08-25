@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Brain, Calendar, Heart, Zap } from 'lucide-react';
+import { Brain, Calendar, Heart, Lightbulb, Shield, Sparkles, Star, Zap } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
 
@@ -30,24 +30,92 @@ export function BorzoliniSection() {
     <section className='py-24 bg-gradient-to-br from-purple-50 via-white to-blue-50' id='borzolini'>
       <Container>
         <motion.div
-          className='text-center mb-16 lg:mb-20'
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
-          variants={fadeInUp}
+          variants={staggerContainer}
         >
-          <div className='inline-flex items-center gap-2 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 px-6 py-3 rounded-full border border-orange-200/50 text-sm font-semibold shadow-sm mb-6'>
-            🐾 Meet Our Beta Tester
-          </div>
-          <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight'>
-            Meet{' '}
-            <span className='bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent'>Borzolini</span>{' '}
-            : Our Pet Beta Tester
-          </h2>
-          <p className='text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
-            See how Borzolini helps Borzolini get better care through smart recommendations, easy vet scheduling, and
-            quality clinic ratings. Simple, effective, and made for all pets!
-          </p>
+          <motion.div variants={fadeInUp}>
+            <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6'>
+              Meet{' '}
+              <span className='bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent'>
+                Borzolini
+              </span>
+              , Our Pet Care Hero
+            </h2>
+            <p className='text-xl text-slate-600 leading-relaxed mb-8'>
+              Borzolini represents everything we believe about pet care - it should be smart, accessible, and tailored
+              to each unique companion. Our platform brings that vision to life.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeInLeft}>
+            <div className='relative'>
+              <div
+                className='w-full h-96 rounded-3xl bg-cover bg-center bg-no-repeat shadow-2xl'
+                style={{
+                  backgroundImage: `url('/images/borzolini-hero.webp')`,
+                }}
+              >
+                <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent rounded-3xl'></div>
+                <div className='absolute bottom-6 left-6 text-white'>
+                  <p className='text-2xl font-bold drop-shadow-lg'>
+                    Borzolini <Sparkles className='inline w-6 h-6 text-yellow-400' />
+                  </p>
+                  <p className='text-lg opacity-90 drop-shadow-md'>Our Pet Hero</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Heart className='w-8 h-8 text-blue-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>All Pets Welcome</h4>
+              <p className='text-slate-600 text-sm'>Dogs, cats, birds, reptiles, and exotic pets</p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Shield className='w-8 h-8 text-green-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>Vet Verified</h4>
+              <p className='text-slate-600 text-sm'>All recommendations reviewed by professionals</p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Brain className='w-8 h-8 text-purple-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>AI Powered</h4>
+              <p className='text-slate-600 text-sm'>Smart insights for better pet health</p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Sparkles className='w-8 h-8 text-orange-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>Always Available</h4>
+              <p className='text-slate-600 text-sm'>24/7 access to care resources</p>
+            </div>
+          </motion.div>
         </motion.div>
 
         <div className='bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto border border-slate-200/50'>
@@ -81,7 +149,9 @@ export function BorzoliniSection() {
 
                 {/* Cat info overlay with trendy Poppins font */}
                 <div className='absolute bottom-6 left-6 text-white'>
-                  <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>Borzolini 😎</h3>
+                  <h3 className='text-3xl font-bold mb-2 font-poppins drop-shadow-lg'>
+                    Borzolini <Sparkles className='inline w-7 h-7 text-yellow-400' />
+                  </h3>
                   <p className='text-xl opacity-95 font-poppins font-semibold drop-shadow-md'>
                     Cat • Male • 8 months old
                   </p>
@@ -117,15 +187,22 @@ export function BorzoliniSection() {
                   <span className='text-2xl font-bold text-blue-600'>Dr. Smith</span>
                 </div>
                 <div className='bg-blue-100/50 rounded-lg p-3'>
-                  <p className='text-sm text-blue-800 font-medium'>📅 Scheduled for March 15, 2024</p>
-                  <p className='text-sm text-blue-600'>Pet care specialist • 4.9★ rating</p>
+                  <p className='text-sm text-blue-800 font-medium'>
+                    <Calendar className='inline w-4 h-4 mr-1' />
+                    Scheduled for March 15, 2024
+                  </p>
+                  <p className='text-sm text-blue-600'>
+                    Pet care specialist • 4.9
+                    <Star className='inline w-3 h-3 ml-1 text-yellow-500' /> rating
+                  </p>
                 </div>
               </motion.div>
 
               {/* AI Insights */}
               <motion.div className='space-y-4' variants={staggerContainer}>
                 <motion.h4 className='font-semibold text-slate-900 text-lg' variants={fadeInUp}>
-                  💡 Smart Care Recommendations
+                  <Lightbulb className='inline w-4 h-4 mr-1 text-yellow-500' />
+                  Smart Care Recommendations
                 </motion.h4>
 
                 <motion.div
@@ -191,21 +268,30 @@ export function BorzoliniSection() {
                       <span className='font-medium text-slate-800'>Dr. Smith's Pet Clinic</span>
                       <p className='text-slate-600'>All pets specialist • 0.8 miles</p>
                     </div>
-                    <span className='font-medium text-green-600'>4.9★</span>
+                    <span className='font-medium text-green-600'>
+                      4.9
+                      <Star className='inline w-3 h-3 ml-1 text-yellow-500' />
+                    </span>
                   </div>
                   <div className='flex justify-between items-center bg-white/50 rounded-lg p-3'>
                     <div>
                       <span className='font-medium text-slate-800'>City Vet Hospital</span>
                       <p className='text-slate-600'>Cat specialist • 1.2 miles</p>
                     </div>
-                    <span className='font-medium text-blue-600'>4.7★</span>
+                    <span className='font-medium text-blue-600'>
+                      4.7
+                      <Star className='inline w-3 h-3 ml-1 text-yellow-500' />
+                    </span>
                   </div>
                   <div className='flex justify-between items-center bg-white/50 rounded-lg p-3'>
                     <div>
                       <span className='font-medium text-slate-800'>Paws & Claws Clinic</span>
                       <p className='text-slate-600'>General vet • 0.5 miles</p>
                     </div>
-                    <span className='font-medium text-orange-600'>4.5★</span>
+                    <span className='font-medium text-orange-600'>
+                      4.5
+                      <Star className='inline w-3 h-3 ml-1 text-yellow-500' />
+                    </span>
                   </div>
                 </div>
               </motion.div>

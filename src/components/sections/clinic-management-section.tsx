@@ -3,7 +3,9 @@
 import { motion } from 'framer-motion';
 import {
   Award,
+  Brain,
   Building2,
+  Calendar,
   CheckCircle,
   Clock,
   Globe,
@@ -12,7 +14,6 @@ import {
   Search,
   Settings,
   Shield,
-  Sparkles,
   Star,
   Stethoscope,
   UserCheck,
@@ -46,6 +47,12 @@ const slideInLeft = {
 
 const slideInRight = {
   initial: { opacity: 0, x: 60 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+};
+
+const fadeInLeft = {
+  initial: { opacity: 0, x: -60 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
 };
@@ -95,40 +102,12 @@ const mockClinics = [
 
 // --- Section Components ---
 
-function ClinicManagementHeader() {
-  return (
-    <motion.div
-      className='text-center mb-20'
-      initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
-      variants={fadeInUp}
-    >
-      <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 px-6 py-3 rounded-full border border-blue-200/50 text-sm font-semibold shadow-sm mb-8'>
-        <Sparkles className='w-4 h-4 text-blue-500' />
-        Clinic Management
-      </div>
-      <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight tracking-tight'>
-        Comprehensive{' '}
-        <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-          Clinic Management
-        </span>{' '}
-        System
-      </h2>
-      <p className='text-xl sm:text-2xl text-slate-600 max-w-5xl mx-auto px-4 font-medium leading-relaxed'>
-        Our advanced clinic management platform provides everything you need to run a successful veterinary practice.
-        From multi-role dashboards to comprehensive service management, we've got you covered.
-      </p>
-    </motion.div>
-  );
-}
-
 function MultiRoleSystem() {
   const roles = [
     {
       role: 'Admin',
       icon: Settings,
-      color: 'blue',
+      color: 'yellow',
       features: ['Clinic Management', 'Staff Oversight', 'Financial Reports', 'System Configuration'],
     },
     {
@@ -147,8 +126,8 @@ function MultiRoleSystem() {
   return (
     <motion.div className='mb-24' initial='initial' whileInView='animate' viewport={{ once: true }} variants={fadeInUp}>
       <div className='text-center mb-16'>
-        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl mb-6 shadow-lg'>
-          <Building2 className='w-10 h-10 text-blue-600' />
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl mb-6 shadow-lg'>
+          <Building2 className='w-10 h-10 text-yellow-600' />
         </div>
         <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>Multi-Role Clinic System</h3>
         <p className='text-slate-600 max-w-3xl mx-auto text-lg font-medium leading-relaxed'>
@@ -164,7 +143,7 @@ function MultiRoleSystem() {
             whileInView='animate'
             viewport={{ once: true }}
           >
-            <Card className='p-8 text-center border-2 hover:border-blue-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-2'>
+            <Card className='p-8 text-center border-2 hover:border-yellow-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-2'>
               <div
                 className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-${role.color}-100 to-${role.color}-200 rounded-2xl mb-6 shadow-lg`}
               >
@@ -502,7 +481,10 @@ function ReviewAndRatingSystem() {
                   </div>
                   <div className='flex flex-wrap gap-2'>
                     {clinic.specializations.slice(0, 2).map((spec, idx) => (
-                      <span key={idx} className='px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium'>
+                      <span
+                        key={idx}
+                        className='px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full font-medium'
+                      >
                         {spec}
                       </span>
                     ))}
@@ -526,7 +508,7 @@ function ClinicManagementCTA() {
       viewport={{ once: true }}
       variants={fadeInUp}
     >
-      <div className='bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-12 border border-slate-200/50 shadow-xl'>
+      <div className='bg-gradient-to-r from-slate-50 to-yellow-50 rounded-3xl p-12 border border-slate-200/50 shadow-xl'>
         <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>
           Ready to Transform Your Veterinary Practice?
         </h3>
@@ -534,22 +516,13 @@ function ClinicManagementCTA() {
           Join the beta to access our comprehensive clinic management system with multi-role dashboards, advanced search
           capabilities, and verified review systems. Completely free for early adopters!
         </p>
-        <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+        <div className='flex justify-center'>
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button
               size='lg'
               className='bg-slate-900 hover:bg-slate-800 text-white px-10 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1'
             >
               🏥 Join Clinic Beta (Free)
-            </Button>
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Button
-              variant='outline'
-              size='lg'
-              className='border-2 border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl'
-            >
-              📋 Request Demo
             </Button>
           </motion.div>
         </div>
@@ -563,9 +536,82 @@ export function ClinicManagementSection() {
   // WARNING: This function is large and may be difficult to maintain.
   // Consider splitting each section into its own file/component.
   return (
-    <section className='py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50' id='clinic-management'>
+    <section className='py-24 bg-gradient-to-br from-slate-50 via-white to-yellow-50' id='clinic-management'>
       <Container size='xl'>
-        <ClinicManagementHeader />
+        <motion.div
+          className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp}>
+            <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6'>
+              Smart{' '}
+              <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
+                Clinic Management
+              </span>{' '}
+              for Modern Vets
+            </h2>
+            <p className='text-xl text-slate-600 leading-relaxed mb-8'>
+              Streamline your veterinary practice with intelligent scheduling, patient management, and automated care
+              recommendations. Focus on what matters most - your patients.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeInLeft}>
+            <div className='relative'>
+              <div className='w-full h-96 rounded-3xl bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50 shadow-xl flex items-center justify-center'>
+                <div className='text-center'>
+                  <div className='w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-6'>
+                    <Calendar className='w-12 h-12 text-blue-600' />
+                  </div>
+                  <h3 className='text-2xl font-bold text-slate-900 mb-2'>Smart Scheduling</h3>
+                  <p className='text-slate-600'>AI-powered appointment optimization</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Calendar className='w-8 h-8 text-blue-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>Smart Scheduling</h4>
+              <p className='text-slate-600 text-sm'>AI-optimized appointment booking</p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Users className='w-8 h-8 text-green-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>Patient Management</h4>
+              <p className='text-slate-600 text-sm'>Comprehensive health records</p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <div className='text-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 hover:shadow-lg transition-shadow duration-200'>
+              <div className='w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                <Brain className='w-8 h-8 text-purple-600' />
+              </div>
+              <h4 className='font-semibold text-slate-900 text-lg mb-2'>AI Insights</h4>
+              <p className='text-slate-600 text-sm'>Predictive care recommendations</p>
+            </div>
+          </motion.div>
+        </motion.div>
+
         <MultiRoleSystem />
         <AdvancedSearchAndFiltering />
         <StaffManagement />
