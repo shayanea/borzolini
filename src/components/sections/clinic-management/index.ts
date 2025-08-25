@@ -1,6 +1,7 @@
+export { AdvancedSearchAndFiltering } from './advanced-search-filtering';
+export { ClinicManagementCTA } from './clinic-management-cta';
 export { ClinicManagementSection } from './clinic-management-section';
-export { ReviewSystemSection } from './review-system-section';
-export { FeatureBenefitsSection } from './feature-benefits-section';
-export { ClinicCard } from './clinic-card';
-export { ReviewFeatureItem } from './review-feature-item';
-export { FeatureBenefitItem } from './feature-benefit-item';
+export { MultiRoleSystem } from './multi-role-system';
+export { ReviewAndRatingSystem } from './review-rating-system';
+export { ServiceCategories } from './service-categories';
+export { StaffManagement } from './staff-management';

@@ -1,9 +1,9 @@
 import './globals.css';
 
-import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
 import { Header } from '@/components/sections/header';
+import type { Metadata } from 'next';
 
 const inter = Inter({
   variable: '--font-inter',

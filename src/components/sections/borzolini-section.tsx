@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Brain, Calendar, Heart, Lightbulb, Shield, Sparkles, Star, Zap } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },

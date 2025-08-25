@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Heart, Lightbulb, Shield, Zap } from 'lucide-react';
-
 import { animations, commonAnimationProps } from '@/lib/animations';
+
+import { motion } from 'framer-motion';
 
 const borzoliniFeatures = [
   {

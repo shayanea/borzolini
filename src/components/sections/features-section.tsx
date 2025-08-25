@@ -1,13 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Award, Brain, Calendar, MessageCircle, Sparkles } from 'lucide-react';
-
-import { FeatureCard } from '@/components/ui/card';
-import { Container } from '@/components/ui/container';
-import { FeatureIcon } from '@/components/ui/icon';
-import { FEATURES } from '@/constants';
 import { animations, commonAnimationProps } from '@/lib/animations';
+
+import { Container } from '@/components/ui/container';
+import { FEATURES } from '@/constants';
+import { FeatureCard } from '@/components/ui/card';
+import { FeatureIcon } from '@/components/ui/icon';
+import { motion } from 'framer-motion';
 
 const iconMap = {
   Brain,
