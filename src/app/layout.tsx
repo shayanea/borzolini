@@ -3,8 +3,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
-import { Header } from '@/components/sections/header';
-
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
@@ -83,10 +81,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log('🔍 ROOT LAYOUT DEBUG: Root layout function called');
+  console.log('🔍 ROOT LAYOUT DEBUG: Children:', children);
+
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>
-        <Header />
         {children}
       </body>
     </html>

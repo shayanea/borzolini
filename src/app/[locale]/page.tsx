@@ -8,6 +8,8 @@ import { HowItWorksSection } from '@/components/sections/how-it-works-section';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 
 export default function HomePage() {
+  console.log('🔍 LOCALE PAGE DEBUG: HomePage function called');
+
   return (
     <ErrorBoundary>
       <main className='min-h-screen'>
