@@ -51,10 +51,10 @@
     "docker:stop": "./scripts/docker.sh stop",
     "docker:clean": "./scripts/docker.sh clean",
     "docker:logs": "./scripts/docker.sh logs",
-    "analytics:start": "docker-compose -f docker-compose.analytics.yml --profile analytics up -d",
-    "analytics:stop": "docker-compose -f docker-compose.analytics.yml down",
-    "analytics:logs": "docker-compose -f docker-compose.analytics.yml logs -f",
-    "analytics:restart": "docker-compose -f docker-compose.analytics.yml restart"
+    "analytics:start": "docker compose -f docker-compose.analytics.yml --profile analytics up -d",
+    "analytics:stop": "docker compose -f docker-compose.analytics.yml down",
+    "analytics:logs": "docker compose -f docker-compose.analytics.yml logs -f",
+    "analytics:restart": "docker compose -f docker-compose.analytics.yml restart"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

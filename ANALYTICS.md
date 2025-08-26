@@ -26,7 +26,7 @@ This document explains how to set up and use analytics tracking in your Borzolin
 
 ```bash
 # Start Umami with Docker Compose
-docker-compose -f docker-compose.analytics.yml --profile analytics up -d
+docker compose -f docker-compose.analytics.yml --profile analytics up -d
 
 # Access Umami dashboard at: http://localhost:3001
 ```
@@ -235,7 +235,7 @@ function PrivacySettings() {
 
 ```bash
 # Build and run Umami in production
-docker-compose -f docker-compose.analytics.yml --profile analytics up -d
+docker compose -f docker-compose.analytics.yml --profile analytics up -d
 
 # Update your .env.production
 NEXT_PUBLIC_UMAMI_SCRIPT_URL=https://yourdomain.com:3001
@@ -324,13 +324,13 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 ```bash
 # Check analytics status
-docker-compose -f docker-compose.analytics.yml ps
+docker compose -f docker-compose.analytics.yml ps
 
 # View real-time logs
-docker-compose -f docker-compose.analytics.yml logs -f umami
+docker compose -f docker-compose.analytics.yml logs -f umami
 
 # Restart analytics services
-docker-compose -f docker-compose.analytics.yml restart
+docker compose -f docker-compose.analytics.yml restart
 
 # Check network connectivity
 curl http://localhost:3001/umami.js

@@ -107,17 +107,17 @@ run_prod() {
 # Function to run with nginx
 run_nginx() {
     print_status "Starting production with nginx reverse proxy..."
-    docker-compose --profile prod-nginx up -d
+    docker compose --profile prod-nginx up -d
 
     print_success "Production with nginx started!"
     print_status "Access at http://localhost (nginx proxy)"
-    print_status "Use 'docker-compose logs' to view logs"
+    print_status "Use 'docker compose logs' to view logs"
 }
 
 # Function to stop containers
 stop_containers() {
     print_status "Stopping all containers..."
-    docker-compose down
+    docker compose down
     docker stop borzolini-dev borzolini-prod 2>/dev/null || true
     print_success "All containers stopped!"
 }
@@ -128,7 +128,7 @@ clean_up() {
     read -r response
     if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
         print_status "Cleaning up Docker resources..."
-        docker-compose down --rmi all --volumes --remove-orphans
+        docker compose down --rmi all --volumes --remove-orphans
         docker stop borzolini-dev borzolini-prod 2>/dev/null || true
         docker rm borzolini-dev borzolini-prod 2>/dev/null || true
         docker rmi borzolini:dev borzolini:prod 2>/dev/null || true
@@ -143,7 +143,7 @@ clean_up() {
 show_logs() {
     if docker ps --format "{{.Names}}" | grep -q "borzolini"; then
         print_status "Showing logs for running containers..."
-        docker-compose logs -f
+        docker compose logs -f
     else
         print_error "No running containers found."
         exit 1
