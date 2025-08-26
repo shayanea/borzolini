@@ -43,7 +43,14 @@
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "commit": "git add . && git commit",
-    "clean": "rm -rf .next out dist node_modules/.cache"
+    "clean": "rm -rf .next out dist node_modules/.cache",
+    "docker:dev": "./scripts/docker.sh run-dev",
+    "docker:prod": "./scripts/docker.sh run-prod",
+    "docker:nginx": "./scripts/docker.sh run-nginx",
+    "docker:build": "./scripts/docker.sh build-prod",
+    "docker:stop": "./scripts/docker.sh stop",
+    "docker:clean": "./scripts/docker.sh clean",
+    "docker:logs": "./scripts/docker.sh logs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
