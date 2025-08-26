@@ -19,6 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://borzolini.com'),
   title: 'Borzolini - Smart Pet Healthcare for All Pets',
   description:
     'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Borzolini! Borzolini is named after our beloved companion.',
@@ -48,6 +49,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -56,6 +60,14 @@ export const metadata: Metadata = {
     description:
       'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
     siteName: 'Borzolini',
+    images: [
+      {
+        url: '/images/borzolini-hero.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Borzolini - Smart Pet Healthcare',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -63,6 +75,7 @@ export const metadata: Metadata = {
     description:
       'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
     creator: '@borzolini',
+    images: ['/images/borzolini-hero.webp'],
   },
   icons: {
     icon: [
@@ -83,11 +96,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Borzolini',
+    url: 'https://borzolini.com',
+    description: 'Smart pet healthcare platform for all pets. Personalized care, vet scheduling, and clinic ratings.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Borzolini',
+      url: 'https://borzolini.com',
+    },
+  };
+
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>
         <Header />
         {children}
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>
   );
