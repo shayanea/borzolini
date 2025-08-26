@@ -7,17 +7,20 @@ import { cn } from '@/lib/utils';
 interface CardProps {
   children: ReactNode;
   className?: string;
-  variant?: 'default' | 'gradient' | 'outlined' | 'elevated';
+  variant?: 'default' | 'gradient' | 'outlined' | 'elevated' | 'glass' | 'clinic' | 'pet';
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
   hover?: boolean;
   onClick?: () => void;
 }
 
 const cardVariants = {
-  default: 'bg-white/80 backdrop-blur-sm border border-slate-200/50',
-  gradient: 'bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50',
-  outlined: 'bg-transparent border-2 border-slate-200',
-  elevated: 'bg-white/90 backdrop-blur-sm shadow-lg border border-slate-200/50',
+  default: 'bg-white/90 backdrop-blur-sm border border-slate-200/50 shadow-sm',
+  gradient: 'bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50 shadow-sm',
+  outlined: 'bg-transparent border-2 border-slate-200 shadow-sm',
+  elevated: 'bg-white/95 backdrop-blur-sm shadow-lg border border-slate-200/50',
+  glass: 'bg-white/80 backdrop-blur-md border border-white/20 shadow-lg',
+  clinic: 'bg-white/95 backdrop-blur-sm shadow-lg border border-indigo-200/50',
+  pet: 'bg-white/95 backdrop-blur-sm shadow-lg border border-cyan-200/50',
 };
 
 const paddingVariants = {
@@ -94,14 +97,23 @@ interface FeatureCardProps {
 
 export function FeatureCard({ icon, title, description, benefits, variant = 'blue', className }: FeatureCardProps) {
   const variantClasses = {
-    blue: 'from-blue-50 to-blue-100 border-blue-200/50',
-    green: 'from-green-50 to-green-100 border-green-200/50',
-    purple: 'from-purple-50 to-purple-100 border-purple-200/50',
-    orange: 'from-orange-50 to-orange-100 border-orange-200/50',
+    blue: 'from-blue-50 to-blue-100 border-blue-200/50 hover:shadow-blue-100/50',
+    green: 'from-green-50 to-green-100 border-green-200/50 hover:shadow-green-100/50',
+    purple: 'from-purple-50 to-purple-100 border-purple-200/50 hover:shadow-purple-100/50',
+    orange: 'from-orange-50 to-orange-100 border-orange-200/50 hover:shadow-orange-100/50',
   };
 
   return (
-    <Card variant='default' className={cn('bg-gradient-to-br', variantClasses[variant], 'border', className)} hover>
+    <Card
+      variant='default'
+      className={cn(
+        'bg-gradient-to-br',
+        variantClasses[variant],
+        'border shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300',
+        className
+      )}
+      hover
+    >
       <CardHeader>
         {icon}
         <h3 className='text-xl font-bold text-slate-900 mt-4 leading-tight'>{title}</h3>
@@ -154,6 +166,50 @@ export function StatsCard({ value, label, trend, className }: StatsCardProps) {
         </div>
         <p className='text-sm text-slate-600 font-medium'>{label}</p>
       </div>
+    </Card>
+  );
+}
+
+// Professional clinic card variant
+interface ClinicCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  className?: string;
+}
+
+export function ClinicCard({ icon, title, description, className }: ClinicCardProps) {
+  return (
+    <Card
+      variant='clinic'
+      className={cn('text-center p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300', className)}
+      hover
+    >
+      <div className='mb-6'>{icon}</div>
+      <h3 className='text-xl font-bold text-slate-900 mb-4 leading-tight'>{title}</h3>
+      <p className='text-slate-600 leading-relaxed'>{description}</p>
+    </Card>
+  );
+}
+
+// Professional pet care card variant
+interface PetCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  className?: string;
+}
+
+export function PetCard({ icon, title, description, className }: PetCardProps) {
+  return (
+    <Card
+      variant='pet'
+      className={cn('text-center p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300', className)}
+      hover
+    >
+      <div className='mb-6'>{icon}</div>
+      <h3 className='text-xl font-bold text-slate-900 mb-4 leading-tight'>{title}</h3>
+      <p className='text-slate-600 leading-relaxed'>{description}</p>
     </Card>
   );
 }

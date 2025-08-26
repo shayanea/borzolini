@@ -8,16 +8,23 @@ import { HeroVisual } from './hero-visual';
 
 export const HeroSection = (): React.JSX.Element => {
   return (
-    <section className='p-14 bg-gradient-to-br from-white via-slate-50 to-blue-50 flex justify-between items-center'>
-      <div className='flex flex-col gap-4 w-2/3'>
-        <HeroBadge />
-        <HeroTitle />
-        <HeroDescription />
-        <HeroActions />
-      </div>
+    <section className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-dots opacity-30' />
 
-      <div className='flex justify-center w-1/3'>
-        <HeroVisual />
+      <div className='container-modern relative z-10'>
+        <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
+          <div className='space-y-8'>
+            <HeroBadge />
+            <HeroTitle />
+            <HeroDescription />
+            <HeroActions />
+          </div>
+
+          <div className='flex justify-center lg:justify-end'>
+            <HeroVisual />
+          </div>
+        </div>
       </div>
     </section>
   );

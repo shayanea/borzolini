@@ -7,8 +7,14 @@ import { BorzoliniFeatures } from './borzolini-features';
 
 export const BorzoliniSection = (): React.JSX.Element => {
   return (
-    <section className='py-24 bg-gradient-to-br from-purple-50 via-white to-blue-50' id='borzolini'>
-      <Container>
+    <section
+      className='section-padding bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden'
+      id='borzolini'
+    >
+      {/* Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-grid opacity-15' />
+
+      <Container className='relative z-10'>
         <BorzoliniHero />
         <BorzoliniFeatures />
       </Container>

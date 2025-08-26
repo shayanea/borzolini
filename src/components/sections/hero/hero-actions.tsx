@@ -16,16 +16,17 @@ export const HeroActions = (): React.JSX.Element => {
       variants={animations.fadeInUp}
     >
       <Button
-        size='lg'
-        className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300'
+        size='xl'
+        variant='pet'
+        className='px-10 py-4 text-lg font-semibold'
         onClick={() => scrollToSection('features')}
       >
         Get Started Free
       </Button>
       <Button
-        size='lg'
+        size='xl'
         variant='outline'
-        className='border-2 border-slate-300 hover:border-slate-400 px-8 py-4 text-lg font-semibold hover:bg-slate-50 transition-all duration-300'
+        className='px-10 py-4 text-lg font-semibold border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50'
         onClick={() => scrollToSection('how-it-works')}
       >
         Learn How It Works

@@ -12,8 +12,11 @@ import { StaffManagement } from './staff-management';
 
 export function ClinicManagementSection() {
   return (
-    <section className='py-24 bg-gradient-to-br from-purple-600 to-indigo-700' id='clinic-management'>
-      <Container size='xl'>
+    <section className='section-padding bg-gradient-clinic relative overflow-hidden' id='clinic-management'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-dots opacity-10' />
+
+      <Container size='xl' className='relative z-10'>
         <ClinicHeader />
         <ClinicFeatures />
         <MultiRoleSystem />

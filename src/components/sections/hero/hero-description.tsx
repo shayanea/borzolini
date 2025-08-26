@@ -6,7 +6,7 @@ import { animations } from '@/lib/animations';
 export const HeroDescription = (): React.JSX.Element => {
   return (
     <motion.p
-      className='text-xl sm:text-2xl text-slate-600 leading-relaxed max-w-3xl font-medium'
+      className='text-body-large text-slate-600 leading-relaxed max-w-3xl font-medium'
       initial='initial'
       animate='animate'
       variants={animations.fadeInUp}

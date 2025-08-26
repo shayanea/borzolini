@@ -21,17 +21,14 @@ const variantMap = ['blue', 'green', 'purple', 'orange'] as const;
 const FeaturesHeader = (): React.JSX.Element => {
   return (
     <motion.div className='text-center mb-16 lg:mb-20' {...commonAnimationProps} variants={animations.fadeInUp}>
-      <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 px-4 py-2 rounded-full border border-blue-200/50 text-sm font-semibold shadow-sm mb-6'>
+      <div className='badge-modern inline-flex items-center gap-2 mb-8'>
         <Sparkles className='w-4 h-4 text-blue-500' />
         Features
       </div>
-      <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight'>
-        Simple Smart Pet Care for{' '}
-        <span className='bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-          All Your Pets
-        </span>
+      <h2 className='text-section font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight'>
+        Simple Smart Pet Care for <span className='text-gradient-primary'>All Your Pets</span>
       </h2>
-      <p className='text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
+      <p className='text-body-large text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
         Get personalized recommendations, easy vet scheduling, and quality clinic ratings - for dogs, pets, and all
         beloved pets
       </p>
@@ -68,8 +65,14 @@ const FeaturesGrid = (): React.JSX.Element => {
 
 export const FeaturesSection = (): React.JSX.Element => {
   return (
-    <section className='py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50' id='features'>
-      <Container size='xl'>
+    <section
+      className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'
+      id='features'
+    >
+      {/* Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-grid opacity-20' />
+
+      <Container size='xl' className='relative z-10'>
         <FeaturesHeader />
         <FeaturesGrid />
       </Container>

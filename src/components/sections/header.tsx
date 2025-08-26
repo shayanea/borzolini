@@ -34,7 +34,7 @@ export function Header() {
 
   return (
     <motion.header
-      className='sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50'
+      className='sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 shadow-sm'
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: shouldReduceMotion ? 0.1 : 0.3 }}
@@ -61,7 +61,12 @@ export function Header() {
               >
                 {shouldReduceMotion ? <ZapOff className='w-4 h-4' /> : <Zap className='w-4 h-4' />}
               </Button>
-              <Button size='sm'>Sign In</Button>
+              <Button variant='outline' size='sm'>
+                Sign In
+              </Button>
+              <Button variant='clinic' size='sm'>
+                Sign Up
+              </Button>
             </div>
           </div>
 
