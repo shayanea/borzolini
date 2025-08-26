@@ -4,10 +4,10 @@
 
 <p align="center">
   <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-    <img alt="Next.js" src="https://cdn.simpleicons.org/nextdotjs/000000" height="28" />
+    <img alt="Next.js" src="https://cdn.simpleicons.org/nextdotjs/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
   </a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"></a>
     <img alt="TypeScript" src="https://cdn.simpleicons.org/typescript/3178C6" height="28" />
   </a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
@@ -24,7 +24,7 @@
   </a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://umami.is/" target="_blank" rel="noreferrer">
-    <img alt="Umami" src="https://cdn.simpleicons.org/umami/000000" height="28" />
+    <img alt="Umami" src="https://cdn.simpleicons.org/umami/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
   </a>
 </p>
 
