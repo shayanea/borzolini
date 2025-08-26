@@ -43,8 +43,7 @@
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "commit": "git add . && git commit",
-    "clean": "rm -rf .next out dist node_modules/.cache",
-    "postbuild": "node scripts/remove-console.js"
+    "clean": "rm -rf .next out dist node_modules/.cache"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
