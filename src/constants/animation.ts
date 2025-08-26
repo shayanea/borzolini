@@ -11,3 +11,9 @@ export const staggerContainer = {
     },
   },
 };
+
+export const slideInLeft = {
+  initial: { opacity: 0, x: -60 },
+  animate: { opacity: 1, x: 0 },
+  transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+};

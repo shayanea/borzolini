@@ -202,4 +202,4 @@ export const FAQ_ITEMS = [
   },
 ] as const;
 
-export { fadeInUp, staggerContainer } from './animation';
+export { fadeInUp, slideInLeft, staggerContainer } from './animation';
