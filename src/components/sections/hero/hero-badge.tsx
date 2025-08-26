@@ -5,7 +5,7 @@ import { Sparkles } from 'lucide-react';
 
 import { animations } from '@/lib/animations';
 
-export const HeroBadge = (): React.JSX.Element => {
+export const HeroBadge = () => {
   return (
     <motion.div initial='initial' animate='animate' variants={animations.fadeInUp} className='inline-block'>
       <div className='badge-pet inline-flex items-center gap-3 px-6 py-3 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105'>

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { animations } from '@/lib/animations';
 
-export const HeroDescription = (): React.JSX.Element => {
+export const HeroDescription = () => {
   return (
     <motion.p
       className='text-body-large text-slate-600 leading-relaxed max-w-3xl font-medium'

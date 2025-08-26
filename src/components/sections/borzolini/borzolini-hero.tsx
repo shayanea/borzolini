@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import { animations, commonAnimationProps } from '@/lib/animations';
 
-export const BorzoliniHero = (): React.JSX.Element => {
+export const BorzoliniHero = () => {
   return (
     <motion.div
       className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20'

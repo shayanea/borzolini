@@ -37,7 +37,7 @@ const features = [
   },
 ];
 
-export const HeroVisual = (): React.JSX.Element => {
+export const HeroVisual = () => {
   return (
     <motion.div className='relative' initial='initial' animate='animate' variants={animations.slideUp}>
       <div className='relative'>

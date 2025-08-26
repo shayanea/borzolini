@@ -5,7 +5,7 @@ import { animations } from '@/lib/animations';
 import { motion } from 'framer-motion';
 import { useScrollTo } from '@/hooks/use-scroll-to';
 
-export const HeroActions = (): React.JSX.Element => {
+export const HeroActions = () => {
   const { scrollToSection } = useScrollTo();
 
   return (
