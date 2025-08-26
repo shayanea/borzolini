@@ -8,24 +8,28 @@ import { animations } from '@/lib/animations';
 
 const features = [
   {
+    id: 1,
     icon: Calendar,
     title: 'Schedule',
     description: 'Easy booking',
     color: 'bg-blue-500',
   },
   {
+    id: 2,
     icon: Heart,
     title: 'Care',
     description: 'Personalized',
     color: 'bg-red-500',
   },
   {
+    id: 3,
     icon: Shield,
     title: 'Trust',
     description: 'Vet verified',
     color: 'bg-green-500',
   },
   {
+    id: 4,
     icon: Zap,
     title: 'Fast',
     description: 'Instant access',
@@ -57,8 +61,8 @@ export const HeroVisual = (): React.JSX.Element => {
             {/* Feature grid */}
             <div className='grid grid-cols-2 gap-4 text-sm'>
               {features.map((feature) => (
-                <div className='text-center p-3 bg-white/60 rounded-lg'>
-                  <feature.icon className='w-6 h-6 text-blue-600 mx-auto mb-2' />
+                <div className={`text-center p-3 bg-white/60 rounded-lg ${feature.color}`}>
+                  <feature.icon className='w-6 h-6 text-white mx-auto mb-2' />
                   <p className='font-medium text-slate-900'>{feature.title}</p>
                   <p className='text-slate-600'>{feature.description}</p>
                 </div>
