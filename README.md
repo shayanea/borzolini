@@ -2,11 +2,31 @@
 
 > **Named after Borzolini, our beloved companion** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
 
-![Borzolini Logo](https://img.shields.io/badge/Borzolini-All%20Pet%20Care-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyUzYuNDggMjIgMTIgMjJTMjIgMTcuNTIgMjIgMTJTMTcuNTIgMiAxMiAyWiIgZmlsbD0iIzAwMCIvPgo8L3N2Zz4K)
-[![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.0-ff69b4?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+<p align="center">
+  <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+    <img alt="Next.js" src="https://cdn.simpleicons.org/nextdotjs/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
+  </a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"></a>
+    <img alt="TypeScript" src="https://cdn.simpleicons.org/typescript/3178C6" height="28" />
+  </a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+    <img alt="Tailwind CSS" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="28" />
+  </a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://www.framer.com/motion/" target="_blank" rel="noreferrer">
+    <img alt="Framer" src="https://cdn.simpleicons.org/framer/0055FF" height="28" />
+  </a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+    <img alt="Docker" src="https://cdn.simpleicons.org/docker/2496ED" height="28" />
+  </a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://umami.is/" target="_blank" rel="noreferrer">
+    <img alt="Umami" src="https://cdn.simpleicons.org/umami/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
+  </a>
+</p>
 
 ## 🌟 About Borzolini
 
@@ -186,10 +206,10 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 
 ### Phase 2 - Core Platform
 
-- [ ] User authentication
-- [ ] Pet profile creation
-- [ ] AI recommendation engine
-- [ ] Vet appointment booking system
+- [x] User authentication
+- [x] Pet profile creation
+- [x] AI recommendation engine
+- [x] Vet appointment booking system
 
 ### Phase 3 - Advanced Features
 
