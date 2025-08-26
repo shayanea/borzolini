@@ -52,6 +52,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  themeColor: '#1d3557',
   openGraph: {
     type: 'website',
     locale: 'en_US',
