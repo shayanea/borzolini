@@ -6,6 +6,33 @@ import { Brain, Calendar, Heart, Shield, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { animations } from '@/lib/animations';
 
+const features = [
+  {
+    icon: Calendar,
+    title: 'Schedule',
+    description: 'Easy booking',
+    color: 'bg-blue-500',
+  },
+  {
+    icon: Heart,
+    title: 'Care',
+    description: 'Personalized',
+    color: 'bg-red-500',
+  },
+  {
+    icon: Shield,
+    title: 'Trust',
+    description: 'Vet verified',
+    color: 'bg-green-500',
+  },
+  {
+    icon: Zap,
+    title: 'Fast',
+    description: 'Instant access',
+    color: 'bg-yellow-500',
+  },
+];
+
 export const HeroVisual = (): React.JSX.Element => {
   return (
     <motion.div className='relative' initial='initial' animate='animate' variants={animations.slideUp}>
@@ -29,26 +56,13 @@ export const HeroVisual = (): React.JSX.Element => {
 
             {/* Feature grid */}
             <div className='grid grid-cols-2 gap-4 text-sm'>
-              <div className='text-center p-3 bg-white/60 rounded-lg'>
-                <Calendar className='w-6 h-6 text-blue-600 mx-auto mb-2' />
-                <p className='font-medium text-slate-900'>Schedule</p>
-                <p className='text-slate-600'>Easy booking</p>
-              </div>
-              <div className='text-center p-3 bg-white/60 rounded-lg'>
-                <Heart className='w-6 h-6 text-red-600 mx-auto mb-2' />
-                <p className='font-medium text-slate-900'>Care</p>
-                <p className='text-slate-600'>Personalized</p>
-              </div>
-              <div className='text-center p-3 bg-white/60 rounded-lg'>
-                <Shield className='w-6 h-6 text-green-600 mx-auto mb-2' />
-                <p className='font-medium text-slate-900'>Trust</p>
-                <p className='text-slate-600'>Vet verified</p>
-              </div>
-              <div className='text-center p-3 bg-white/60 rounded-lg'>
-                <Zap className='w-6 h-6 text-yellow-600 mx-auto mb-2' />
-                <p className='font-medium text-slate-900'>Fast</p>
-                <p className='text-slate-600'>Instant access</p>
-              </div>
+              {features.map((feature) => (
+                <div className='text-center p-3 bg-white/60 rounded-lg'>
+                  <feature.icon className='w-6 h-6 text-blue-600 mx-auto mb-2' />
+                  <p className='font-medium text-slate-900'>{feature.title}</p>
+                  <p className='text-slate-600'>{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Card>
