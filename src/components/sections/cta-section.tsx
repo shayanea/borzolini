@@ -41,7 +41,7 @@ export function CTASection() {
 
       <Container className='relative z-10'>
         <motion.div
-          className='text-center max-w-4xl mx-auto'
+          className='text-center max-w-6xl mx-auto'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
@@ -61,7 +61,7 @@ export function CTASection() {
           </motion.div>
 
           <motion.h2 className='text-section font-bold text-white mb-6 leading-tight' variants={fadeInUp}>
-            Ready to Give Your Pet the <span className='text-gradient-pet'>Best Care</span> Possible?
+            Ready to Give Your Pet the Best Care Possible?
           </motion.h2>
 
           <motion.p className='text-body-large text-blue-100 mb-8 max-w-2xl mx-auto' variants={fadeInUp}>

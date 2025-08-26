@@ -61,7 +61,7 @@ export const HeroVisual = (): React.JSX.Element => {
             {/* Feature grid */}
             <div className='grid grid-cols-2 gap-4 text-sm'>
               {features.map((feature) => (
-                <div className={`text-center p-3 bg-white/60 rounded-lg ${feature.color}`}>
+                <div key={feature.id} className={`text-center p-3 bg-white/60 rounded-lg ${feature.color}`}>
                   <feature.icon className='w-6 h-6 text-white mx-auto mb-2' />
                   <p className='font-medium text-slate-900'>{feature.title}</p>
                   <p className='text-slate-600'>{feature.description}</p>

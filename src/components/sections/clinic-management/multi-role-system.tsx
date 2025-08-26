@@ -22,13 +22,7 @@ const staggerContainer = {
 
 export function MultiRoleSystem() {
   return (
-    <motion.div
-      className='mt-24'
-      initial='initial'
-      whileInView='animate'
-      viewport={{ once: true }}
-      variants={staggerContainer}
-    >
+    <motion.div initial='initial' whileInView='animate' viewport={{ once: true }} variants={staggerContainer}>
       <motion.div className='text-center mb-16' variants={fadeInUp}>
         <h3 className='text-3xl sm:text-4xl font-bold text-white mb-4'>Multi-Role Access System</h3>
         <p className='text-xl text-blue-100 max-w-3xl mx-auto'>

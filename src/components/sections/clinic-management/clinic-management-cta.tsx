@@ -69,9 +69,6 @@ export function ClinicManagementCTA() {
                 Get Started Free
                 <ArrowRight className='w-4 h-4 ml-2' />
               </Button>
-              <Button size='lg' variant='outline' className='w-full border-white/30 text-white hover:bg-white/10'>
-                Schedule Demo
-              </Button>
             </div>
           </div>
         </div>
@@ -81,7 +78,7 @@ export function ClinicManagementCTA() {
         <p className='text-blue-100'>
           Questions? Contact our team at{' '}
           <a href='mailto:support@clinicmanagement.com' className='text-white underline hover:text-blue-200'>
-            support@clinicmanagement.com
+            support@borzolini.com
           </a>
         </p>
       </motion.div>
