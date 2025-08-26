@@ -7,6 +7,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.0-ff69b4?style=flat-square&logo=framer)](https://www.framer.com/motion/)
+[![Docker](https://img.shields.io/badge/Docker-Desktop-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Umami](https://img.shields.io/badge/Umami-Analytics-000000?style=flat-square&logo=umami&logoColor=white)](https://umami.is/)
 
 ## 🌟 About Borzolini
 
@@ -186,10 +188,10 @@ We use [Conventional Commits](https://www.conventionalcommits.org/):
 
 ### Phase 2 - Core Platform
 
-- [ ] User authentication
-- [ ] Pet profile creation
-- [ ] AI recommendation engine
-- [ ] Vet appointment booking system
+- [x] User authentication
+- [x] Pet profile creation
+- [x] AI recommendation engine
+- [x] Vet appointment booking system
 
 ### Phase 3 - Advanced Features
 
