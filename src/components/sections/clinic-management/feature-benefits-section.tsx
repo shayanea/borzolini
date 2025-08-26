@@ -8,7 +8,7 @@ import { featureBenefits } from '@/data/mock-clinics';
 
 import { FeatureBenefitItem } from './feature-benefit-item';
 
-export const FeatureBenefitsSection = (): React.JSX.Element => {
+export const FeatureBenefitsSection = () => {
   return (
     <motion.div className='mb-24' {...commonAnimationProps} variants={animations.fadeInUp}>
       <div className='text-center mb-16'>

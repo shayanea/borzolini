@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useAnalyticsConsent } from './analytics-provider';
 
 interface ConsentBannerProps {
@@ -43,6 +44,8 @@ export const ConsentBanner: React.FC<ConsentBannerProps> = ({
     return null;
   }
 
+  const isInternal = !!learnMoreUrl && learnMoreUrl.startsWith('/');
+
   return (
     <>
       {isVisible && (
@@ -54,16 +57,21 @@ export const ConsentBanner: React.FC<ConsentBannerProps> = ({
               <h3 className='text-sm font-medium text-gray-900 mb-1'>{title}</h3>
               <p className='text-sm text-gray-600 mb-3 sm:mb-0'>
                 {description}
-                {learnMoreUrl && (
-                  <a
-                    href={learnMoreUrl}
-                    className='text-blue-600 hover:text-blue-800 underline ml-1'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    {learnMoreText}
-                  </a>
-                )}
+                {learnMoreUrl &&
+                  (isInternal ? (
+                    <Link href={learnMoreUrl} className='text-blue-600 hover:text-blue-800 underline ml-1'>
+                      {learnMoreText}
+                    </Link>
+                  ) : (
+                    <a
+                      href={learnMoreUrl}
+                      className='text-blue-600 hover:text-blue-800 underline ml-1'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      {learnMoreText}
+                    </a>
+                  ))}
               </p>
             </div>
 

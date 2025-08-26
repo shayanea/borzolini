@@ -4,6 +4,7 @@ import { Brain, Calendar, Heart, Lightbulb, Shield, Sparkles, Star, Zap } from '
 
 import { Container } from '@/components/ui/container';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -52,12 +53,15 @@ export function BorzoliniSection() {
 
           <motion.div variants={fadeInLeft}>
             <div className='relative'>
-              <div
-                className='w-full h-96 rounded-3xl bg-cover bg-center bg-no-repeat shadow-2xl'
-                style={{
-                  backgroundImage: `url('/images/borzolini-hero.webp')`,
-                }}
-              >
+              <div className='relative w-full h-96 rounded-3xl shadow-2xl overflow-hidden'>
+                <Image
+                  src='/images/borzolini-hero.webp'
+                  alt='Borzolini - Our Pet Hero'
+                  fill
+                  sizes='(min-width: 1024px) 50vw, 100vw'
+                  className='object-cover'
+                  priority
+                />
                 <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent rounded-3xl'></div>
                 <div className='absolute bottom-6 left-6 text-white'>
                   <p className='text-2xl font-bold drop-shadow-lg'>
@@ -129,21 +133,15 @@ export function BorzoliniSection() {
               variants={fadeInLeft}
             >
               {/* Borzolini Hero Photo */}
-              <div
-                className='w-full h-full min-h-[500px] bg-gradient-to-br from-slate-100 to-slate-300 bg-cover bg-center bg-no-repeat relative'
-                style={{
-                  backgroundImage: `url('/images/borzolini-hero.webp')`,
-                }}
-              >
-                {/* Fallback content if image doesn't load */}
-                <div className='absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100'>
-                  <div className='text-center text-slate-700'>
-                    <div className='text-8xl mb-4'>🐱</div>
-                    <p className='text-2xl font-bold mb-2'>Borzolini</p>
-                    <p className='text-lg opacity-75'>The Original Borzolini</p>
-                  </div>
-                </div>
-
+              <div className='relative w-full h-full min-h-[500px] bg-gradient-to-br from-slate-100 to-slate-300 overflow-hidden'>
+                <Image
+                  src='/images/borzolini-hero.webp'
+                  alt='Borzolini - The Original Borzolini'
+                  fill
+                  sizes='(min-width: 1024px) 50vw, 100vw'
+                  className='object-cover'
+                  priority
+                />
                 {/* Enhanced overlay gradient */}
                 <div className='absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/20 to-transparent'></div>
 

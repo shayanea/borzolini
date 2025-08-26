@@ -18,7 +18,7 @@ const iconMap = {
 
 const variantMap = ['blue', 'green', 'purple', 'orange'] as const;
 
-const FeaturesHeader = (): React.JSX.Element => {
+const FeaturesHeader = () => {
   return (
     <motion.div className='text-center mb-16 lg:mb-20' {...commonAnimationProps} variants={animations.fadeInUp}>
       <div className='badge-modern inline-flex items-center gap-2 mb-8'>
@@ -36,7 +36,7 @@ const FeaturesHeader = (): React.JSX.Element => {
   );
 };
 
-const FeaturesGrid = (): React.JSX.Element => {
+const FeaturesGrid = () => {
   return (
     <motion.div
       className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10'
@@ -63,7 +63,7 @@ const FeaturesGrid = (): React.JSX.Element => {
   );
 };
 
-export const FeaturesSection = (): React.JSX.Element => {
+export const FeaturesSection = () => {
   return (
     <section
       className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'

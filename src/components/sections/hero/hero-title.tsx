@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { animations } from '@/lib/animations';
 
-export const HeroTitle = (): React.JSX.Element => {
+export const HeroTitle = () => {
   return (
     <motion.h1
       className='text-hero font-bold text-slate-900 leading-tight tracking-tight'

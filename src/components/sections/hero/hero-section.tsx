@@ -6,7 +6,7 @@ import { HeroDescription } from './hero-description';
 import { HeroTitle } from './hero-title';
 import { HeroVisual } from './hero-visual';
 
-export const HeroSection = (): React.JSX.Element => {
+export const HeroSection = () => {
   return (
     <section className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'>
       {/* Background Pattern */}

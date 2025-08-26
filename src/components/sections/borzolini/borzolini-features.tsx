@@ -36,7 +36,7 @@ const borzoliniFeatures = [
   },
 ];
 
-export const BorzoliniFeatures = (): React.JSX.Element => {
+export const BorzoliniFeatures = () => {
   return (
     <motion.div
       className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'

@@ -10,7 +10,7 @@ import { mockClinics, reviewFeatures } from '@/data/mock-clinics';
 import { ClinicCard } from './clinic-card';
 import { ReviewFeatureItem } from './review-feature-item';
 
-export const ReviewSystemSection = (): React.JSX.Element => {
+export const ReviewSystemSection = () => {
   return (
     <motion.div className='mb-24' {...commonAnimationProps} variants={animations.fadeInUp}>
       <div className='text-center mb-16'>

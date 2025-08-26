@@ -40,14 +40,14 @@ export const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({
     document.head.appendChild(script);
 
     // Initialize gtag
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).gtag = function gtag() {
+      (window as any).dataLayer.push(arguments);
     };
 
     // Set up GA4
-    window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
+    (window as any).gtag('js', new Date());
+    (window as any).gtag('config', measurementId, {
       page_title: document.title,
       page_location: window.location.href,
       anonymize_ip: true,
