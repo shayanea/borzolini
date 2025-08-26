@@ -66,14 +66,17 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
 
-      // General code quality
+      // Console and debugging - strict rules for production
       'no-console': [
-        'warn',
+        process.env.NODE_ENV === 'production' ? 'error' : 'warn',
         {
           allow: ['warn', 'error'],
         },
       ],
       'no-debugger': 'error',
+      'no-alert': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+
+      // General code quality
       'prefer-const': 'error',
 
       // Import organization
@@ -87,6 +90,20 @@ export default [
           argsIgnorePattern: '^_',
         },
       ],
+    },
+  },
+  // Special rules for utility files that need console statements
+  {
+    files: ['scripts/**/*.js', 'scripts/**/*.ts'],
+    rules: {
+      'no-console': 'off', // Allow console in utility scripts
+    },
+  },
+  // Special rules for logger hook files
+  {
+    files: ['**/use-logger.ts', '**/use-logger.tsx'],
+    rules: {
+      'no-console': 'off', // Allow console in logger hooks
     },
   },
 ];

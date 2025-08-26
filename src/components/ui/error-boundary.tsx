@@ -1,6 +1,7 @@
 'use client';
 
 import { Component, type ReactNode } from 'react';
+import { useLogger } from '@/hooks/use-logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -24,7 +25,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.warn('ErrorBoundary caught an error:', error, errorInfo);
+    // Use console.warn directly here since this is a class component
+    // and we can't use hooks. This will be removed in production builds.
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn('ErrorBoundary caught an error:', error, errorInfo);
+    }
     this.props.onError?.(error, errorInfo);
   }
 
@@ -68,19 +73,21 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
+  const logger = useLogger();
+
   const handleError = (error: Error, context?: string) => {
-    console.warn(`Error${context ? ` in ${context}` : ''}:`, error);
+    logger.warn(`Error${context ? ` in ${context}` : ''}:`, error);
 
     // In a real app, you might want to send this to an error reporting service
     // like Sentry, LogRocket, etc.
 
-    // For now, we'll just log it
+    // For now, we'll just log it in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('Error Details');
-      console.warn('Error:', error);
-      console.warn('Stack:', error.stack);
-      console.warn('Context:', context);
-      console.groupEnd();
+      logger.group('Error Details');
+      logger.warn('Error:', error);
+      logger.warn('Stack:', error.stack);
+      logger.warn('Context:', context);
+      logger.groupEnd();
     }
   };
 

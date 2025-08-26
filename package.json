@@ -30,16 +30,21 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "build:prod": "NODE_ENV=production next build --turbopack",
+    "build:clean": "NODE_ENV=production next build --turbopack && node scripts/remove-console.js",
     "start": "next start",
+    "start:prod": "NODE_ENV=production next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:prod": "NODE_ENV=production eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "commit": "git add . && git commit",
-    "clean": "rm -rf .next out dist node_modules/.cache"
+    "clean": "rm -rf .next out dist node_modules/.cache",
+    "postbuild": "node scripts/remove-console.js"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

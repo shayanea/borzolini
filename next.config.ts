@@ -10,6 +10,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  // Production optimizations
+  ...(process.env.NODE_ENV === 'production' && {
+    compiler: {
+      // Remove console statements in production
+      removeConsole: true,
+    },
+  }),
 };
 
 export default nextConfig;
