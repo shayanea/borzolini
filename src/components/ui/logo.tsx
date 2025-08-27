@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface LogoProps {
@@ -20,11 +21,12 @@ export function Logo({ size = 'md', className }: LogoProps) {
   return (
     <span
       className={cn(
-        'font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600',
+        'font-extrabold tracking-tight text-transparent flex items-center bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600',
         textSizeClasses[size],
         className
       )}
     >
+      <Image src='/logo.png' alt='Borzolini' width={35} height={35} className='mr-2' />
       Borzolini
     </span>
   );
