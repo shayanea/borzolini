@@ -1,7 +1,9 @@
 'use client';
 
-import { analyticsConfig, isAnalyticsEnabled } from '@/config/analytics';
 import { ReactNode, createContext, useContext, useEffect } from 'react';
+import { analyticsConfig, isAnalyticsEnabled } from '@/config/analytics';
+
+import { useLogger } from '@/hooks/use-logger';
 
 interface AnalyticsContextType {
   track: (eventName: string, eventData?: Record<string, string | number | boolean>) => void;
@@ -23,16 +25,17 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.JSX.Element => {
   const isEnabled = isAnalyticsEnabled();
+  const logger = useLogger();
 
   useEffect(() => {
     if (!isEnabled) {
-      console.log('Analytics disabled - check configuration');
+      logger.info('Analytics disabled - check configuration');
       return;
     }
 
     // Check if Umami script is already loaded
     if (window.umami) {
-      console.log('Umami analytics already loaded');
+      logger.info('Umami analytics already loaded');
       return;
     }
 
@@ -53,7 +56,7 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
     }
 
     script.onload = () => {
-      console.log('Umami analytics loaded successfully');
+      logger.info('Umami analytics loaded successfully');
 
       // Initialize with custom domain if specified
       if (analyticsConfig.umami.domain && analyticsConfig.umami.domain !== 'localhost') {
@@ -62,7 +65,7 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
     };
 
     script.onerror = () => {
-      console.error('Failed to load Umami analytics script');
+      logger.error('Failed to load Umami analytics script');
     };
 
     document.head.appendChild(script);
@@ -73,7 +76,7 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
         document.head.removeChild(script);
       }
     };
-  }, [isEnabled]);
+  }, [isEnabled, logger]);
 
   const track = (eventName: string, eventData?: Record<string, string | number | boolean>): void => {
     if (!isEnabled || !window.umami) {
@@ -83,7 +86,7 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
     try {
       window.umami.track(eventName, eventData);
     } catch (error) {
-      console.error('Failed to track event:', error);
+      logger.error('Failed to track event:', error);
     }
   };
 
