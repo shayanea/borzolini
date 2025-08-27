@@ -1,36 +1,35 @@
-export const analyticsConfig = {
-  // Umami Analytics Configuration
+export interface AnalyticsConfig {
   umami: {
-    // Enable/disable analytics
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: boolean;
+    websiteId: string;
+    scriptUrl: string;
+    domain: string;
+  };
+  privacy: {
+    respectDNT: boolean;
+    anonymizeIP: boolean;
+    requireConsent: boolean;
+  };
+}
 
-    // Your Umami website ID (get this from Umami dashboard)
-    websiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || 'your-website-id-here',
-
-    // Umami script URL
+export const analyticsConfig: AnalyticsConfig = {
+  umami: {
+    enabled: process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID !== undefined,
+    websiteId: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || '',
     scriptUrl: process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL || 'http://localhost:3001',
-
-    // Your website domain for tracking
     domain: process.env.NEXT_PUBLIC_WEBSITE_DOMAIN || 'localhost',
   },
-
-  // Google Analytics 4 Configuration (alternative)
-  googleAnalytics: {
-    enabled: false, // Set to true if you want to use GA4 instead
-    measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
-  },
-
-  // Privacy and GDPR settings
   privacy: {
-    // Respect Do Not Track header
     respectDNT: true,
-
-    // Anonymize IP addresses
     anonymizeIP: true,
-
-    // Cookie consent required
-    requireConsent: false,
+    requireConsent: false, // Set to true for GDPR compliance
   },
-} as const;
+};
 
-export type AnalyticsConfig = typeof analyticsConfig;
+export const isAnalyticsEnabled = (): boolean => {
+  return analyticsConfig.umami.enabled && analyticsConfig.umami.websiteId !== '';
+};
+
+export const getUmamiScriptUrl = (): string => {
+  return `${analyticsConfig.umami.scriptUrl}/umami.js`;
+};

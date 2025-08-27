@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Brain, Calendar, Heart, Shield, Zap } from 'lucide-react';
 
 import { Card } from '@/components/ui/card';
 import { animations } from '@/lib/animations';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -12,28 +12,40 @@ const features = [
     icon: Calendar,
     title: 'Schedule',
     description: 'Easy booking',
-    color: 'bg-blue-500',
+    bgColor: 'bg-white',
+    titleColor: 'text-slate-900',
+    subtitleColor: 'text-slate-600',
+    isSelected: false,
   },
   {
     id: 2,
     icon: Heart,
     title: 'Care',
     description: 'Personalized',
-    color: 'bg-red-500',
+    bgColor: 'bg-white',
+    titleColor: 'text-slate-900',
+    subtitleColor: 'text-slate-600',
+    isSelected: false,
   },
   {
     id: 3,
     icon: Shield,
     title: 'Trust',
     description: 'Vet verified',
-    color: 'bg-green-500',
+    bgColor: 'bg-white',
+    titleColor: 'text-slate-900',
+    subtitleColor: 'text-slate-600',
+    isSelected: false,
   },
   {
     id: 4,
     icon: Zap,
     title: 'Fast',
     description: 'Instant access',
-    color: 'bg-yellow-500',
+    bgColor: 'bg-blue-500',
+    titleColor: 'text-white',
+    subtitleColor: 'text-white',
+    isSelected: true,
   },
 ];
 
@@ -61,10 +73,12 @@ export const HeroVisual = () => {
             {/* Feature grid */}
             <div className='grid grid-cols-2 gap-4 text-sm'>
               {features.map((feature) => (
-                <div key={feature.id} className={`text-center p-3 bg-white/60 rounded-lg ${feature.color}`}>
-                  <feature.icon className='w-6 h-6 text-white mx-auto mb-2' />
-                  <p className='font-medium text-slate-900'>{feature.title}</p>
-                  <p className='text-slate-600'>{feature.description}</p>
+                <div key={feature.id} className={`text-center p-3 rounded-lg shadow-md ${feature.bgColor}`}>
+                  <feature.icon
+                    className={`w-6 h-6 ${feature.isSelected ? 'text-white' : 'text-gray-500'} mx-auto mb-2`}
+                  />
+                  <p className={`text-sm ${feature.titleColor} font-bold`}>{feature.title}</p>
+                  <p className={`text-sm ${feature.subtitleColor}`}>{feature.description}</p>
                 </div>
               ))}
             </div>

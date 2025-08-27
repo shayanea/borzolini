@@ -2,6 +2,7 @@ import './globals.css';
 
 import { Inter, Poppins } from 'next/font/google';
 
+import { AnalyticsProvider } from '@/components/analytics';
 import { Header } from '@/components/sections/header';
 import type { Metadata } from 'next';
 
@@ -113,9 +114,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>
-        <Header />
-        {children}
-        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <AnalyticsProvider>
+          <Header />
+          {children}
+          <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        </AnalyticsProvider>
       </body>
     </html>
   );

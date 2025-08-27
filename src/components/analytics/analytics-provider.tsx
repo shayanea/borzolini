@@ -1,118 +1,106 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { analyticsConfig } from '@/config/analytics';
-import { UmamiTracker } from './umami-tracker';
-import { GoogleAnalytics } from './google-analytics';
+import { analyticsConfig, isAnalyticsEnabled } from '@/config/analytics';
+import { ReactNode, createContext, useContext, useEffect } from 'react';
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+interface AnalyticsContextType {
+  track: (eventName: string, eventData?: Record<string, string | number | boolean>) => void;
+  isEnabled: boolean;
 }
 
-/**
- * Analytics Provider Component
- * 
- * This component manages analytics tracking based on configuration and user preferences.
- * It automatically handles privacy settings and enables/disables tracking accordingly.
- */
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [consentGiven, setConsentGiven] = useState<boolean | null>(null);
-  const [dntEnabled, setDntEnabled] = useState<boolean>(false);
+const AnalyticsContext = createContext<AnalyticsContextType>({
+  track: () => {},
+  isEnabled: false,
+});
 
-  useEffect(() => {
-    // Check if user has given consent (stored in localStorage)
-    const storedConsent = localStorage.getItem('analytics-consent');
-    if (storedConsent !== null) {
-      setConsentGiven(storedConsent === 'true');
-    }
-
-    // Check Do Not Track header
-    const dnt = navigator.doNotTrack || (window as any).doNotTrack;
-    setDntEnabled(dnt === '1' || dnt === 'yes');
-  }, []);
-
-  // Determine if analytics should be enabled
-  const shouldEnableAnalytics = () => {
-    // Check if analytics is globally enabled
-    if (!analyticsConfig.umami.enabled && !analyticsConfig.googleAnalytics.enabled) {
-      return false;
-    }
-
-    // Check Do Not Track if enabled in config
-    if (analyticsConfig.privacy.respectDNT && dntEnabled) {
-      return false;
-    }
-
-    // Check consent requirement
-    if (analyticsConfig.privacy.requireConsent && consentGiven === false) {
-      return false;
-    }
-
-    // If no consent required or consent given, enable analytics
-    return !analyticsConfig.privacy.requireConsent || consentGiven === true;
-  };
-
-  const isEnabled = shouldEnableAnalytics();
-
-  return (
-    <>
-      {children}
-      
-      {/* Analytics Components - only render if enabled */}
-      {isEnabled && (
-        <>
-          {/* Umami Analytics */}
-          {analyticsConfig.umami.enabled && (
-            <UmamiTracker
-              websiteId={analyticsConfig.umami.websiteId}
-              domain={analyticsConfig.umami.domain}
-              scriptUrl={analyticsConfig.umami.scriptUrl}
-            />
-          )}
-
-          {/* Google Analytics 4 */}
-          {analyticsConfig.googleAnalytics.enabled && analyticsConfig.googleAnalytics.measurementId && (
-            <GoogleAnalytics
-              measurementId={analyticsConfig.googleAnalytics.measurementId}
-              enabled={isEnabled}
-            />
-          )}
-        </>
-      )}
-    </>
-  );
+export const useAnalytics = (): AnalyticsContextType => {
+  return useContext(AnalyticsContext);
 };
 
-/**
- * Hook to manage analytics consent
- */
-export const useAnalyticsConsent = () => {
-  const [consentGiven, setConsentGiven] = useState<boolean | null>(null);
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.JSX.Element => {
+  const isEnabled = isAnalyticsEnabled();
 
   useEffect(() => {
-    const storedConsent = localStorage.getItem('analytics-consent');
-    if (storedConsent !== null) {
-      setConsentGiven(storedConsent === 'true');
+    if (!isEnabled) {
+      console.log('Analytics disabled - check configuration');
+      return;
     }
-  }, []);
 
-  const giveConsent = () => {
-    localStorage.setItem('analytics-consent', 'true');
-    setConsentGiven(true);
-    // Reload page to enable analytics
-    window.location.reload();
+    // Check if Umami script is already loaded
+    if (window.umami) {
+      console.log('Umami analytics already loaded');
+      return;
+    }
+
+    // Load Umami script
+    const script = document.createElement('script');
+    script.src = `${analyticsConfig.umami.scriptUrl}/umami.js`;
+    script.async = true;
+    script.defer = true;
+    script.setAttribute('data-website-id', analyticsConfig.umami.websiteId);
+
+    // Add privacy settings
+    if (analyticsConfig.privacy.respectDNT) {
+      script.setAttribute('data-respect-dnt', 'true');
+    }
+
+    if (analyticsConfig.privacy.anonymizeIP) {
+      script.setAttribute('data-anonymize-ip', 'true');
+    }
+
+    script.onload = () => {
+      console.log('Umami analytics loaded successfully');
+
+      // Initialize with custom domain if specified
+      if (analyticsConfig.umami.domain && analyticsConfig.umami.domain !== 'localhost') {
+        window.umami?.setDomain(analyticsConfig.umami.domain);
+      }
+    };
+
+    script.onerror = () => {
+      console.error('Failed to load Umami analytics script');
+    };
+
+    document.head.appendChild(script);
+
+    // Cleanup function
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, [isEnabled]);
+
+  const track = (eventName: string, eventData?: Record<string, string | number | boolean>): void => {
+    if (!isEnabled || !window.umami) {
+      return;
+    }
+
+    try {
+      window.umami.track(eventName, eventData);
+    } catch (error) {
+      console.error('Failed to track event:', error);
+    }
   };
 
-  const revokeConsent = () => {
-    localStorage.setItem('analytics-consent', 'false');
-    setConsentGiven(false);
-    // Reload page to disable analytics
-    window.location.reload();
+  const contextValue: AnalyticsContextType = {
+    track,
+    isEnabled,
   };
 
-  return {
-    consentGiven,
-    giveConsent,
-    revokeConsent,
-  };
+  return <AnalyticsContext.Provider value={contextValue}>{children}</AnalyticsContext.Provider>;
 };
+
+// Extend Window interface for Umami
+declare global {
+  interface Window {
+    umami?: {
+      track: (eventName: string, eventData?: Record<string, string | number | boolean>) => void;
+      setDomain: (domain: string) => void;
+    };
+  }
+}

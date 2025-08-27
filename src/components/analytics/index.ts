@@ -1,4 +1,3 @@
-export { UmamiTracker, useUmami } from './umami-tracker';
-export { GoogleAnalytics, useGoogleAnalytics } from './google-analytics';
-export { AnalyticsProvider, useAnalyticsConsent } from './analytics-provider';
-export { ConsentBanner } from './consent-banner';
+export { AnalyticsExample } from './analytics-example';
+export { AnalyticsProvider, useAnalytics } from './analytics-provider';
+export { useAnalyticsTracking } from './use-analytics';
