@@ -26,7 +26,7 @@ const FeaturesHeader = () => {
         Features
       </div>
       <h2 className='text-section font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight'>
-        Simple Smart Pet Care for <span className='text-gradient-primary'>All Your Pets</span>
+        Simple Smart Pet Care for <span className='text-blue-500'>All Your Pets</span>
       </h2>
       <p className='text-body-large text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
         Get personalized recommendations, easy vet scheduling, and quality clinic ratings - for dogs, pets, and all

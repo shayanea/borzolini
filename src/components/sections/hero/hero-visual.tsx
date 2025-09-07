@@ -12,40 +12,28 @@ const features = [
     icon: Calendar,
     title: 'Schedule',
     description: 'Easy booking',
-    bgColor: 'bg-white',
-    titleColor: 'text-slate-900',
-    subtitleColor: 'text-slate-600',
-    isSelected: false,
+    color: 'bg-blue-500',
   },
   {
     id: 2,
     icon: Heart,
     title: 'Care',
     description: 'Personalized',
-    bgColor: 'bg-white',
-    titleColor: 'text-slate-900',
-    subtitleColor: 'text-slate-600',
-    isSelected: false,
+    color: 'bg-red-500',
   },
   {
     id: 3,
     icon: Shield,
     title: 'Trust',
     description: 'Vet verified',
-    bgColor: 'bg-white',
-    titleColor: 'text-slate-900',
-    subtitleColor: 'text-slate-600',
-    isSelected: false,
+    color: 'bg-green-500',
   },
   {
     id: 4,
     icon: Zap,
     title: 'Fast',
     description: 'Instant access',
-    bgColor: 'bg-blue-500',
-    titleColor: 'text-white',
-    subtitleColor: 'text-white',
-    isSelected: true,
+    color: 'bg-yellow-500',
   },
 ];
 
@@ -73,11 +61,19 @@ export const HeroVisual = () => {
 
             {/* Modern feature grid */}
             <div className='grid grid-cols-2 gap-4 text-sm'>
-              {features.map((feature) => (
-                <div key={feature.id} className={`text-center p-3 bg-white/60 rounded-lg ${feature.color}`}>
-                  <feature.icon className='w-6 h-6 text-white mx-auto mb-2' />
-                  <p className='font-medium text-slate-900'>{feature.title}</p>
-                  <p className='text-slate-600'>{feature.description}</p>
+              {features.map((feature, index) => (
+                <div
+                  key={feature.id}
+                  className={`text-center p-4 glass rounded-xl hover:glass-morphism transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div
+                    className={`w-10 h-10 ${feature.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <feature.icon className='w-5 h-5 text-white' />
+                  </div>
+                  <p className='font-semibold text-slate-900 mb-1'>{feature.title}</p>
+                  <p className='text-slate-600 text-xs'>{feature.description}</p>
                 </div>
               ))}
             </div>

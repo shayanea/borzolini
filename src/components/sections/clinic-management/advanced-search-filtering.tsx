@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Clock, Globe, MapPin, Search, Settings } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -102,9 +102,7 @@ export function AdvancedSearchAndFiltering() {
             </div>
 
             <div className='mt-8 pt-6 border-t border-slate-200'>
-              <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'>
-                Apply Filters
-              </Button>
+              <Button className='w-full bg-blue-500 text-white hover:bg-blue-700 '>Apply Filters</Button>
             </div>
           </Card>
         </motion.div>
