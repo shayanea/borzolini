@@ -1,10 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Building2, Shield, UserCheck } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -101,12 +100,6 @@ export function MultiRoleSystem() {
           </Card>
         </motion.div>
       </div>
-
-      <motion.div className='text-center mt-12' variants={fadeInUp}>
-        <Button size='lg' className='bg-white text-slate-900 hover:bg-blue-50'>
-          Learn More About Roles
-        </Button>
-      </motion.div>
     </motion.div>
   );
 }

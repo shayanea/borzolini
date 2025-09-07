@@ -144,11 +144,11 @@ function CTAButton() {
   const handleClick = () => {
     track('cta_button_clicked', {
       button_location: 'hero_section',
-      button_text: 'Get Started',
+      button_text: 'Sing In',
     });
   };
 
-  return <button onClick={handleClick}>Get Started</button>;
+  return <button onClick={handleClick}>Sing In</button>;
 }
 ```
 

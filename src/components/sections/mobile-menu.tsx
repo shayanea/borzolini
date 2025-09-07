@@ -39,13 +39,6 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           >
             For Vets
           </a>
-          <a
-            href='#cta'
-            className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
-            onClick={onClose}
-          >
-            Get Started
-          </a>
 
           <div className='pt-4 border-t border-slate-200/50 space-y-3 px-4'>
             <Button
