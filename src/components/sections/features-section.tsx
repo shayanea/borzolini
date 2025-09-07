@@ -65,12 +65,9 @@ const FeaturesGrid = () => {
 
 export const FeaturesSection = () => {
   return (
-    <section
-      className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'
-      id='features'
-    >
-      {/* Background Pattern */}
-      <div className='absolute inset-0 bg-pattern-grid opacity-20' />
+    <section className='section-padding bg-slate-50 relative overflow-hidden' id='features'>
+      {/* Subtle Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-dots opacity-20' />
 
       <Container size='xl' className='relative z-10'>
         <FeaturesHeader />

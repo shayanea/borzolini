@@ -17,7 +17,7 @@ export const HeroActions = () => {
     >
       <Button
         size='xl'
-        variant='pet'
+        variant='primary'
         className='px-10 py-4 text-lg font-semibold'
         onClick={() => scrollToSection('features')}
       >

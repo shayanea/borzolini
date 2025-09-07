@@ -166,6 +166,11 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-mesh-primary': 'var(--gradient-mesh-primary)',
+        'gradient-mesh-secondary': 'var(--gradient-mesh-secondary)',
+        'gradient-mesh-accent': 'var(--gradient-mesh-accent)',
+        'gradient-mesh-hero': 'var(--gradient-mesh-hero)',
+        'gradient-mesh-organic': 'var(--gradient-mesh-organic)',
         'gradient-modern': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         'gradient-accent': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
         'gradient-clinic': 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',

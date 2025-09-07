@@ -8,10 +8,7 @@ import { HeroVisual } from './hero-visual';
 
 export const HeroSection = () => {
   return (
-    <section className='section-padding bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden'>
-      {/* Background Pattern */}
-      <div className='absolute inset-0 bg-pattern-dots opacity-30' />
-
+    <section className='section-padding bg-gradient-mesh-hero relative overflow-hidden'>
       <div className='container-modern relative z-10'>
         <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
           <div className='space-y-8'>

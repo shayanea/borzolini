@@ -48,7 +48,6 @@ export function Header() {
               <NavLink href='#features'>Features</NavLink>
               <NavLink href='#how-it-works'>How It Works</NavLink>
               <NavLink href='#clinic-management'>For Vets</NavLink>
-              <NavLink href='#cta'>Get Started</NavLink>
             </nav>
 
             <div className='flex items-center gap-3'>
@@ -64,7 +63,7 @@ export function Header() {
               <Button variant='outline' size='sm'>
                 Sign In
               </Button>
-              <Button variant='clinic' size='sm'>
+              <Button variant='primary' size='sm'>
                 Sign Up
               </Button>
             </div>
