@@ -3,8 +3,8 @@
 import { Calendar, Shield, Sparkles } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
-import { motion } from 'framer-motion';
 import { fadeInUp } from '@/constants';
+import { motion } from 'framer-motion';
 
 const items = [
   {
@@ -12,7 +12,7 @@ const items = [
     title: 'Smart Recommendations',
     description: "AI-powered care suggestions tailored to your pet's needs",
     icon: Sparkles,
-    color: 'bg-blue-100',
+    color: 'bg-white',
     iconColor: 'text-blue-600',
   },
   {
@@ -20,7 +20,7 @@ const items = [
     title: 'Easy Scheduling',
     description: 'Book appointments with top-rated vets in minutes',
     icon: Calendar,
-    color: 'bg-green-100',
+    color: 'bg-white',
     iconColor: 'text-green-600',
   },
   {
@@ -28,16 +28,17 @@ const items = [
     title: 'Trusted Care',
     description: 'Verified clinics and vet-reviewed recommendations',
     icon: Shield,
-    color: 'bg-purple-100',
+    color: 'bg-white',
     iconColor: 'text-purple-600',
   },
 ];
 
 export function CTASection() {
   return (
-    <section className='section-padding bg-gradient-pet relative overflow-hidden'>
-      {/* Background Pattern */}
-      <div className='absolute inset-0 bg-pattern-dots opacity-10' />
+    <section className='section-padding bg-gradient-mesh-hero relative overflow-hidden'>
+      {/* Modern Background Pattern */}
+      <div className='absolute inset-0 bg-pattern-organic opacity-20' />
+      <div className='absolute inset-0 bg-noise opacity-10' />
 
       <Container className='relative z-10'>
         <motion.div
@@ -80,9 +81,7 @@ export function CTASection() {
           >
             {items.map((item) => (
               <motion.div key={item.id} variants={fadeInUp}>
-                <div
-                  className={`card-elevated text-center p-8 rounded-2xl border border-white/20 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${item.color}`}
-                >
+                <div className={`text-center p-8 rounded-2xl border border-white/30 shadow-xl  ${item.color}`}>
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 ${item.iconColor}`}
                   >

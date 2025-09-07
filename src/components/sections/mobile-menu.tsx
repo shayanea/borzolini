@@ -49,7 +49,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
 
           <div className='pt-4 border-t border-slate-200/50 space-y-3 px-4'>
             <Button
-              variant='ghost'
+              variant='primary'
               size='sm'
               className='w-full text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium'
             >

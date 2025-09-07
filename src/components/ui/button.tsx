@@ -15,11 +15,8 @@ const buttonVariants = cva(
         secondary: 'bg-slate-100 text-slate-900 hover:bg-slate-200 shadow-sm hover:shadow-md',
         ghost: 'hover:bg-slate-100 hover:text-slate-900',
         link: 'text-slate-900 underline-offset-4 hover:underline',
-        gradient:
-          'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl',
-        clinic:
-          'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 shadow-lg hover:shadow-xl',
-        pet: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg hover:shadow-xl',
+        clinic: 'bg-purple-600 text-white hover:purple-700 shadow-lg hover:shadow-xl',
+        primary: 'bg-blue-500 text-white shadow-lg hover:shadow-xl',
         glass:
           'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30 shadow-lg hover:shadow-xl',
       },

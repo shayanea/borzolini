@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Award, CheckCircle, Star, Stethoscope, Users } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -77,9 +77,7 @@ export function StaffManagement() {
               </div>
 
               <div className='pt-4 border-t border-slate-200'>
-                <Button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'>
-                  View Full Profile
-                </Button>
+                <Button className='w-full text-white '>View Full Profile</Button>
               </div>
             </div>
           </Card>

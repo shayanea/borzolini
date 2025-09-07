@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { animations } from '@/lib/animations';
+import { motion } from 'framer-motion';
 
 export const HeroTitle = () => {
   return (
@@ -11,8 +11,8 @@ export const HeroTitle = () => {
       animate='animate'
       variants={animations.fadeInUp}
     >
-      Smart Pet Care Made <span className='text-gradient-pet'>Simple</span> for{' '}
-      <span className='text-gradient-primary'>All Pets</span>
+      Smart Pet Care Made <span className='text-primary-500'>Simple</span> for{' '}
+      <span className='text-primary-500'>All Pets</span>
     </motion.h1>
   );
 };

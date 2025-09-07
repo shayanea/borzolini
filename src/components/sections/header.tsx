@@ -64,7 +64,7 @@ export function Header() {
               <Button variant='outline' size='sm'>
                 Sign In
               </Button>
-              <Button variant='clinic' size='sm'>
+              <Button variant='primary' size='sm'>
                 Sign Up
               </Button>
             </div>

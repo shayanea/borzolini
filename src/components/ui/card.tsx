@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 interface CardProps {
   children: ReactNode;
   className?: string;
-  variant?: 'default' | 'gradient' | 'outlined' | 'elevated' | 'glass' | 'clinic' | 'pet';
+  variant?: 'default' | 'gradient' | 'outlined' | 'elevated' | 'glass' | 'primary';
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
   hover?: boolean;
   onClick?: () => void;
@@ -19,8 +19,7 @@ const cardVariants = {
   outlined: 'bg-transparent border-2 border-slate-200 shadow-sm',
   elevated: 'bg-white/95 backdrop-blur-sm shadow-lg border border-slate-200/50',
   glass: 'bg-white/80 backdrop-blur-md border border-white/20 shadow-lg',
-  clinic: 'bg-white/95 backdrop-blur-sm shadow-lg border border-indigo-200/50',
-  pet: 'bg-white/95 backdrop-blur-sm shadow-lg border border-cyan-200/50',
+  primary: 'bg-blue-500 text-white shadow-lg hover:shadow-xl',
 };
 
 const paddingVariants = {
@@ -181,7 +180,7 @@ interface ClinicCardProps {
 export function ClinicCard({ icon, title, description, className }: ClinicCardProps) {
   return (
     <Card
-      variant='clinic'
+      variant='primary'
       className={cn('text-center p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300', className)}
       hover
     >
@@ -203,7 +202,7 @@ interface PetCardProps {
 export function PetCard({ icon, title, description, className }: PetCardProps) {
   return (
     <Card
-      variant='pet'
+      variant='primary'
       className={cn('text-center p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300', className)}
       hover
     >
