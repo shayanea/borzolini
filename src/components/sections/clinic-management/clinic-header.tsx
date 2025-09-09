@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { fadeInUp, slideInLeft, staggerContainer } from '@/constants';
 import { Calendar } from 'lucide-react';
+import { animations } from '@/lib/animations';
+import { motion } from 'framer-motion';
 
 export const ClinicHeader = () => {
   return (
@@ -9,9 +9,9 @@ export const ClinicHeader = () => {
       initial='initial'
       whileInView='animate'
       viewport={{ once: true }}
-      variants={staggerContainer}
+      variants={animations.staggerContainer}
     >
-      <motion.div variants={fadeInUp} className='space-y-8'>
+      <motion.div variants={animations.fadeInUp} className='space-y-8'>
         <h2 className='text-section font-bold text-white leading-tight'>
           Smart <span className='text-gradient-clinic'>Clinic Management</span> for Modern Vets
         </h2>
@@ -21,7 +21,7 @@ export const ClinicHeader = () => {
         </p>
       </motion.div>
 
-      <motion.div variants={slideInLeft}>
+      <motion.div variants={animations.slideInLeft}>
         <div className='relative'>
           <div className='card-elevated w-full h-96 rounded-3xl bg-gradient-to-br from-white/95 to-blue-50/95 border border-white/20 shadow-2xl flex items-center justify-center backdrop-blur-sm'>
             <div className='text-center p-8'>

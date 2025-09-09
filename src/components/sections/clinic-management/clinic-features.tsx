@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '@/constants';
 import { Brain, Calendar, Users } from 'lucide-react';
+
+import { animations } from '@/lib/animations';
+import { motion } from 'framer-motion';
 
 export const ClinicFeatures = () => {
   return (
@@ -9,9 +10,9 @@ export const ClinicFeatures = () => {
       initial='initial'
       whileInView='animate'
       viewport={{ once: true }}
-      variants={staggerContainer}
+      variants={animations.staggerContainer}
     >
-      <motion.div variants={fadeInUp}>
+      <motion.div variants={animations.fadeInUp}>
         <div className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 hover:shadow-xl transition-shadow duration-200'>
           <div className='w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
             <Calendar className='w-8 h-8 text-blue-600' />
@@ -21,7 +22,7 @@ export const ClinicFeatures = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={fadeInUp}>
+      <motion.div variants={animations.fadeInUp}>
         <div className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 hover:shadow-xl transition-shadow duration-200'>
           <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
             <Users className='w-8 h-8 text-green-600' />
@@ -31,7 +32,7 @@ export const ClinicFeatures = () => {
         </div>
       </motion.div>
 
-      <motion.div variants={fadeInUp}>
+      <motion.div variants={animations.fadeInUp}>
         <div className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 hover:shadow-xl transition-shadow duration-200'>
           <div className='w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
             <Brain className='w-8 h-8 text-purple-600' />

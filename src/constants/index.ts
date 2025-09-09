@@ -201,5 +201,3 @@ export const FAQ_ITEMS = [
       'Yes, we take privacy seriously. All pet health data is encrypted and stored securely. We never share individual pet information without your explicit consent. We may use anonymized, aggregated data to improve our AI models and contribute to veterinary research.',
   },
 ] as const;
-
-export { fadeInUp, slideInLeft, staggerContainer } from './animation';

@@ -1,5 +1,5 @@
 import { Sparkles } from 'lucide-react';
-import { fadeInUp } from '@/constants';
+import { animations } from '@/lib/animations';
 import { motion } from 'framer-motion';
 
 export const HowItWorks = () => {
@@ -9,7 +9,7 @@ export const HowItWorks = () => {
       initial='initial'
       whileInView='animate'
       viewport={{ once: true }}
-      variants={fadeInUp}
+      variants={animations.fadeInUp}
     >
       <div className='badge-modern inline-flex items-center gap-2 mb-8'>
         <Sparkles className='w-4 h-4 text-blue-500' />

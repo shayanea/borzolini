@@ -3,7 +3,7 @@
 import { Calendar, Shield, Sparkles } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
-import { fadeInUp } from '@/constants';
+import { animations } from '@/lib/animations';
 import { motion } from 'framer-motion';
 
 const items = [
@@ -54,18 +54,18 @@ export function CTASection() {
             },
           }}
         >
-          <motion.div variants={fadeInUp}>
+          <motion.div variants={animations.fadeInUp}>
             <div className='badge-pet inline-flex items-center gap-2 mb-8'>
               <Sparkles className='w-4 h-4 text-cyan-500' />
               Get Started Today
             </div>
           </motion.div>
 
-          <motion.h2 className='text-section font-bold text-white mb-6 leading-tight' variants={fadeInUp}>
+          <motion.h2 className='text-section font-bold text-white mb-6 leading-tight' variants={animations.fadeInUp}>
             Ready to Give Your Pet the Best Care Possible?
           </motion.h2>
 
-          <motion.p className='text-body-large text-blue-100 mb-8 max-w-2xl mx-auto' variants={fadeInUp}>
+          <motion.p className='text-body-large text-blue-100 mb-8 max-w-2xl mx-auto' variants={animations.fadeInUp}>
             Join thousands of pet owners who trust our platform for smarter, more affordable pet healthcare.
           </motion.p>
 
@@ -80,7 +80,7 @@ export function CTASection() {
             }}
           >
             {items.map((item) => (
-              <motion.div key={item.id} variants={fadeInUp}>
+              <motion.div key={item.id} variants={animations.fadeInUp}>
                 <div className={`text-center p-8 rounded-2xl border border-white/30 shadow-xl  ${item.color}`}>
                   <div
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 ${item.iconColor}`}

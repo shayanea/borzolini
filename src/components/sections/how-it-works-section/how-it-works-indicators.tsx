@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
 import { Clock, Shield, Users } from 'lucide-react';
-import { fadeInUp } from '@/constants';
+
+import { animations } from '@/lib/animations';
+import { motion } from 'framer-motion';
 
 export const HowItWorksIndicators = () => {
   return (
@@ -9,7 +10,7 @@ export const HowItWorksIndicators = () => {
       initial='initial'
       whileInView='animate'
       viewport={{ once: true }}
-      variants={fadeInUp}
+      variants={animations.fadeInUp}
     >
       <div className='bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-slate-200/50 max-w-5xl mx-auto'>
         <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-8 leading-tight'>Trusted by Pet Owners</h3>
