@@ -20,9 +20,9 @@ export const analyticsConfig: AnalyticsConfig = {
     domain: process.env.NEXT_PUBLIC_WEBSITE_DOMAIN || 'localhost',
   },
   privacy: {
-    respectDNT: true,
-    anonymizeIP: true,
-    requireConsent: false, // Set to true for GDPR compliance
+    respectDNT: process.env.NEXT_PUBLIC_ANALYTICS_RESPECT_DNT === 'true' || true,
+    anonymizeIP: process.env.NEXT_PUBLIC_ANALYTICS_ANONYMIZE_IP === 'true' || true,
+    requireConsent: process.env.NEXT_PUBLIC_ANALYTICS_REQUIRE_CONSENT === 'true' || false, // Set to true for GDPR compliance
   },
 };
 

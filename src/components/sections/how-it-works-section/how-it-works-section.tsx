@@ -1,9 +1,9 @@
 'use client';
 
 import { Container } from '@/components/ui/container';
-import { HowItWorksIndicators } from './how-it-works-indicators';
-import { HowItWorksFeatures } from './how-it-works-features';
 import { HowItWorks } from './how-it-works';
+import { HowItWorksFeatures } from './how-it-works-features';
+import { HowItWorksIndicators } from './how-it-works-indicators';
 
 export function HowItWorksSection() {
   return (

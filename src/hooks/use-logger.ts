@@ -4,13 +4,18 @@ import { useCallback } from 'react';
  * Custom hook for conditional logging
  * Automatically disables console statements in production builds
  */
+
 export const useLogger = () => {
   const isProduction = process.env.NODE_ENV === 'production';
 
   const log = useCallback(
     (...args: unknown[]) => {
       if (!isProduction) {
-        console.log(...args);
+        try {
+          console.log(...args);
+        } catch {
+          console.log('Logger log Error:', ...args);
+        }
       }
     },
     [isProduction]
@@ -19,7 +24,11 @@ export const useLogger = () => {
   const info = useCallback(
     (...args: unknown[]) => {
       if (!isProduction) {
-        console.info(...args);
+        try {
+          console.info(...args);
+        } catch {
+          console.log('Logger info Error:', ...args);
+        }
       }
     },
     [isProduction]
@@ -28,7 +37,11 @@ export const useLogger = () => {
   const debug = useCallback(
     (...args: unknown[]) => {
       if (!isProduction) {
-        console.debug(...args);
+        try {
+          console.debug(...args);
+        } catch {
+          console.log('Logger debug Error:', ...args);
+        }
       }
     },
     [isProduction]
@@ -37,57 +50,84 @@ export const useLogger = () => {
   const warn = useCallback(
     (...args: unknown[]) => {
       if (!isProduction) {
-        console.warn(...args);
+        try {
+          console.warn(...args);
+        } catch {
+          console.log('Logger warn Error:', ...args);
+        }
       }
     },
     [isProduction]
   );
 
-  // Always allow error logging in production for debugging issues
   const error = useCallback((...args: unknown[]) => {
-    console.error(...args);
+    try {
+      console.error(...args);
+    } catch {
+      console.log('Logger Error:', ...args);
+    }
   }, []);
 
-  // Group logging for better organization
   const group = useCallback(
-    (label: string) => {
+    (...args: unknown[]) => {
       if (!isProduction) {
-        console.group(label);
+        try {
+          console.group(...args);
+        } catch {
+          console.log('Logger group Error:', ...args);
+        }
       }
     },
     [isProduction]
   );
 
-  const groupEnd = useCallback(() => {
-    if (!isProduction) {
-      console.groupEnd();
-    }
-  }, [isProduction]);
+  const groupEnd = useCallback(
+    (...args: unknown[]) => {
+      if (!isProduction) {
+        try {
+          console.groupEnd(...args);
+        } catch {
+          console.log('Logger groupEnd Error:', ...args);
+        }
+      }
+    },
+    [isProduction]
+  );
 
-  // Table logging for data visualization
   const table = useCallback(
-    (data: unknown) => {
+    (...args: unknown[]) => {
       if (!isProduction) {
-        console.table(data);
+        try {
+          console.table(...args);
+        } catch {
+          console.log('Logger table Error:', ...args);
+        }
       }
     },
     [isProduction]
   );
 
-  // Time logging for performance measurement
   const time = useCallback(
-    (label: string) => {
+    (...args: unknown[]) => {
       if (!isProduction) {
-        console.time(label);
+        try {
+          console.time(...args);
+        } catch {
+          console.log('Logger time Error:', ...args);
+        }
       }
     },
     [isProduction]
   );
 
   const timeEnd = useCallback(
-    (label: string) => {
+    (...args: unknown[]) => {
       if (!isProduction) {
-        console.timeEnd(label);
+        try {
+          console.timeEnd(...args);
+        } catch {
+          console.log('Logger timeEnd Error:', ...args);
+        }
       }
     },
     [isProduction]

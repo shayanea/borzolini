@@ -1,21 +1,14 @@
 import './globals.css';
 
-import { Inter, Poppins } from 'next/font/google';
-
 import { AnalyticsProvider } from '@/components/analytics';
 import { Header } from '@/components/sections/header';
+import { Manrope } from 'next/font/google';
 import type { Metadata } from 'next';
 
-const inter = Inter({
-  variable: '--font-inter',
+const manrope = Manrope({
+  variable: '--font-manrope',
   subsets: ['latin'],
-  display: 'swap',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
@@ -113,7 +106,7 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={`${inter.variable} ${poppins.variable} antialiased`} suppressHydrationWarning>
+      <body className={`${manrope.variable} antialiased`} suppressHydrationWarning>
         <AnalyticsProvider>
           <Header />
           {children}

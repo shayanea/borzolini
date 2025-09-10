@@ -33,6 +33,17 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
       return;
     }
 
+    // Validate required configuration
+    if (!analyticsConfig.umami.websiteId) {
+      logger.warn('Umami website ID not configured - analytics disabled');
+      return;
+    }
+
+    if (!analyticsConfig.umami.scriptUrl) {
+      logger.warn('Umami script URL not configured - analytics disabled');
+      return;
+    }
+
     // Check if Umami script is already loaded
     if (window.umami) {
       logger.info('Umami analytics already loaded');
@@ -64,8 +75,12 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
       }
     };
 
-    script.onerror = () => {
-      logger.error('Failed to load Umami analytics script');
+    script.onerror = (error) => {
+      logger.error('Failed to load Umami analytics script:', {
+        scriptUrl: script.src,
+        websiteId: analyticsConfig.umami.websiteId,
+        error: error,
+      });
     };
 
     document.head.appendChild(script);
@@ -79,14 +94,25 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps): React.J
   }, [isEnabled, logger]);
 
   const track = (eventName: string, eventData?: Record<string, string | number | boolean>): void => {
-    if (!isEnabled || !window.umami) {
+    if (!isEnabled) {
+      logger.debug('Analytics disabled - event not tracked:', eventName);
+      return;
+    }
+
+    if (!window.umami) {
+      logger.warn('Umami not loaded - event not tracked:', eventName);
       return;
     }
 
     try {
       window.umami.track(eventName, eventData);
+      logger.debug('Event tracked successfully:', eventName, eventData);
     } catch (error) {
-      logger.error('Failed to track event:', error);
+      logger.error('Failed to track event:', {
+        eventName,
+        eventData,
+        error: error instanceof Error ? error.message : String(error),
+      });
     }
   };
 

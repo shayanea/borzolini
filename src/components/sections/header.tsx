@@ -1,6 +1,5 @@
 'use client';
 
-import { Zap, ZapOff } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -17,12 +16,6 @@ export function Header() {
   const prefersReducedMotion = useReducedMotion();
   const [forceReducedMotion, setForceReducedMotion] = useState(false);
 
-  const toggleReducedMotion = () => {
-    setForceReducedMotion(!forceReducedMotion);
-    // You could also store this preference in localStorage
-    localStorage.setItem('forceReducedMotion', (!forceReducedMotion).toString());
-  };
-
   useEffect(() => {
     const stored = localStorage.getItem('forceReducedMotion');
     if (stored) {
@@ -34,37 +27,39 @@ export function Header() {
 
   return (
     <motion.header
-      className='sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/50 shadow-sm'
+      className='sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/50 shadow-lg'
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: shouldReduceMotion ? 0.1 : 0.3 }}
+      transition={{ duration: shouldReduceMotion ? 0.1 : 0.3, delay: 0.1 }}
     >
       <Container>
-        <div className='flex items-center justify-between h-16'>
-          <Logo />
+        <div className='flex items-center justify-between h-20'>
+          <div className='flex items-center gap-3'>
+            <Logo />
+            <div className='hidden lg:block'>
+              <div className='text-sm font-semibold text-slate-900'>PetCare Pro</div>
+              <div className='text-xs text-slate-500'>Professional Veterinary Care</div>
+            </div>
+          </div>
 
-          <div className='hidden md:flex items-center gap-6'>
+          <div className='hidden md:flex items-center gap-8'>
             <nav className='flex items-center gap-8'>
-              <NavLink href='#features'>Features</NavLink>
+              <NavLink href='#features'>Services</NavLink>
               <NavLink href='#how-it-works'>How It Works</NavLink>
-              <NavLink href='#clinic-management'>For Vets</NavLink>
+              <NavLink href='#clinic-management'>For Veterinarians</NavLink>
+              <NavLink href='#about'>About Us</NavLink>
             </nav>
 
             <div className='flex items-center gap-3'>
-              <Button
-                variant='ghost'
-                size='sm'
-                onClick={toggleReducedMotion}
-                className='p-2'
-                title={shouldReduceMotion ? 'Enable animations' : 'Reduce animations'}
-              >
-                {shouldReduceMotion ? <ZapOff className='w-4 h-4' /> : <Zap className='w-4 h-4' />}
-              </Button>
-              <Button variant='outline' size='sm'>
+              <Button variant='outline' size='sm' className='border-blue-200 text-blue-700 hover:bg-blue-50'>
                 Sign In
               </Button>
-              <Button variant='primary' size='sm'>
-                Sign Up
+              <Button
+                variant='primary'
+                size='sm'
+                className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300'
+              >
+                Get Started
               </Button>
             </div>
           </div>
