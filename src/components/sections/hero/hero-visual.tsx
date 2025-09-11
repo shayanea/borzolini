@@ -1,6 +1,6 @@
 'use client';
 
-import { Heart, Stethoscope, Shield, Clock, Users, Award } from 'lucide-react';
+import { Award, Brain, Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
 
 import { Card } from '@/components/ui/card';
 import { animations } from '@/lib/animations';
@@ -99,7 +99,7 @@ export const HeroVisual = () => {
             {/* Stats section */}
             <div className='border-t border-slate-200/50 pt-6'>
               <div className='grid grid-cols-3 gap-4 text-center'>
-                {stats.map((stat) => (
+                {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     className='space-y-1'
@@ -133,7 +133,7 @@ export const HeroVisual = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         >
-          <Shield className='w-6 h-6 text-white' />
+          <Brain className='w-6 h-6 text-white' />
         </motion.div>
       </div>
     </motion.div>

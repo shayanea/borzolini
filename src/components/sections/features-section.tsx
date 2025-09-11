@@ -1,6 +1,6 @@
 'use client';
 
-import { Award, Clock, Heart, Shield, Stethoscope, Users, Video } from 'lucide-react';
+import { Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
 import { animations, commonAnimationProps } from '@/lib/animations';
 
 import { Container } from '@/components/ui/container';
@@ -26,13 +26,14 @@ const medicalFeatures = [
     benefits: ['24/7 availability', 'Emergency response', 'Urgent care'],
   },
   {
-    id: 'video-consultations',
-    title: 'Video Consultations',
-    description: 'Secure video calls with veterinarians for remote health assessments and consultations.',
-    icon: Video,
-    color: 'from-green-500 to-emerald-500',
-    bgColor: 'from-green-50 to-emerald-50',
-    benefits: ['Remote consultations', 'Secure video calls', 'Quick assessments'],
+    id: 'security-compliance',
+    title: 'Security & Compliance',
+    description:
+      'Enterprise-grade data protection: encryption at rest and in transit, role-based access, detailed audit logs.',
+    icon: Shield,
+    color: 'from-emerald-500 to-green-600',
+    bgColor: 'from-emerald-50 to-green-50',
+    benefits: ['HIPAA-aligned controls', 'RBAC & audit trails', 'PII encryption'],
   },
   {
     id: 'preventive-care',
@@ -125,23 +126,23 @@ const FeaturesHeader = () => {
       </h2>
 
       <p className='text-body-large text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
-        Access professional veterinary services, emergency care, and specialized treatments through our trusted network
-        of licensed veterinarians and medical specialists.
+        From clinic chaos to calm at home. Trusted vets come to you or meet virtually, with guidance tailored to your
+        pet at home.
       </p>
 
       {/* Trust indicators */}
       <div className='flex flex-wrap justify-center gap-8 mt-8 text-sm text-slate-500'>
         <div className='flex items-center gap-2'>
           <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-          <span>Licensed Veterinarians</span>
+          <span>Vet verified</span>
         </div>
         <div className='flex items-center gap-2'>
           <div className='w-2 h-2 bg-blue-500 rounded-full'></div>
-          <span>24/7 Emergency Care</span>
+          <span>Home visits + tele‑consults</span>
         </div>
         <div className='flex items-center gap-2'>
           <div className='w-2 h-2 bg-purple-500 rounded-full'></div>
-          <span>Specialist Network</span>
+          <span>AI monitoring</span>
         </div>
       </div>
     </motion.div>
@@ -155,48 +156,9 @@ const FeaturesGrid = () => {
       {...commonAnimationProps}
       variants={animations.staggerContainer}
     >
-      {medicalFeatures.map((feature, index) => (
-        <MedicalFeatureCard key={feature.id} feature={feature} index={index} />
+      {medicalFeatures.map((feature) => (
+        <MedicalFeatureCard key={feature.id} feature={feature} />
       ))}
-    </motion.div>
-  );
-};
-
-const StatsSection = () => {
-  const stats = [
-    { label: 'Happy Pets Treated', value: '50K+', icon: Heart },
-    { label: 'Expert Veterinarians', value: '1,200+', icon: Users },
-    { label: 'Years of Experience', value: '25+', icon: Award },
-  ];
-
-  return (
-    <motion.div
-      className='mt-20 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl border border-blue-100/50'
-      {...commonAnimationProps}
-      variants={animations.fadeInUp}
-    >
-      <div className='text-center mb-8'>
-        <h3 className='text-2xl font-bold text-slate-900 mb-2'>Trusted by Pet Owners Worldwide</h3>
-        <p className='text-slate-600'>Professional veterinary care you can count on</p>
-      </div>
-
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-        {stats.map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            className='text-center'
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <div className='flex items-center justify-center mb-2'>
-              <stat.icon className='w-6 h-6 text-blue-600 mr-2' />
-              <span className='text-3xl font-bold text-slate-900'>{stat.value}</span>
-            </div>
-            <p className='text-slate-600 font-medium'>{stat.label}</p>
-          </motion.div>
-        ))}
-      </div>
     </motion.div>
   );
 };
@@ -215,7 +177,6 @@ export const FeaturesSection = () => {
       <Container size='xl' className='relative z-10'>
         <FeaturesHeader />
         <FeaturesGrid />
-        <StatsSection />
       </Container>
     </section>
   );

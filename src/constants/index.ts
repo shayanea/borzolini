@@ -44,12 +44,12 @@ export const FEATURES: Feature[] = [
     benefits: ['One-click vet booking', 'Pet specialist matching', 'Smart timing suggestions'],
   },
   {
-    id: 'vet-consultations',
-    title: 'Video Vet Consultations',
+    id: 'security-compliance',
+    title: 'Security & Compliance',
     description:
-      'Connect with qualified veterinarians through secure video calls for quick health assessments and advice for any pet.',
-    icon: 'MessageCircle',
-    benefits: ['Instant vet access', 'Secure video calls', 'Quick health assessments'],
+      'Enterprise-grade privacy and data security with encryption in transit/at rest, RBAC, and audit trails.',
+    icon: 'Shield',
+    benefits: ['HIPAA-aligned', 'RBAC & audit logs', 'PII encryption'],
   },
   {
     id: 'clinic-scoring',

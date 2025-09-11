@@ -4,6 +4,7 @@ import { HeroActions } from './hero-actions';
 import { HeroBadge } from './hero-badge';
 import { HeroDescription } from './hero-description';
 import { HeroTitle } from './hero-title';
+import { HeroTrustStrip } from './hero-trust-strip';
 import { HeroVisual } from './hero-visual';
 
 export const HeroSection = () => {
@@ -31,6 +32,7 @@ export const HeroSection = () => {
             <HeroTitle />
             <HeroDescription />
             <HeroActions />
+            <HeroTrustStrip />
           </div>
 
           <div className='flex justify-center lg:justify-end'>

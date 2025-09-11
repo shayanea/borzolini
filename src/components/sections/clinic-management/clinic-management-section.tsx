@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/container';
 import { MultiRoleSystem } from './multi-role-system';
 import { ReviewAndRatingSystem } from './review-rating-system';
 import { StaffManagement } from './staff-management';
+import { ClinicROIMetrics } from './clinic-roi-metrics';
 
 export function ClinicManagementSection() {
   return (
@@ -33,6 +34,7 @@ export function ClinicManagementSection() {
         <AdvancedSearchAndFiltering />
         <StaffManagement />
         <ReviewAndRatingSystem />
+        <ClinicROIMetrics />
         <ClinicManagementCTA />
       </Container>
     </section>

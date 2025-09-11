@@ -73,7 +73,10 @@ const MedicalServiceCard = ({ service }: { service: (typeof medicalServices)[0] 
 
 export function CTASection() {
   return (
-    <section className='section-padding bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden'>
+    <section
+      id='cta'
+      className='section-padding bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 relative overflow-hidden'
+    >
       {/* Medical-themed background patterns */}
       <div className='absolute inset-0 bg-pattern-organic opacity-10' />
       <div className='absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl' />

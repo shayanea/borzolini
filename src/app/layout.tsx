@@ -2,8 +2,8 @@ import './globals.css';
 
 import { AnalyticsProvider } from '@/components/analytics';
 import { Header } from '@/components/sections/header';
-import { Manrope } from 'next/font/google';
 import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
 
 const manrope = Manrope({
   variable: '--font-manrope',
@@ -14,9 +14,9 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://borzolini.com'),
-  title: 'Borzolini - Smart Pet Healthcare for All Pets',
+  title: 'From clinic chaos to calm at home | Borzolini',
   description:
-    'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Starting with Borzolini! Borzolini is named after our beloved companion.',
+    'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
   keywords: [
     'pet healthcare',
     'care recommendations',
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://borzolini.com',
-    title: 'Borzolini - Smart Pet Healthcare for All Pets',
+    title: 'From clinic chaos to calm at home | Borzolini',
     description:
-      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
+      'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
     siteName: 'Borzolini',
     images: [
       {
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Borzolini - Smart Pet Healthcare for All Pets',
+    title: 'From clinic chaos to calm at home | Borzolini',
     description:
-      'Get personalized care recommendations, easy vet scheduling, and quality clinic ratings for all your pets. Named after Borzolini, our beloved companion.',
+      'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
     creator: '@borzolini',
     images: ['/images/borzolini-hero.webp'],
   },

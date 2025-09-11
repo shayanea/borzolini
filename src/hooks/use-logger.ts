@@ -69,30 +69,27 @@ export const useLogger = () => {
   }, []);
 
   const group = useCallback(
-    (...args: unknown[]) => {
+    (...labels: Array<string | undefined>) => {
       if (!isProduction) {
         try {
-          console.group(...args);
+          console.group(...labels);
         } catch {
-          console.log('Logger group Error:', ...args);
+          console.log('Logger group Error:', ...labels);
         }
       }
     },
     [isProduction]
   );
 
-  const groupEnd = useCallback(
-    (...args: unknown[]) => {
-      if (!isProduction) {
-        try {
-          console.groupEnd(...args);
-        } catch {
-          console.log('Logger groupEnd Error:', ...args);
-        }
+  const groupEnd = useCallback(() => {
+    if (!isProduction) {
+      try {
+        console.groupEnd();
+      } catch {
+        console.log('Logger groupEnd Error');
       }
-    },
-    [isProduction]
-  );
+    }
+  }, [isProduction]);
 
   const table = useCallback(
     (...args: unknown[]) => {
@@ -108,12 +105,12 @@ export const useLogger = () => {
   );
 
   const time = useCallback(
-    (...args: unknown[]) => {
+    (label?: string) => {
       if (!isProduction) {
         try {
-          console.time(...args);
+          console.time(label);
         } catch {
-          console.log('Logger time Error:', ...args);
+          console.log('Logger time Error:', label);
         }
       }
     },
@@ -121,12 +118,12 @@ export const useLogger = () => {
   );
 
   const timeEnd = useCallback(
-    (...args: unknown[]) => {
+    (label?: string) => {
       if (!isProduction) {
         try {
-          console.timeEnd(...args);
+          console.timeEnd(label);
         } catch {
-          console.log('Logger timeEnd Error:', ...args);
+          console.log('Logger timeEnd Error:', label);
         }
       }
     },

@@ -4,6 +4,8 @@ import { Award, Heart, Shield } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { footerLinks } from '@/constants/footer';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -13,31 +15,54 @@ const fadeInUp = {
 
 export function Footer() {
   return (
-    <footer className='bg-slate-900 text-white py-6 relative overflow-hidden'>
+    <footer className='bg-slate-900 text-white py-8 border-t border-slate-800 relative overflow-hidden'>
       <Container className='relative z-10'>
         <motion.div
-          className=' flex flex-col md:flex-row justify-between items-center'
+          className='flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <p className='text-slate-400 text-body font-medium'>
+          <p className='text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-[42rem]'>
             © 2024 Borzolini. All rights reserved. Named after Borzolini 🐾
           </p>
-          <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8 text-sm text-slate-400 md:mt-0'>
-            <span className='flex items-center gap-3 bg-slate-800/50 px-4 py-2 rounded-lg shadow-sm'>
+          <div className='flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-slate-300'>
+            <span
+              className='flex items-center gap-2 bg-slate-800/60 px-3 py-1.5 rounded-lg shadow-sm'
+              aria-label='HIPAA compliant platform'
+              role='status'
+            >
               <Shield className='w-4 h-4 flex-shrink-0 text-blue-400' />
               <span className='font-medium'>HIPAA Compliant</span>
             </span>
-            <span className='flex items-center gap-3 bg-slate-800/50 px-4 py-2 rounded-lg shadow-sm'>
+            <span
+              className='flex items-center gap-2 bg-slate-800/60 px-3 py-1.5 rounded-lg shadow-sm'
+              aria-label='Vet approved product'
+              role='status'
+            >
               <Award className='w-4 h-4 flex-shrink-0 text-green-400' />
               <span className='font-medium'>Vet Approved</span>
             </span>
-            <span className='flex items-center gap-3 bg-slate-800/50 px-4 py-2 rounded-lg shadow-sm'>
+            <span
+              className='flex items-center gap-2 bg-slate-800/60 px-3 py-1.5 rounded-lg shadow-sm'
+              aria-label='Made with love for all pets'
+              role='status'
+            >
               <Heart className='w-4 h-4 flex-shrink-0 text-pink-400' />
               <span className='font-medium'>Made with ❤️ for all pets</span>
             </span>
+            <nav aria-label='Footer navigation' className='pl-1'>
+              <ul className='flex items-center gap-6 text-slate-400' role='list'>
+                {footerLinks.map(({ href, label, ariaLabel }) => (
+                  <li key={href}>
+                    <Link href={href} aria-label={ariaLabel ?? label} className='hover:text-white transition-colors'>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </motion.div>
       </Container>

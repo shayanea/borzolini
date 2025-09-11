@@ -1,9 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Star } from 'lucide-react';
+import { Instagram, Shield, Star } from 'lucide-react';
 
 import type { Clinic } from '@/types/clinic';
+
+const hasInstagramHandle = (
+  clinic: Clinic | (Clinic & { instagramHandle?: string })
+): clinic is Clinic & { instagramHandle: string } => {
+  return (
+    typeof (clinic as { instagramHandle?: unknown }).instagramHandle === 'string' &&
+    (clinic as { instagramHandle?: unknown }).instagramHandle !== ''
+  );
+};
 
 interface ClinicCardProps {
   clinic: Clinic;
@@ -35,12 +44,17 @@ export const ClinicCard = ({ clinic }: ClinicCardProps): React.JSX.Element => {
         )}
       </div>
 
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap gap-2 items-center'>
         {clinic.specializations.slice(0, 2).map((spec, idx) => (
           <span key={idx} className='px-3 py-1 bg-yellow-100 text-yellow-700 text-sm rounded-full font-medium'>
             {spec}
           </span>
         ))}
+        {hasInstagramHandle(clinic) && (
+          <span className='flex items-center gap-1 px-2 py-1 bg-pink-50 text-pink-700 text-xs rounded-full font-medium'>
+            <Instagram className='w-3 h-3' />@{clinic.instagramHandle}
+          </span>
+        )}
       </div>
     </motion.div>
   );

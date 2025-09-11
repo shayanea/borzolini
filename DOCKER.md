@@ -100,27 +100,33 @@ docker rmi borzolini:dev borzolini:prod
 ## Docker Compose Profiles
 
 ### Development Profile
+
 ```bash
 docker-compose --profile dev up -d
 ```
+
 - Hot reloading enabled
 - Source code mounted as volume
 - Development dependencies
 - Accessible at http://localhost:3000
 
 ### Production Profile
+
 ```bash
 docker-compose --profile prod up -d
 ```
+
 - Production build
 - Optimized for performance
 - No source code mounting
 - Accessible at http://localhost:3000
 
 ### Production with Nginx Profile
+
 ```bash
 docker-compose --profile prod-nginx up -d
 ```
+
 - Production build with nginx reverse proxy
 - Load balancing and caching
 - Security headers
@@ -130,10 +136,12 @@ docker-compose --profile prod-nginx up -d
 ## Environment Variables
 
 ### Development
+
 - `NODE_ENV=development`
 - `NEXT_TELEMETRY_DISABLED=1`
 
 ### Production
+
 - `NODE_ENV=production`
 - `NEXT_TELEMETRY_DISABLED=1`
 - `PORT=3000`
@@ -154,6 +162,7 @@ docker-compose --profile prod-nginx up -d
 ## Dockerfile Details
 
 ### Production Dockerfile (`Dockerfile`)
+
 - Multi-stage build for optimization
 - Uses Node.js 20 Alpine for smaller image size
 - Standalone output for better performance
@@ -161,6 +170,7 @@ docker-compose --profile prod-nginx up -d
 - Optimized for production builds
 
 ### Development Dockerfile (`Dockerfile.dev`)
+
 - Single-stage build for simplicity
 - Volume mounting for hot reloading
 - Development dependencies included
@@ -169,6 +179,7 @@ docker-compose --profile prod-nginx up -d
 ## Nginx Configuration
 
 The nginx configuration includes:
+
 - Reverse proxy to Next.js app
 - Gzip compression
 - Static file caching
@@ -180,6 +191,7 @@ The nginx configuration includes:
 ## Performance Optimizations
 
 ### Production Build
+
 - Multi-stage Docker build
 - Standalone output mode
 - Alpine Linux base image
@@ -187,6 +199,7 @@ The nginx configuration includes:
 - Optimized layer caching
 
 ### Development Build
+
 - Volume mounting for fast file changes
 - Development server with hot reloading
 - Source maps enabled
@@ -205,21 +218,24 @@ The nginx configuration includes:
 ### Common Issues
 
 1. **Port already in use**
+
    ```bash
    # Check what's using port 3000
    lsof -i :3000
-   
+
    # Stop existing containers
    ./scripts/docker.sh stop
    ```
 
 2. **Permission denied**
+
    ```bash
    # Make script executable
    chmod +x scripts/docker.sh
    ```
 
 3. **Build fails**
+
    ```bash
    # Clean up and rebuild
    ./scripts/docker.sh clean
@@ -227,10 +243,11 @@ The nginx configuration includes:
    ```
 
 4. **Container won't start**
+
    ```bash
    # Check logs
    ./scripts/docker.sh logs
-   
+
    # Check container status
    docker ps -a
    ```
@@ -254,6 +271,7 @@ docker stats
 ## Production Deployment
 
 ### Single Container
+
 ```bash
 # Build and run production container
 ./scripts/docker.sh build-prod
@@ -261,13 +279,16 @@ docker stats
 ```
 
 ### With Nginx Reverse Proxy
+
 ```bash
 # Run production with nginx
 ./scripts/docker.sh run-nginx
 ```
 
 ### Environment Variables
+
 Create a `.env` file for production:
+
 ```env
 NODE_ENV=production
 NEXT_TELEMETRY_DISABLED=1
@@ -277,6 +298,7 @@ NEXT_TELEMETRY_DISABLED=1
 ## Monitoring and Logs
 
 ### View Logs
+
 ```bash
 # All containers
 ./scripts/docker.sh logs
@@ -289,6 +311,7 @@ docker logs -f <container-name>
 ```
 
 ### Health Checks
+
 - Nginx health endpoint: http://localhost/health
 - Container health status: `docker ps`
 
@@ -306,6 +329,7 @@ docker logs -f <container-name>
 ## Support
 
 For Docker-related issues:
+
 1. Check the troubleshooting section
 2. Review Docker logs
 3. Verify Docker is running
