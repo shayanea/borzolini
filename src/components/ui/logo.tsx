@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 interface LogoProps {
@@ -18,11 +19,13 @@ export function Logo({ size = 'md', className }: LogoProps) {
   };
 
   return (
-    <span
+    <Link
+      href='/'
+      aria-label='Go to homepage'
       className={cn('font-extrabold tracking-tight flex items-center text-blue-500', textSizeClasses[size], className)}
     >
       Borzolini
-    </span>
+    </Link>
   );
 }
 

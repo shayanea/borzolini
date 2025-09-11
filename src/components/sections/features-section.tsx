@@ -1,6 +1,6 @@
 'use client';
 
-import { Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
+import { Brain, Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
 import { animations, commonAnimationProps } from '@/lib/animations';
 
 import { Container } from '@/components/ui/container';
@@ -26,14 +26,14 @@ const medicalFeatures = [
     benefits: ['24/7 availability', 'Emergency response', 'Urgent care'],
   },
   {
-    id: 'security-compliance',
-    title: 'Security & Compliance',
+    id: 'ai-monitoring',
+    title: 'AI Monitoring',
     description:
-      'Enterprise-grade data protection: encryption at rest and in transit, role-based access, detailed audit logs.',
-    icon: Shield,
-    color: 'from-emerald-500 to-green-600',
-    bgColor: 'from-emerald-50 to-green-50',
-    benefits: ['HIPAA-aligned controls', 'RBAC & audit trails', 'PII encryption'],
+      'Proactive AI that analyzes signals to detect anomalies early, predict issues, and surface actionable insights.',
+    icon: Brain,
+    color: 'from-violet-500 to-fuchsia-600',
+    bgColor: 'from-violet-50 to-fuchsia-50',
+    benefits: ['Real-time anomaly detection', 'Predictive alerts', 'Continuous insights'],
   },
   {
     id: 'preventive-care',

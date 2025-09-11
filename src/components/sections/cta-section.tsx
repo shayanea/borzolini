@@ -52,7 +52,7 @@ const MedicalServiceCard = ({ service }: { service: (typeof medicalServices)[0] 
         <div className='relative z-10'>
           {/* Icon */}
           <div
-            className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+            className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
           >
             <service.icon className='w-8 h-8 text-white' />
           </div>

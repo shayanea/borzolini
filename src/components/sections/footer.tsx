@@ -3,9 +3,11 @@
 import { Award, Heart, Shield } from 'lucide-react';
 
 import { Container } from '@/components/ui/container';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import { footerLinks } from '@/constants/footer';
+import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -14,6 +16,7 @@ const fadeInUp = {
 };
 
 export function Footer() {
+  const pathname = usePathname();
   return (
     <footer className='bg-slate-900 text-white py-8 border-t border-slate-800 relative overflow-hidden'>
       <Container className='relative z-10'>
@@ -54,13 +57,21 @@ export function Footer() {
             </span>
             <nav aria-label='Footer navigation' className='pl-1'>
               <ul className='flex items-center gap-6 text-slate-400' role='list'>
-                {footerLinks.map(({ href, label, ariaLabel }) => (
-                  <li key={href}>
-                    <Link href={href} aria-label={ariaLabel ?? label} className='hover:text-white transition-colors'>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
+                {footerLinks.map(({ href, label, ariaLabel }) => {
+                  const isActive = pathname === href;
+                  return (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        aria-label={ariaLabel ?? label}
+                        aria-current={isActive ? 'page' : undefined}
+                        className={cn('transition-colors', isActive ? 'text-white font-semibold' : 'hover:text-white')}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
           </div>

@@ -48,6 +48,7 @@ export function Header() {
               <NavLink href='#how-it-works'>How It Works</NavLink>
               <NavLink href='#clinic-management'>For Veterinarians</NavLink>
               <NavLink href='#about'>About Us</NavLink>
+              <NavLink href='/contact'>Contact us</NavLink>
             </nav>
 
             <div className='flex items-center gap-3'>
