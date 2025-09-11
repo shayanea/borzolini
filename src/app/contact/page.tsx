@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { ContactForm } from '@/components/sections/contact/contact-form';
 
 import { Container } from '@/components/ui/container';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
@@ -52,6 +53,9 @@ export default function ContactPage() {
                 <div className='font-semibold text-slate-900'>Location</div>
                 <div className='text-slate-600'>Remote-first, global team</div>
               </div>
+            </div>
+            <div className='mt-12'>
+              <ContactForm />
             </div>
           </Container>
         </section>

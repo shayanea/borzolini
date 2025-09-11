@@ -17,6 +17,14 @@ const fadeInUp = {
 
 export function Footer() {
   const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  const homeLinks = [
+    { href: '/', label: 'Home', ariaLabel: 'Go to homepage' },
+    { href: '/#cta', label: 'Contact us', ariaLabel: 'Contact us' },
+  ] as const;
+
+  const linksToRender = isHome ? footerLinks : homeLinks;
   return (
     <footer className='bg-slate-900 text-white py-8 border-t border-slate-800 relative overflow-hidden'>
       <Container className='relative z-10'>
@@ -57,7 +65,7 @@ export function Footer() {
             </span>
             <nav aria-label='Footer navigation' className='pl-1'>
               <ul className='flex items-center gap-6 text-slate-400' role='list'>
-                {footerLinks.map(({ href, label, ariaLabel }) => {
+                {linksToRender.map(({ href, label, ariaLabel }) => {
                   const isActive = pathname === href;
                   return (
                     <li key={href}>
