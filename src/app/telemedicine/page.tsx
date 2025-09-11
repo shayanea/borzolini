@@ -1,7 +1,6 @@
 import { CTASection } from '@/components/sections/cta-section';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Footer } from '@/components/sections/footer';
-import { HeroSection } from '@/components/sections/hero';
 import { HowItWorksSection } from '@/components/sections/how-it-works-section/how-it-works-section';
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function TelemedicinePage() {
   return (
     <ErrorBoundary>
       <main className='min-h-screen'>
-        <HeroSection />
         <HowItWorksSection />
         <CTASection />
         <Footer />

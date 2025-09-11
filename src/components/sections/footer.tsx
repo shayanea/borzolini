@@ -17,14 +17,7 @@ const fadeInUp = {
 
 export function Footer() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
 
-  const homeLinks = [
-    { href: '/', label: 'Home', ariaLabel: 'Go to homepage' },
-    { href: '/#cta', label: 'Contact us', ariaLabel: 'Contact us' },
-  ] as const;
-
-  const linksToRender = isHome ? footerLinks : homeLinks;
   return (
     <footer className='bg-slate-900 text-white py-8 border-t border-slate-800 relative overflow-hidden'>
       <Container className='relative z-10'>
@@ -36,7 +29,7 @@ export function Footer() {
           variants={fadeInUp}
         >
           <p className='text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-[42rem]'>
-            © 2024 Borzolini. All rights reserved. Named after Borzolini 🐾
+            © 2025 Borzolini. All rights reserved. Named after Borzolini 🐾
           </p>
           <div className='flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-slate-300'>
             <span
@@ -65,7 +58,7 @@ export function Footer() {
             </span>
             <nav aria-label='Footer navigation' className='pl-1'>
               <ul className='flex items-center gap-6 text-slate-400' role='list'>
-                {linksToRender.map(({ href, label, ariaLabel }) => {
+                {footerLinks.map(({ href, label, ariaLabel }) => {
                   const isActive = pathname === href;
                   return (
                     <li key={href}>

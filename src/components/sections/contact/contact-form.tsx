@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { z } from 'zod';
@@ -14,7 +13,7 @@ const schema = z.object({
   subject: z.string().min(3, 'Subject must be at least 3 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
   consent: z.boolean().refine((v) => v === true, { message: 'Please accept the privacy policy' }),
-  hcaptchaToken: z.string().min(1, 'Please complete the captcha'),
+  // captcha handled server-side via rate limiting
 });
 
 export type ContactFormValues = z.infer<typeof schema>;
@@ -27,7 +26,6 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     reset,
-    setValue,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({ resolver: zodResolver(schema), mode: 'onTouched' });
 
@@ -122,19 +120,7 @@ export const ContactForm = () => {
           {errors.message && <p className='mt-1 text-sm text-red-600'>{errors.message.message}</p>}
         </div>
 
-        <div>
-          <HCaptcha
-            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY as string}
-            onVerify={(token) => {
-              setValue('hcaptchaToken', token, { shouldValidate: true, shouldDirty: true });
-            }}
-            onExpire={() => {
-              setValue('hcaptchaToken', '', { shouldValidate: true, shouldDirty: true });
-            }}
-          />
-          <input type='hidden' {...register('hcaptchaToken')} />
-          {errors.hcaptchaToken && <p className='mt-1 text-sm text-red-600'>{errors.hcaptchaToken.message}</p>}
-        </div>
+        {/* hCaptcha removed; rate limiting enforced server-side */}
 
         <div className='flex items-start gap-3'>
           <input
