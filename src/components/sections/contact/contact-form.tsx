@@ -33,7 +33,8 @@ export const ContactForm = () => {
     setServerError(null);
     setServerSuccess(null);
     try {
-      const res = await fetch('/api/contact', {
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001/api/v1';
+      const res = await fetch(`${apiBaseUrl}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),

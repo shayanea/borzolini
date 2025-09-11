@@ -56,7 +56,7 @@ export function Header() {
               ) : (
                 <>
                   <NavLink href='/'>Home</NavLink>
-                  <NavLink href='/#cta'>Contact us</NavLink>
+                  <NavLink href='/contact'>Contact us</NavLink>
                 </>
               )}
             </nav>

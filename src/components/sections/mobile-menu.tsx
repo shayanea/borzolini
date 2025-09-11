@@ -55,7 +55,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
                 Home
               </Link>
               <Link
-                href='/#cta'
+                href='/contact'
                 className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
                 onClick={onClose}
               >

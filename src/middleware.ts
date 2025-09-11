@@ -31,7 +31,8 @@ function allow(ip: string): boolean {
 
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith('/api/contact')) {
-    const ip = request.ip || request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
     if (!allow(ip)) {
       return NextResponse.json({ error: 'Too Many Requests' }, { status: 429 });
     }

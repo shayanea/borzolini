@@ -3,6 +3,9 @@
 Create a `.env.local` file in your web directory with the following variables:
 
 ```env
+# API Configuration
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3001/api/v1
+
 # Umami Analytics Configuration
 NEXT_PUBLIC_UMAMI_WEBSITE_ID=22dc4639-0c98-4e02-a981-4b58a18de648
 NEXT_PUBLIC_UMAMI_SCRIPT_URL=http://localhost:3001

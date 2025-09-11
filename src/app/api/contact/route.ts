@@ -21,13 +21,23 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid input', issues: parsed.error.flatten() }, { status: 400 });
     }
 
-    const { name, email, subject, message } = parsed.data;
+    // Forward the request to the NestJS API
+    const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001/api/v1';
+    const response = await fetch(`${apiBaseUrl}/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(parsed.data),
+    });
 
-    // TODO: hook up email provider or ticket system here
-    // Temporary server-side note
-    console.warn('[CONTACT_FORM]', { name, email, subject, messageLength: message.length });
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      return NextResponse.json({ error: errorData?.error || 'Failed to send message' }, { status: response.status });
+    }
 
-    return NextResponse.json({ ok: true });
+    const result = await response.json();
+    return NextResponse.json(result);
   } catch (error) {
     console.error('[CONTACT_FORM_ERROR]', error);
     return NextResponse.json({ error: 'Unexpected error' }, { status: 500 });
