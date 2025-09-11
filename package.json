@@ -57,6 +57,7 @@
     "analytics:restart": "docker compose -f docker-compose.analytics.yml restart"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.12.1",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",

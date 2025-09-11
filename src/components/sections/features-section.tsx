@@ -27,7 +27,7 @@ const medicalFeatures = [
   },
   {
     id: 'ai-monitoring',
-    title: 'AI Monitoring',
+    title: 'AI Monitoring/Insights',
     description:
       'Proactive AI that analyzes signals to detect anomalies early, predict issues, and surface actionable insights.',
     icon: Brain,
@@ -142,7 +142,7 @@ const FeaturesHeader = () => {
         </div>
         <div className='flex items-center gap-2'>
           <div className='w-2 h-2 bg-purple-500 rounded-full'></div>
-          <span>AI monitoring</span>
+          <span>AI-powered insights</span>
         </div>
       </div>
     </motion.div>

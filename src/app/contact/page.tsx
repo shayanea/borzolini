@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { ContactForm } from '@/components/sections/contact/contact-form';
 
+import { ContactForm } from '@/components/sections/contact/contact-form';
 import { Container } from '@/components/ui/container';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Footer } from '@/components/sections/footer';

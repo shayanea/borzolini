@@ -56,7 +56,7 @@ const MedicalServiceCard = ({ service }: { service: (typeof medicalServices)[0] 
           >
             <service.icon className='w-8 h-8 text-white' />
           </div>
-
+          Happy Pets
           {/* Content */}
           <h3 className='text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300'>
             {service.title}

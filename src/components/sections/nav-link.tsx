@@ -1,14 +1,20 @@
 'use client';
 
+import Link from 'next/link';
+
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-export function NavLink({ href, children }: NavLinkProps) {
+export function NavLink({ href, children, className }: NavLinkProps) {
   return (
-    <a href={href} className='text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-sm'>
+    <Link
+      href={href}
+      className={className ?? 'text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-sm'}
+    >
       {children}
-    </a>
+    </Link>
   );
 }

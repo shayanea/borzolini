@@ -1,21 +1,20 @@
 'use client';
 
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
-
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const schema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
   subject: z.string().min(3, 'Subject must be at least 3 characters'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
-  consent: z.literal<boolean>(true, {
-    errorMap: () => ({ message: 'Please accept the privacy policy' }),
-  }),
+  consent: z.boolean().refine((v) => v === true, { message: 'Please accept the privacy policy' }),
+  hcaptchaToken: z.string().min(1, 'Please complete the captcha'),
 });
 
 export type ContactFormValues = z.infer<typeof schema>;
@@ -28,6 +27,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({ resolver: zodResolver(schema), mode: 'onTouched' });
 
@@ -120,6 +120,20 @@ export const ContactForm = () => {
             aria-invalid={!!errors.message}
           />
           {errors.message && <p className='mt-1 text-sm text-red-600'>{errors.message.message}</p>}
+        </div>
+
+        <div>
+          <HCaptcha
+            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY as string}
+            onVerify={(token) => {
+              setValue('hcaptchaToken', token, { shouldValidate: true, shouldDirty: true });
+            }}
+            onExpire={() => {
+              setValue('hcaptchaToken', '', { shouldValidate: true, shouldDirty: true });
+            }}
+          />
+          <input type='hidden' {...register('hcaptchaToken')} />
+          {errors.hcaptchaToken && <p className='mt-1 text-sm text-red-600'>{errors.hcaptchaToken.message}</p>}
         </div>
 
         <div className='flex items-start gap-3'>

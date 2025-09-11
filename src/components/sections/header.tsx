@@ -9,12 +9,14 @@ import { MobileMenu } from './mobile-menu';
 import { MobileMenuButton } from './mobile-menu-button';
 import { NavLink } from './nav-link';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const [forceReducedMotion, setForceReducedMotion] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const stored = localStorage.getItem('forceReducedMotion');
@@ -44,11 +46,19 @@ export function Header() {
 
           <div className='hidden md:flex items-center gap-8'>
             <nav className='flex items-center gap-8'>
-              <NavLink href='#features'>Services</NavLink>
-              <NavLink href='#how-it-works'>How It Works</NavLink>
-              <NavLink href='#clinic-management'>For Veterinarians</NavLink>
-              <NavLink href='#about'>About Us</NavLink>
-              <NavLink href='/contact'>Contact us</NavLink>
+              {pathname === '/' ? (
+                <>
+                  <NavLink href='#features'>Services</NavLink>
+                  <NavLink href='#how-it-works'>How It Works</NavLink>
+                  <NavLink href='#clinic-management'>For Veterinarians</NavLink>
+                  <NavLink href='#about'>About Us</NavLink>
+                </>
+              ) : (
+                <>
+                  <NavLink href='/'>Home</NavLink>
+                  <NavLink href='/#cta'>Contact us</NavLink>
+                </>
+              )}
             </nav>
 
             <div className='flex items-center gap-3'>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Award, Brain, Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
+import { Brain, Clock, Heart, Shield, Stethoscope } from 'lucide-react';
 
 import { Card } from '@/components/ui/card';
 import { animations } from '@/lib/animations';
@@ -39,12 +39,6 @@ const medicalFeatures = [
     color: 'bg-purple-500',
     delay: 300,
   },
-];
-
-const stats = [
-  { label: 'Happy Pets', value: '10K+', icon: Heart },
-  { label: 'Expert Vets', value: '500+', icon: Users },
-  { label: 'Years Experience', value: '15+', icon: Award },
 ];
 
 export const HeroVisual = () => {
@@ -94,27 +88,6 @@ export const HeroVisual = () => {
                   <p className='text-slate-600 text-xs'>{feature.description}</p>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Stats section */}
-            <div className='border-t border-slate-200/50 pt-6'>
-              <div className='grid grid-cols-3 gap-4 text-center'>
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    className='space-y-1'
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                  >
-                    <div className='flex items-center justify-center mb-1'>
-                      <stat.icon className='w-4 h-4 text-blue-600 mr-1' />
-                      <span className='text-lg font-bold text-slate-900'>{stat.value}</span>
-                    </div>
-                    <p className='text-xs text-slate-500'>{stat.label}</p>
-                  </motion.div>
-                ))}
-              </div>
             </div>
           </div>
         </Card>
