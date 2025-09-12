@@ -22,20 +22,18 @@ const HowItWorksStep: React.FC<HowItWorksStepProps> = ({
   onToggle: _onToggle,
 }) => {
   return (
-    <motion.div className='relative mb-8 last:mb-0 lg:mb-0' variants={animations.fadeInUp}>
-      <div className='hidden lg:block absolute w-px h-full bg-gradient-to-b from-blue-200 to-purple-200 left-12 top-0 -translate-x-1/2' />
-      <div className='flex items-start lg:items-center relative group'>
-        <div className='w-24 h-24 bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl flex items-center justify-center flex-shrink-0 mr-8 shadow-lg group-hover:scale-105 transition-all duration-300 border border-white/50'>
-          <Icon className='w-12 h-12 text-blue-600' />
+    <div className='relative mb-8 last:mb-0 lg:mb-0'>
+      <div className='hidden lg:block absolute w-px h-full bg-slate-200 left-10 top-0 -translate-x-1/2' />
+      <div className='flex items-start lg:items-center relative'>
+        <div className='w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0 mr-6 lg:mr-8 group-hover:scale-105 transition-transform duration-200'>
+          <Icon className='w-10 h-10 text-blue-600' />
         </div>
         <div className='flex-1'>
-          <h3 className='text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors duration-300'>
-            {title}
-          </h3>
-          <p className='text-slate-600 leading-relaxed text-lg'>{description}</p>
+          <h3 className='text-2xl font-bold text-slate-900 mb-2'>{title}</h3>
+          <p className='text-slate-600 leading-relaxed'>{description}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -77,16 +75,14 @@ export const HowItWorksTimeline: React.FC = () => {
     >
       {/* Mobile Timeline View */}
       <div className='relative lg:hidden'>
-        <div className='absolute left-6 top-0 w-px h-full bg-gradient-to-b from-blue-200 to-purple-200' />
+        <div className='absolute left-4 top-0 w-px h-full bg-slate-200' />
         {steps.map((step, index) => (
-          <motion.div key={index} className='mb-8 relative' variants={animations.fadeInUp}>
-            <div className='flex items-center mb-4 cursor-pointer group' onClick={() => handleToggle(index)}>
-              <div className='w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-lg font-bold flex-shrink-0 z-10 shadow-lg group-hover:scale-110 transition-transform duration-300'>
+          <div key={index} className='mb-8 relative'>
+            <div className='flex items-center mb-4 cursor-pointer' onClick={() => handleToggle(index)}>
+              <div className='w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0 z-10'>
                 {index + 1}
               </div>
-              <h3 className='ml-6 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300'>
-                {step.title}
-              </h3>
+              <h3 className='ml-4 text-xl font-bold text-slate-900'>{step.title}</h3>
             </div>
             {expandedIndex === index && (
               <motion.div
@@ -94,17 +90,17 @@ export const HowItWorksTimeline: React.FC = () => {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className='pl-20 text-slate-600 leading-relaxed text-lg'
+                className='pl-16 text-slate-600 leading-relaxed'
               >
                 {step.description}
               </motion.div>
             )}
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      {/* Desktop Grid View */}
-      <div className='hidden lg:grid lg:grid-cols-3 lg:gap-16'>
+      {/* Desktop Grid View (existing HowItWorksFeatures content) */}
+      <div className='hidden lg:grid lg:grid-cols-3 lg:gap-12'>
         {steps.map((step, index) => (
           <HowItWorksStep
             key={index}
