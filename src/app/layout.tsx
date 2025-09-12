@@ -73,11 +73,8 @@ export const metadata: Metadata = {
     images: ['/images/borzolini-hero.webp'],
   },
   icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.png', type: 'image/png' },
-    ],
-    apple: '/app-icon.svg',
+    icon: '/favicon.ico',
+    apple: '/apple-icon-180x180.png',
   },
 };
 
