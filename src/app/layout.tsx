@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  themeColor: '#1d3557',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -68,6 +67,7 @@ export const metadata: Metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#1d3557',
 };
 
 export default function RootLayout({
