@@ -11,6 +11,7 @@ import { NavLink } from './nav-link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
+import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,18 +46,23 @@ export function Header() {
           </div>
 
           <div className='hidden md:flex items-center gap-8'>
-            <nav className='flex items-center gap-8'>
+            <nav className='flex items-center gap-6'>
               {pathname === '/' ? (
                 <>
-                  <NavLink href='#features'>Services</NavLink>
-                  <NavLink href='#how-it-works'>How It Works</NavLink>
-                  <NavLink href='#clinic-management'>For Veterinarians</NavLink>
-                  <NavLink href='#about'>About Us</NavLink>
+                  {NAVIGATION_ITEMS.map((item) => (
+                    <NavLink key={item.href} href={item.href}>
+                      {item.title}
+                    </NavLink>
+                  ))}
                 </>
               ) : (
                 <>
                   <NavLink href='/'>Home</NavLink>
-                  <NavLink href='/contact'>Contact us</NavLink>
+                  {SECONDARY_NAVIGATION_ITEMS.map((item) => (
+                    <NavLink key={item.href} href={item.href}>
+                      {item.title}
+                    </NavLink>
+                  ))}
                 </>
               )}
             </nav>

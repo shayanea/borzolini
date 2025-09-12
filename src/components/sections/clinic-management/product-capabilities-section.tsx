@@ -54,48 +54,46 @@ function CapabilityCard({ title, description, points, icon }: CapabilityCardProp
 
 export function ProductCapabilitiesSection(): React.JSX.Element {
   return (
-    <section className='mt-24'>
-      <Container size='xl'>
-        <motion.div
-          className='text-center mb-16'
-          initial='initial'
-          whileInView='animate'
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          <h3 className='text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight'>Product capabilities</h3>
-          <p className='text-blue-100/90 max-w-3xl mx-auto text-lg leading-relaxed'>
-            The essentials that make the tele‑first model work at scale.
-          </p>
-        </motion.div>
+    <Container size='xl'>
+      <motion.div
+        className='text-center mb-16'
+        initial='initial'
+        whileInView='animate'
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <h3 className='text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight'>Product capabilities</h3>
+        <p className='text-blue-100/90 max-w-3xl mx-auto text-lg leading-relaxed'>
+          The essentials that make the tele‑first model work at scale.
+        </p>
+      </motion.div>
 
-        <motion.div
-          className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10'
-          initial='initial'
-          whileInView='animate'
-          viewport={{ once: true }}
-          variants={stagger}
-        >
-          <CapabilityCard
-            icon={Users2}
-            title='Multi‑role access'
-            description='Clear permissions for owners, vets, and ops with an accessible UI.'
-            points={['Owner app with guidance', 'Vet workspace & protocols', 'Ops tools for logistics']}
-          />
-          <CapabilityCard
-            icon={Activity}
-            title='Smart triage & monitoring'
-            description='Signals and tele‑consults catch issues early and route the right care.'
-            points={['AI‑assisted risk signals', 'Tele‑first consults', 'Contextual notes & history']}
-          />
-          <CapabilityCard
-            icon={Home}
-            title='In‑home visit ops'
-            description='Reliable logistics for precise, prepared visits when needed.'
-            points={['Routing & scheduling', 'Checklists & supplies', 'After‑visit summaries']}
-          />
-        </motion.div>
-      </Container>
-    </section>
+      <motion.div
+        className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10'
+        initial='initial'
+        whileInView='animate'
+        viewport={{ once: true }}
+        variants={stagger}
+      >
+        <CapabilityCard
+          icon={Users2}
+          title='Multi‑role access'
+          description='Clear permissions for owners, vets, and ops with an accessible UI.'
+          points={['Owner app with guidance', 'Vet workspace & protocols', 'Ops tools for logistics']}
+        />
+        <CapabilityCard
+          icon={Activity}
+          title='Smart triage & monitoring'
+          description='Signals and tele‑consults catch issues early and route the right care.'
+          points={['AI‑assisted risk signals', 'Tele‑first consults', 'Contextual notes & history']}
+        />
+        <CapabilityCard
+          icon={Home}
+          title='In‑home visit ops'
+          description='Reliable logistics for precise, prepared visits when needed.'
+          points={['Routing & scheduling', 'Checklists & supplies', 'After‑visit summaries']}
+        />
+      </motion.div>
+    </Container>
   );
 }

@@ -10,7 +10,14 @@ interface LogoProps {
   showText?: boolean;
 }
 
-export function Logo({ size = 'md', className }: LogoProps) {
+export function Logo({ variant = 'full', size = 'md', className, showText = true }: LogoProps) {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
+  };
+
   const textSizeClasses = {
     sm: 'text-lg',
     md: 'text-xl',
@@ -18,13 +25,44 @@ export function Logo({ size = 'md', className }: LogoProps) {
     xl: 'text-3xl',
   };
 
-  return (
-    <Link
-      href='/'
-      aria-label='Go to homepage'
-      className={cn('font-extrabold tracking-tight flex items-center text-blue-500', textSizeClasses[size], className)}
+  const iconElement = (
+    <div
+      className={cn(
+        'bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold',
+        sizeClasses[size]
+      )}
     >
-      Borzolini
+      <span className={cn('font-extrabold tracking-tight', textSizeClasses[size])}>B</span>
+    </div>
+  );
+
+  if (variant === 'icon') {
+    return (
+      <Link href='/' aria-label='Go to homepage' className={cn('flex items-center', className)}>
+        {iconElement}
+      </Link>
+    );
+  }
+
+  if (variant === 'text') {
+    return (
+      <Link
+        href='/'
+        aria-label='Go to homepage'
+        className={cn('font-extrabold tracking-tight text-slate-900', textSizeClasses[size], className)}
+      >
+        Borzolini
+      </Link>
+    );
+  }
+
+  // Full logo (icon + text)
+  return (
+    <Link href='/' aria-label='Go to homepage' className={cn('flex items-center gap-3', className)}>
+      {iconElement}
+      {showText && (
+        <span className={cn('font-extrabold tracking-tight text-slate-900', textSizeClasses[size])}>Borzolini</span>
+      )}
     </Link>
   );
 }
@@ -32,8 +70,8 @@ export function Logo({ size = 'md', className }: LogoProps) {
 // Favicon component for use in layout
 export function Favicon() {
   return (
-    <span className='w-8 h-8 text-2xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 flex items-center justify-center'>
-      B
-    </span>
+    <div className='w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold'>
+      <span className='text-lg font-extrabold tracking-tight'>B</span>
+    </div>
   );
 }

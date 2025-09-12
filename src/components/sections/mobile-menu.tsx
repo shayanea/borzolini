@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -23,27 +24,16 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         <div className='py-6 space-y-4'>
           {pathname === '/' ? (
             <>
-              <Link
-                href='#features'
-                className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
-                onClick={onClose}
-              >
-                Services
-              </Link>
-              <Link
-                href='#how-it-works'
-                className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
-                onClick={onClose}
-              >
-                How It Works
-              </Link>
-              <Link
-                href='#clinic-management'
-                className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
-                onClick={onClose}
-              >
-                For Veterinarians
-              </Link>
+              {NAVIGATION_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
+                  onClick={onClose}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </>
           ) : (
             <>
@@ -54,13 +44,16 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
               >
                 Home
               </Link>
-              <Link
-                href='/contact'
-                className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
-                onClick={onClose}
-              >
-                Contact us
-              </Link>
+              {SECONDARY_NAVIGATION_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className='block text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 text-base px-4 py-2 rounded-lg hover:bg-slate-50'
+                  onClick={onClose}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </>
           )}
 
