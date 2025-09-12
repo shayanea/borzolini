@@ -27,24 +27,26 @@ const stagger = {
 function CapabilityCard({ title, description, points, icon }: CapabilityCardProps) {
   return (
     <motion.div variants={fadeInUp}>
-      <Card className='h-full p-6 sm:p-7 bg-white/90 backdrop-blur-sm border-white/20 shadow-xl'>
-        <div className='flex items-start gap-4'>
-          <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 ring-1 ring-blue-200'>
-            <Icon icon={icon} size='lg' />
+      <Card className='h-full p-8 bg-white/95 backdrop-blur-sm border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'>
+        <div className='flex flex-col h-full'>
+          <div className='flex items-start gap-5 mb-6'>
+            <div className='flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-600 ring-1 ring-blue-200/50 shadow-sm'>
+              <Icon icon={icon} size='lg' />
+            </div>
+            <div className='flex-1'>
+              <h4 className='text-xl font-bold text-slate-900 mb-2'>{title}</h4>
+              <p className='text-slate-600 leading-relaxed'>{description}</p>
+            </div>
           </div>
-          <div>
-            <h4 className='text-lg font-semibold text-slate-900'>{title}</h4>
-            <p className='mt-1 text-sm text-slate-600'>{description}</p>
-          </div>
+          <ul className='space-y-3 text-slate-700 flex-1'>
+            {points.map((p) => (
+              <li key={p} className='flex items-start gap-3'>
+                <div className='w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0'></div>
+                <span className='leading-relaxed text-sm'>{p}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className='mt-5 space-y-2 text-sm text-slate-700'>
-          {points.map((p) => (
-            <li key={p} className='flex gap-2'>
-              <span className='text-blue-500'>•</span>
-              <span className='leading-relaxed'>{p}</span>
-            </li>
-          ))}
-        </ul>
       </Card>
     </motion.div>
   );
@@ -55,20 +57,20 @@ export function ProductCapabilitiesSection(): React.JSX.Element {
     <section className='mt-24'>
       <Container size='xl'>
         <motion.div
-          className='text-center mb-10'
+          className='text-center mb-16'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h3 className='text-3xl sm:text-4xl font-bold text-white mb-3'>Product capabilities</h3>
-          <p className='text-blue-100 max-w-3xl mx-auto'>
+          <h3 className='text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight'>Product capabilities</h3>
+          <p className='text-blue-100/90 max-w-3xl mx-auto text-lg leading-relaxed'>
             The essentials that make the tele‑first model work at scale.
           </p>
         </motion.div>
 
         <motion.div
-          className='grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8'
+          className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10'
           initial='initial'
           whileInView='animate'
           viewport={{ once: true }}
