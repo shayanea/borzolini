@@ -1,11 +1,7 @@
 'use client';
 
-import { AdvancedSearchAndFiltering } from './advanced-search-filtering';
-import { ClinicManagementCTA } from './clinic-management-cta';
+import { ProductCapabilitiesSection } from './product-capabilities-section';
 import { Container } from '@/components/ui/container';
-import { MultiRoleSystem } from './multi-role-system';
-import { ReviewAndRatingSystem } from './review-rating-system';
-import { StaffManagement } from './staff-management';
 import { ClinicROIMetrics } from './clinic-roi-metrics';
 
 export function ClinicManagementSection() {
@@ -30,12 +26,8 @@ export function ClinicManagementSection() {
       </div>
 
       <Container size='xl' className='relative z-10'>
-        <MultiRoleSystem />
-        <AdvancedSearchAndFiltering />
-        <StaffManagement />
-        <ReviewAndRatingSystem />
+        <ProductCapabilitiesSection />
         <ClinicROIMetrics />
-        <ClinicManagementCTA />
       </Container>
     </section>
   );

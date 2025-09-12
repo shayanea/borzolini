@@ -1,30 +1,12 @@
 'use client';
 
-import { Brain, Clock, Heart, Shield, Stethoscope, Users } from 'lucide-react';
+import { Brain, Shield, Stethoscope, Users } from 'lucide-react';
 import { animations, commonAnimationProps } from '@/lib/animations';
 
 import { Container } from '@/components/ui/container';
 import { motion } from 'framer-motion';
 
 const medicalFeatures = [
-  {
-    id: 'expert-diagnosis',
-    title: 'Expert Diagnosis',
-    description: 'Connect with licensed veterinarians for professional medical assessments and treatment plans.',
-    icon: Stethoscope,
-    color: 'from-blue-500 to-indigo-500',
-    bgColor: 'from-blue-50 to-indigo-50',
-    benefits: ['Licensed veterinarians', 'Professional assessments', 'Treatment plans'],
-  },
-  {
-    id: 'emergency-care',
-    title: '24/7 Emergency Care',
-    description: 'Round-the-clock emergency veterinary services for urgent pet health situations.',
-    icon: Clock,
-    color: 'from-red-500 to-pink-500',
-    bgColor: 'from-red-50 to-pink-50',
-    benefits: ['24/7 availability', 'Emergency response', 'Urgent care'],
-  },
   {
     id: 'ai-monitoring',
     title: 'AI Monitoring/Insights',
@@ -34,15 +16,6 @@ const medicalFeatures = [
     color: 'from-violet-500 to-fuchsia-600',
     bgColor: 'from-violet-50 to-fuchsia-50',
     benefits: ['Real-time anomaly detection', 'Predictive alerts', 'Continuous insights'],
-  },
-  {
-    id: 'preventive-care',
-    title: 'Preventive Care',
-    description: 'Comprehensive preventive health programs to keep your pets healthy and happy.',
-    icon: Heart,
-    color: 'from-purple-500 to-violet-500',
-    bgColor: 'from-purple-50 to-violet-50',
-    benefits: ['Health monitoring', 'Preventive treatments', 'Wellness programs'],
   },
   {
     id: 'specialist-referrals',
@@ -126,8 +99,8 @@ const FeaturesHeader = () => {
       </h2>
 
       <p className='text-body-large text-slate-600 max-w-4xl mx-auto px-4 font-medium leading-relaxed'>
-        From clinic chaos to calm at home. Trusted vets come to you or meet virtually, with guidance tailored to your
-        pet at home.
+        From clinic chaos to care that simply works. Trusted vets come to you or meet virtually, with guidance tailored
+        to your pet at home.
       </p>
 
       {/* Trust indicators */}

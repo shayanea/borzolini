@@ -1,6 +1,6 @@
 'use client';
 
-import { Activity, Home, Users2 } from 'lucide-react';
+import { Activity, Home, Users2, type LucideIcon } from 'lucide-react';
 
 import { Card } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
@@ -11,7 +11,7 @@ interface CapabilityCardProps {
   title: string;
   description: string;
   points: string[];
-  icon: any;
+  icon: LucideIcon;
 }
 
 const fadeInUp = {

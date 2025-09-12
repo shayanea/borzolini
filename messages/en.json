@@ -1,4 +1,10 @@
 {
+  "seo": {
+    "title": "From clinic chaos to calm at home | Borzolini",
+    "description": "Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.",
+    "keywords": "pet healthcare, veterinary, all pets, dogs, appointment scheduling, clinic ratings, Borzolini",
+    "siteDescription": "Smart pet healthcare platform for all pets. Personalized care, vet scheduling, and clinic ratings."
+  },
   "hero": {
     "badge": "🤖 World's First AI-Powered Pet Healthcare Platform",
     "title": "Transform Your Pet's Healthcare from {reactive} to {predictive}",
@@ -103,7 +109,7 @@
     "disclaimer": "No credit card required • Cancel anytime • HIPAA compliant"
   },
   "footer": {
-    "description": "The world's first AI-powered predictive healthcare platform for pets. Transforming pet care from reactive to predictive, one pet at a time.",
+    "description": "Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.",
     "product": "Product",
     "support": "Support",
     "copyright": "© 2024 PetAI Health. All rights reserved.",

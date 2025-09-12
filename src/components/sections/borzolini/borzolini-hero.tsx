@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
-import Image from 'next/image';
-
 import { animations, commonAnimationProps } from '@/lib/animations';
+
+import Image from 'next/image';
+import { Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const BorzoliniHero = () => {
   return (
@@ -29,10 +29,11 @@ export const BorzoliniHero = () => {
             <Image
               src='/images/borzolini-hero.webp'
               alt='Borzolini - Our Pet Hero'
-              fill
               priority
               sizes='(min-width: 1024px) 50vw, 100vw'
               className='object-cover'
+              width={800}
+              height={600}
             />
             <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent rounded-3xl'></div>
             <div className='absolute bottom-6 left-6 text-white'>

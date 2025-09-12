@@ -3,6 +3,7 @@ import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { FeaturesSection } from '@/components/sections/features-section';
 import { Footer } from '@/components/sections/footer';
 import { HowItWorksSection } from '@/components/sections/how-it-works-section/how-it-works-section';
+import { WhyNowUsSection } from '@/components/sections/why-now-us';
 
 export const metadata = {
   title: 'Why now | Borzolini',
@@ -14,6 +15,7 @@ export default function WhyNowPage() {
     <ErrorBoundary>
       <main className='min-h-screen'>
         <FeaturesSection />
+        <WhyNowUsSection />
         <HowItWorksSection />
         <CTASection />
         <Footer />

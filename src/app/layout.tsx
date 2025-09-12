@@ -4,6 +4,7 @@ import { AnalyticsProvider } from '@/components/analytics';
 import { Header } from '@/components/sections/header';
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
+import messages from '../../messages/en.json';
 
 const manrope = Manrope({
   variable: '--font-manrope',
@@ -14,21 +15,9 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://borzolini.com'),
-  title: 'From clinic chaos to calm at home | Borzolini',
-  description:
-    'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
-  keywords: [
-    'pet healthcare',
-    'care recommendations',
-    'veterinary',
-    'all pets',
-    'dogs',
-    'pets',
-    'appointment scheduling',
-    'clinic ratings',
-    'Borzolini',
-    'Borzolini',
-  ],
+  title: messages.seo.title,
+  description: messages.seo.description,
+  keywords: messages.seo.keywords.split(', '),
   authors: [{ name: 'Borzolini' }],
   creator: 'Borzolini',
   publisher: 'Borzolini',
@@ -51,9 +40,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://borzolini.com',
-    title: 'From clinic chaos to calm at home | Borzolini',
-    description:
-      'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
+    title: messages.seo.title,
+    description: messages.seo.description,
     siteName: 'Borzolini',
     images: [
       {
@@ -66,9 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'From clinic chaos to calm at home | Borzolini',
-    description:
-      'Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.',
+    title: messages.seo.title,
+    description: messages.seo.description,
     creator: '@borzolini',
     images: ['/images/borzolini-hero.webp'],
   },
@@ -93,7 +80,7 @@ export default function RootLayout({
     '@type': 'WebSite',
     name: 'Borzolini',
     url: 'https://borzolini.com',
-    description: 'Smart pet healthcare platform for all pets. Personalized care, vet scheduling, and clinic ratings.',
+    description: messages.seo.siteDescription,
     publisher: {
       '@type': 'Organization',
       name: 'Borzolini',

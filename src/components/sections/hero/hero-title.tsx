@@ -11,12 +11,7 @@ export const HeroTitle = () => {
       animate='animate'
       variants={animations.fadeInUp}
     >
-      Professional{' '}
-      <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600'>
-        Veterinary Care
-      </span>{' '}
-      for Your{' '}
-      <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600'>Beloved Pets</span>
+      Professional veterinary care, delivered calmly at home.
     </motion.h1>
   );
 };

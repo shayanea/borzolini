@@ -1,7 +1,6 @@
 'use client';
 
 import { HeroActions } from './hero-actions';
-import { HeroBadge } from './hero-badge';
 import { HeroDescription } from './hero-description';
 import { HeroTitle } from './hero-title';
 import { HeroTrustStrip } from './hero-trust-strip';
@@ -28,7 +27,6 @@ export const HeroSection = () => {
       <div className='container-modern relative z-10 pt-20 pb-16'>
         <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]'>
           <div className='space-y-8'>
-            <HeroBadge />
             <HeroTitle />
             <HeroDescription />
             <HeroActions />

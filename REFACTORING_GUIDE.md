@@ -108,7 +108,6 @@ export function HeroSection() {
 export function HeroSection() {
   return (
     <section className={gradients.hero}>
-      <HeroBadge />
       <HeroTitle />
       <HeroDescription />
       <HeroVisual />
