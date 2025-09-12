@@ -2,8 +2,8 @@
 
 import { Container } from '@/components/ui/container';
 import { HowItWorks } from './how-it-works';
+import { HowItWorksFeatures } from './how-it-works-features';
 import { HowItWorksIndicators } from './how-it-works-indicators';
-import { HowItWorksTimeline } from './how-it-works-timeline';
 
 export function HowItWorksSection() {
   return (
@@ -19,7 +19,7 @@ export function HowItWorksSection() {
         <HowItWorks />
 
         {/* Features */}
-        <HowItWorksTimeline />
+        <HowItWorksFeatures />
 
         {/* Trust indicators */}
         <HowItWorksIndicators />
