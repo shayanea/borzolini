@@ -82,8 +82,8 @@ export function ReviewAndRatingSystem() {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <div className='w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0'>
-                <TrendingUp className='w-6 h-6 text-green-600' />
+              <div className='w-12 h-12 bg-[#3DAD8C] rounded-xl flex items-center justify-center flex-shrink-0'>
+                <TrendingUp className='w-6 h-6 text-white' />
               </div>
               <div>
                 <h4 className='text-xl font-semibold text-white mb-2'>Performance Analytics</h4>
@@ -140,7 +140,7 @@ export function ReviewAndRatingSystem() {
                     <p className='text-slate-700 text-sm mb-2'>{review.comment}</p>
                     <div className='flex items-center justify-between'>
                       <span className='text-xs text-slate-500'>{review.date}</span>
-                      {review.verified && <span className='text-xs text-green-600 font-medium'>✓ Verified</span>}
+                      {review.verified && <span className='text-xs text-[#3DAD8C] font-medium'>✓ Verified</span>}
                     </div>
                   </div>
                 ))}

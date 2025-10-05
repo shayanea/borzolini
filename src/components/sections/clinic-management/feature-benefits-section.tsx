@@ -12,7 +12,7 @@ export const FeatureBenefitsSection = () => {
   return (
     <motion.div className='mb-24' {...commonAnimationProps} variants={animations.fadeInUp}>
       <div className='text-center mb-16'>
-        <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl mb-6 shadow-lg'>
+        <div className='inline-flex items-center justify-center w-20 h-20 bg-[#013187] rounded-2xl mb-6 shadow-lg'>
           <Brain className='w-10 h-10 text-blue-600' />
         </div>
         <h3 className='text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight'>

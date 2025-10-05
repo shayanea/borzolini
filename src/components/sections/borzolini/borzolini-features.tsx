@@ -17,8 +17,8 @@ const borzoliniFeatures = [
     title: 'Vet Verified',
     description: 'All recommendations reviewed by professionals',
     icon: Shield,
-    bgColor: 'bg-green-100',
-    iconColor: 'text-green-600',
+    bgColor: 'bg-[#3DAD8C]',
+    iconColor: 'text-white',
   },
   {
     title: 'Smart Insights',

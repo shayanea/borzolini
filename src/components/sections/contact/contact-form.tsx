@@ -57,7 +57,9 @@ export const ContactForm = () => {
           <div className='rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-700'>{serverError}</div>
         )}
         {serverSuccess && (
-          <div className='rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-700'>{serverSuccess}</div>
+          <div className='rounded-lg border border-[#3DAD8C] bg-[#3DAD8C]/10 px-4 py-3 text-[#3DAD8C]'>
+            {serverSuccess}
+          </div>
         )}
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

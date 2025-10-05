@@ -67,8 +67,8 @@ export function AdvancedSearchAndFiltering() {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <div className='w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0'>
-                <Clock className='w-6 h-6 text-green-600' />
+              <div className='w-12 h-12 bg-[#3DAD8C] rounded-xl flex items-center justify-center flex-shrink-0'>
+                <Clock className='w-6 h-6 text-white' />
               </div>
               <div>
                 <h4 className='text-xl font-semibold text-white mb-2'>Real-time Updates</h4>
@@ -88,7 +88,7 @@ export function AdvancedSearchAndFiltering() {
                 <span className='text-slate-700 font-medium'>Location</span>
               </div>
               <div className='flex items-center space-x-3'>
-                <Globe className='w-5 h-5 text-green-600' />
+                <Globe className='w-5 h-5 text-[#3DAD8C]' />
                 <span className='text-slate-700 font-medium'>Specialization</span>
               </div>
               <div className='flex items-center space-x-3'>

@@ -39,15 +39,15 @@ export function MultiRoleSystem() {
             <h4 className='text-xl font-semibold text-slate-900 mb-4 text-center'>Administrator</h4>
             <ul className='space-y-3 text-slate-600'>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 Full system access
               </li>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 User management
               </li>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 Analytics & reporting
               </li>
             </ul>
@@ -79,21 +79,21 @@ export function MultiRoleSystem() {
 
         <motion.div variants={fadeInUp}>
           <Card className='p-8 bg-white/90 backdrop-blur-sm border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300'>
-            <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6'>
-              <UserCheck className='w-8 h-8 text-green-600' />
+            <div className='w-16 h-16 bg-[#3DAD8C] rounded-2xl flex items-center justify-center mx-auto mb-6'>
+              <UserCheck className='w-8 h-8 text-white' />
             </div>
             <h4 className='text-xl font-semibold text-slate-900 mb-4 text-center'>Staff Member</h4>
             <ul className='space-y-3 text-slate-600'>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 Basic patient info
               </li>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 Scheduling assistance
               </li>
               <li className='flex items-center'>
-                <Shield className='w-4 h-4 text-green-500 mr-2' />
+                <Shield className='w-4 h-4 text-[#3DAD8C] mr-2' />
                 Communication tools
               </li>
             </ul>

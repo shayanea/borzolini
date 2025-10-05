@@ -24,8 +24,8 @@ export const ClinicFeatures = () => {
 
       <motion.div variants={animations.fadeInUp}>
         <div className='text-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-white/20 hover:shadow-xl transition-shadow duration-200'>
-          <div className='w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
-            <Users className='w-8 h-8 text-green-600' />
+          <div className='w-16 h-16 bg-[#3DAD8C] rounded-2xl flex items-center justify-center mx-auto mb-4'>
+            <Users className='w-8 h-8 text-white' />
           </div>
           <h4 className='font-semibold text-slate-900 text-lg mb-2'>Patient Management</h4>
           <p className='text-slate-600 text-sm'>Comprehensive health records</p>

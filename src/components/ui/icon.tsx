@@ -34,7 +34,7 @@ interface FeatureIconProps {
 export function FeatureIcon({ icon, variant = 'blue', size = 'lg', className, ...props }: FeatureIconProps) {
   const variantClasses = {
     blue: 'text-blue-600 bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200/50',
-    green: 'text-green-600 bg-gradient-to-br from-green-50 to-green-100 border border-green-200/50',
+    green: 'text-white bg-[#3DAD8C] border border-[#3DAD8C]/50',
     purple: 'text-purple-600 bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200/50',
     orange: 'text-orange-600 bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200/50',
   };
@@ -61,7 +61,7 @@ interface StatusIconProps {
 
 export function StatusIcon({ icon, status, size = 'md', className, ...props }: StatusIconProps) {
   const statusClasses = {
-    success: 'text-green-600',
+    success: 'text-[#3DAD8C]',
     warning: 'text-yellow-600',
     error: 'text-red-600',
     info: 'text-blue-600',

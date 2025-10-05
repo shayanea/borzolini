@@ -18,7 +18,7 @@ export const FeatureBenefitItem = ({ benefit, index }: FeatureBenefitItemProps):
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
     >
-      <div className='w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+      <div className='w-16 h-16 bg-[#013187] rounded-2xl flex items-center justify-center mx-auto mb-4'>
         <benefit.icon className='w-8 h-8 text-blue-600' />
       </div>
       <h4 className='font-semibold text-slate-900 text-lg mb-2'>{benefit.title}</h4>

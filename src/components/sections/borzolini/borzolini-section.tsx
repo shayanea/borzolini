@@ -1,9 +1,7 @@
 'use client';
 
-import { Container } from '@/components/ui/container';
-
-import { BorzoliniHero } from './borzolini-hero';
 import { BorzoliniFeatures } from './borzolini-features';
+import { Container } from '@/components/ui/container';
 
 export const BorzoliniSection = () => {
   return (
@@ -15,7 +13,6 @@ export const BorzoliniSection = () => {
       <div className='absolute inset-0 bg-pattern-grid opacity-15' />
 
       <Container className='relative z-10'>
-        <BorzoliniHero />
         <BorzoliniFeatures />
       </Container>
     </section>

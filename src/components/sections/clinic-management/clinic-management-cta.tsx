@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -51,7 +51,7 @@ export function ClinicManagementCTA() {
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
             {benefits.map((benefit, index) => (
               <div key={index} className='flex items-center space-x-3'>
-                <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                <CheckCircle className='w-5 h-5 text-[#3DAD8C] flex-shrink-0' />
                 <span className='text-blue-100'>{benefit}</span>
               </div>
             ))}

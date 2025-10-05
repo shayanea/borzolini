@@ -61,7 +61,7 @@ export function StaffManagement() {
                 </div>
                 <div className='flex items-center justify-between'>
                   <span className='text-slate-600'>Availability</span>
-                  <span className='text-green-600 font-medium'>Mon-Fri, 9AM-5PM</span>
+                  <span className='text-[#3DAD8C] font-medium'>Mon-Fri, 9AM-5PM</span>
                 </div>
                 <div className='flex items-center justify-between'>
                   <span className='text-slate-600'>Rating</span>
@@ -98,8 +98,8 @@ export function StaffManagement() {
             </div>
 
             <div className='flex items-start space-x-4'>
-              <div className='w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0'>
-                <CheckCircle className='w-6 h-6 text-green-600' />
+              <div className='w-12 h-12 bg-[#3DAD8C] rounded-xl flex items-center justify-center flex-shrink-0'>
+                <CheckCircle className='w-6 h-6 text-white' />
               </div>
               <div>
                 <h4 className='text-xl font-semibold text-white mb-2'>Performance Tracking</h4>

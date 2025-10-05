@@ -64,11 +64,11 @@ export const WhyNowUsSection = (): React.JSX.Element => {
             <h3 className='mb-5 text-2xl font-semibold text-slate-900 tracking-tight'>Why us</h3>
             <ul className='space-y-4 text-slate-700'>
               <li className='flex gap-3'>
-                <Icon icon={CheckCircle2} size='md' className='mt-0.5 text-green-600' />
+                <Icon icon={CheckCircle2} size='md' className='mt-0.5 text-[#3DAD8C]' />
                 <span className='leading-relaxed'>Tele‑first model reduces unnecessary visits and anxiety.</span>
               </li>
               <li className='flex gap-3'>
-                <Icon icon={CheckCircle2} size='md' className='mt-0.5 text-green-600' />
+                <Icon icon={CheckCircle2} size='md' className='mt-0.5 text-[#3DAD8C]' />
                 <span className='leading-relaxed'>Operationally rigorous in‑home logistics for true scale.</span>
               </li>
             </ul>

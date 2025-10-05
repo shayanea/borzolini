@@ -1,5 +1,6 @@
 'use client';
 
+import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -11,7 +12,6 @@ import { NavLink } from './nav-link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useReducedMotion } from '@/hooks/use-reduced-motion';
-import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,10 +39,6 @@ export function Header() {
         <div className='flex items-center justify-between h-20'>
           <div className='flex items-center gap-3'>
             <Logo />
-            <div className='hidden lg:block'>
-              <div className='text-sm font-semibold text-slate-900'>PetCare Pro</div>
-              <div className='text-xs text-slate-500'>Professional Veterinary Care</div>
-            </div>
           </div>
 
           <div className='hidden md:flex items-center gap-8'>
@@ -67,18 +63,13 @@ export function Header() {
               )}
             </nav>
 
-            <div className='flex items-center gap-3'>
-              <Button variant='outline' size='sm' className='border-blue-200 text-blue-700 hover:bg-blue-50'>
-                Sign In
-              </Button>
-              <Button
-                variant='primary'
-                size='sm'
-                className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all duration-300'
-              >
-                Get Started
-              </Button>
-            </div>
+            <Button
+              variant='primary'
+              size='sm'
+              className='bg-blue-500 shadow-lg hover:shadow-xl transition-all duration-300'
+            >
+              Get Started
+            </Button>
           </div>
 
           <MobileMenuButton onClick={() => setIsMenuOpen(true)} />

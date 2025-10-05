@@ -1,4 +1,3 @@
-import { CTASection } from '@/components/sections/cta-section';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { FeaturesSection } from '@/components/sections/features-section';
 import { Footer } from '@/components/sections/footer';
@@ -17,7 +16,6 @@ export default function WhyNowPage() {
         <FeaturesSection />
         <WhyNowUsSection />
         <HowItWorksSection />
-        <CTASection />
         <Footer />
       </main>
     </ErrorBoundary>

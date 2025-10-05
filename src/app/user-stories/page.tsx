@@ -1,4 +1,3 @@
-import { CTASection } from '@/components/sections/cta-section';
 import { ClinicROIMetrics } from '@/components/sections/clinic-management/clinic-roi-metrics';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Footer } from '@/components/sections/footer';
@@ -21,7 +20,6 @@ export default function UserStoriesPage() {
         <ReviewSystemSection />
         <ReviewAndRatingSystem />
         <ClinicROIMetrics />
-        <CTASection />
         <Footer />
       </main>
     </ErrorBoundary>

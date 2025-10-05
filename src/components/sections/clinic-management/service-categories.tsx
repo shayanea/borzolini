@@ -1,10 +1,10 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Calendar, Clock, DollarSign, Shield } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -72,7 +72,7 @@ export function ServiceCategories() {
           const IconComponent = category.icon;
           const colorClasses = {
             blue: 'bg-blue-100 text-blue-600',
-            green: 'bg-green-100 text-green-600',
+            green: 'bg-[#3DAD8C] text-[#3DAD8C]',
             purple: 'bg-purple-100 text-purple-600',
             orange: 'bg-orange-100 text-orange-600',
           };
@@ -97,10 +97,7 @@ export function ServiceCategories() {
                     ))}
                   </div>
 
-                  <Button
-                    size='sm'
-                    className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                  >
+                  <Button size='sm' className='w-full bg-[#013187] text-white hover:bg-[#0e3c92]'>
                     Manage Services
                   </Button>
                 </div>

@@ -13,7 +13,7 @@ export const HowItWorksFeatures = () => {
       variants={animations.staggerContainer}
     >
       <motion.div className='text-center group' variants={animations.fadeInUp}>
-        <div className='w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+        <div className='w-20 h-20 bg-[#013187] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
           <Search className='w-10 h-10 text-blue-600' />
         </div>
         <h3 className='text-2xl font-bold text-slate-900 mb-4'>Find Your Perfect Vet</h3>
@@ -24,8 +24,8 @@ export const HowItWorksFeatures = () => {
       </motion.div>
 
       <motion.div className='text-center group' variants={animations.fadeInUp}>
-        <div className='w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
-          <Calendar className='w-10 h-10 text-green-600' />
+        <div className='w-20 h-20 bg-[#3DAD8C] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+          <Calendar className='w-10 h-10 text-white' />
         </div>
         <h3 className='text-2xl font-bold text-slate-900 mb-4'>Book Appointments Instantly</h3>
         <p className='text-slate-600 leading-relaxed'>

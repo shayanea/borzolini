@@ -1,7 +1,6 @@
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { CTASection } from '@/components/sections/cta-section';
 import { Container } from '@/components/ui/container';
 import { ErrorBoundary } from '@/components/ui/error-boundary';
 import { Footer } from '@/components/sections/footer';
@@ -120,7 +119,6 @@ export default function BlogPage() {
           </Container>
         </section>
 
-        <CTASection />
         <Footer />
       </main>
     </ErrorBoundary>

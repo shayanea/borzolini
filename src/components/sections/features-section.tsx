@@ -88,7 +88,7 @@ const FeaturesHeader = () => {
       <div className='inline-flex items-center gap-3 px-6 py-3 text-base font-semibold bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 rounded-full shadow-lg mb-8'>
         <Stethoscope className='w-5 h-5 text-blue-600' />
         <span className='text-slate-700'>Professional Veterinary Services</span>
-        <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></div>
+        <div className='w-2 h-2 bg-[#3DAD8C] rounded-full animate-pulse'></div>
       </div>
 
       <h2 className='text-section font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight'>
@@ -106,7 +106,7 @@ const FeaturesHeader = () => {
       {/* Trust indicators */}
       <div className='flex flex-wrap justify-center gap-8 mt-8 text-sm text-slate-500'>
         <div className='flex items-center gap-2'>
-          <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+          <div className='w-2 h-2 bg-[#3DAD8C] rounded-full'></div>
           <span>Vet verified</span>
         </div>
         <div className='flex items-center gap-2'>

@@ -1,11 +1,11 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { NAVIGATION_ITEMS, SECONDARY_NAVIGATION_ITEMS } from '@/constants';
 
 interface MobileMenuProps {
   onClose: () => void;
@@ -58,14 +58,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           )}
 
           <div className='pt-4 border-t border-slate-200/50 space-y-3 px-4'>
-            <Button
-              variant='primary'
-              size='sm'
-              className='w-full text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium'
-            >
-              Sign In
-            </Button>
-            <Button size='sm' className='w-full bg-slate-900 hover:bg-slate-800 text-white font-medium shadow-lg'>
+            <Button size='sm' className='w-full bg-blue-500 text-white font-medium shadow-lg'>
               Get Started
             </Button>
           </div>

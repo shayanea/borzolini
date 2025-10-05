@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Instagram, Shield, Star } from 'lucide-react';
 
 import type { Clinic } from '@/types/clinic';
+import { motion } from 'framer-motion';
 
 const hasInstagramHandle = (
   clinic: Clinic | (Clinic & { instagramHandle?: string })
@@ -39,7 +39,7 @@ export const ClinicCard = ({ clinic }: ClinicCardProps): React.JSX.Element => {
           <span>{clinic.totalReviews} reviews</span>
           <span>{clinic.location}</span>
           {clinic.verified && (
-            <span className='flex items-center text-green-600 font-semibold'>
+            <span className='flex items-center text-[#3DAD8C] font-semibold'>
               <Shield className='w-4 h-4 mr-2' />
               Verified
             </span>

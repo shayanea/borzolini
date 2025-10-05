@@ -15,7 +15,7 @@ interface CardProps {
 
 const cardVariants = {
   default: 'bg-white/90 backdrop-blur-sm border border-slate-200/50 shadow-sm',
-  gradient: 'bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200/50 shadow-sm',
+  gradient: 'bg-[#013187] border border-blue-200/50 shadow-sm',
   outlined: 'bg-transparent border-2 border-slate-200 shadow-sm',
   elevated: 'bg-white/95 backdrop-blur-sm shadow-lg border border-slate-200/50',
   glass: 'bg-white/80 backdrop-blur-md border border-white/20 shadow-lg',
@@ -97,7 +97,7 @@ interface FeatureCardProps {
 export function FeatureCard({ icon, title, description, benefits, variant = 'blue', className }: FeatureCardProps) {
   const variantClasses = {
     blue: 'from-blue-50 to-blue-100 border-blue-200/50 hover:shadow-blue-100/50',
-    green: 'from-green-50 to-green-100 border-green-200/50 hover:shadow-green-100/50',
+    green: 'bg-[#3DAD8C] border-[#3DAD8C]/50 hover:shadow-lg',
     purple: 'from-purple-50 to-purple-100 border-purple-200/50 hover:shadow-purple-100/50',
     orange: 'from-orange-50 to-orange-100 border-orange-200/50 hover:shadow-orange-100/50',
   };
@@ -124,8 +124,8 @@ export function FeatureCard({ icon, title, description, benefits, variant = 'blu
         <ul className='space-y-3 text-sm text-slate-600'>
           {benefits.map((benefit, index) => (
             <li key={index} className='flex items-center gap-3'>
-              <div className='w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0'>
-                <span className='text-green-600 text-xs font-bold'>✓</span>
+              <div className='w-5 h-5 bg-[#3DAD8C] rounded-full flex items-center justify-center flex-shrink-0'>
+                <span className='text-white text-xs font-bold'>✓</span>
               </div>
               <span className='font-medium'>{benefit}</span>
             </li>
@@ -151,7 +151,7 @@ export function StatsCard({ value, label, trend, className }: StatsCardProps) {
   };
 
   const trendColor = {
-    up: 'text-green-600',
+    up: 'text-[#3DAD8C]',
     down: 'text-red-600',
     stable: 'text-slate-600',
   };
