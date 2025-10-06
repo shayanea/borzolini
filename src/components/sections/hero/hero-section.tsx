@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <section className='relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 overflow-hidden'>
       {/* Enhanced background with pet-themed gradients */}
-      <div className='absolute inset-0 bg-pattern-organic opacity-20'></div>
+      <div className='absolute inset-0 bg-gradient-mesh-organic opacity-20'></div>
       <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/30 to-indigo-100/30 rounded-full blur-3xl animate-pulse'></div>
       <div className='absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-cyan-100/30 to-blue-100/30 rounded-full blur-3xl animate-pulse animation-delay-1000'></div>
       <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-100/20 to-pink-100/20 rounded-full blur-3xl'></div>

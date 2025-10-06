@@ -38,14 +38,31 @@ function CapabilityCard({ title, description, points, icon }: CapabilityCardProp
               <p className='text-slate-600 leading-relaxed'>{description}</p>
             </div>
           </div>
+
+          {/* Decorative element */}
+          <div className='w-full h-px bg-gradient-to-r from-transparent via-blue-200/50 to-transparent my-4'></div>
+
           <ul className='space-y-3 text-slate-700 flex-1'>
             {points.map((p) => (
               <li key={p} className='flex items-start gap-3'>
-                <div className='w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0'></div>
+                <div className='w-5 h-5 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5'>
+                  <div className='w-2 h-2 bg-blue-500 rounded-full'></div>
+                </div>
                 <span className='leading-relaxed text-sm'>{p}</span>
               </li>
             ))}
           </ul>
+
+          {/* Visual footer element */}
+          <div className='w-full mt-4 pt-4 border-t border-blue-100/30 flex justify-end'>
+            <motion.div
+              className='w-6 h-6 rounded-full bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center'
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
+            </motion.div>
+          </div>
         </div>
       </Card>
     </motion.div>
