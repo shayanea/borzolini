@@ -1,8 +1,8 @@
 'use client';
 
 import { Container } from '@/components/ui/container';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export const UserStoriesHero = () => {
   return (
@@ -26,8 +26,9 @@ export const UserStoriesHero = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
             >
-              See how pet owners and clinics use Borzolini to reduce stress, improve outcomes, and build trust—through
-              verified reviews, ratings, and measurable ROI.
+              See how pet owners and clinics use Borzolini to reduce stress and build trust. It started with Fariborz,
+              my British Shorthair kitten, and a noisy clinic visit. Now we focus on calm care at home, verified
+              reviews, and results that feel real.
             </motion.p>
           </div>
 

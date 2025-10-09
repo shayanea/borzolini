@@ -10,10 +10,8 @@ export const HeroDescription = () => {
         className='text-body-large text-slate-600 leading-relaxed max-w-2xl font-medium'
         variants={animations.fadeInUp}
       >
-        AI‑assisted monitoring + tele‑consults + vetted home visits.{' '}
-        <span className='text-slate-800 font-semibold'>Fewer emergencies</span>,{' '}
-        <span className='text-slate-800 font-semibold'>higher adherence</span>,{' '}
-        <span className='text-slate-800 font-semibold'>happier pets</span>.
+        I started this after my kitten Fariborz got anxious at a noisy clinic. We make care calmer: smart health
+        monitoring, quick video consults, and trusted vets who come home. Simple things done well.
       </motion.p>
     </motion.div>
   );

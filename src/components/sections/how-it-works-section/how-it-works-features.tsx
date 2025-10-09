@@ -14,7 +14,7 @@ export const HowItWorksFeatures = () => {
     >
       <motion.div className='text-center group' variants={animations.fadeInUp}>
         <div className='w-20 h-20 bg-[#013187] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
-          <Search className='w-10 h-10 text-blue-600' />
+          <Search className='w-10 h-10 text-white' />
         </div>
         <h3 className='text-2xl font-bold text-slate-900 mb-4'>Find Your Perfect Vet</h3>
         <p className='text-slate-600 leading-relaxed'>
@@ -34,8 +34,8 @@ export const HowItWorksFeatures = () => {
       </motion.div>
 
       <motion.div className='text-center group' variants={animations.fadeInUp}>
-        <div className='w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
-          <Brain className='w-10 h-10 text-purple-600' />
+        <div className='w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-200'>
+          <Brain className='w-10 h-10 text-white' />
         </div>
         <h3 className='text-2xl font-bold text-slate-900 mb-4'>Get Smart Care Tips</h3>
         <p className='text-slate-600 leading-relaxed'>

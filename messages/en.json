@@ -1,20 +1,20 @@
 {
   "seo": {
     "title": "Borzolini - From clinic chaos to calm at home",
-    "description": "Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.",
+    "description": "I started this after my kitten Fariborz got anxious at a noisy clinic. Trusted vets come to you—or meet virtually—with AI guidance tailored to your pet at home.",
     "keywords": "pet healthcare, veterinary, all pets, dogs, appointment scheduling, clinic ratings, Borzolini",
     "siteDescription": "Smart pet healthcare platform for all pets. Personalized care, vet scheduling, and clinic ratings."
   },
   "hero": {
-    "badge": "🤖 World's First AI-Powered Pet Healthcare Platform",
-    "title": "Transform Your Pet's Healthcare from {reactive} to {predictive}",
+    "badge": "Calm care at home, from a real pet parent",
+    "title": "Make your pet’s care calmer at home",
     "reactive": "Reactive",
     "predictive": "Predictive",
-    "description": "Clinic visits can be chaotic—ours were. We built a calmer way: trusted vets come to you, with guidance tailored to your pet at home.",
+    "description": "Clinic visits can be chaotic—ours were. After Fariborz’s loud clinic visit, we built a calmer way: trusted vets come to you, with guidance tailored to your pet at home.",
     "savings": "−20% cancellations (target)",
     "savingsDescription": "Through predictive care vs emergency treatments",
-    "ctaPrimary": "📅 Schedule demo",
-    "ctaSecondary": "🏠 Book home visit",
+    "ctaPrimary": "Schedule demo",
+    "ctaSecondary": "Book home visit",
     "trustIndicators": {
       "hipaa": "HIPAA Compliant",
       "vetApproved": "Vet Approved",
@@ -22,8 +22,8 @@
     }
   },
   "features": {
-    "title": "Revolutionary AI Features",
-    "description": "Advanced artificial intelligence that understands your pet's unique health patterns",
+    "title": "Simple things done well",
+    "description": "Smart monitoring, quick consults, and trusted vets. Built from real experience.",
     "aiMonitoring": {
       "title": "24/7 Health Monitoring",
       "description": "AI continuously analyzes your pet's health patterns, detecting subtle changes that humans might miss."
