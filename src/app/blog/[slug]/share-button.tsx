@@ -1,8 +1,8 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Share2 } from 'lucide-react';
-import { useState } from 'react';
+import { Check, Share2 } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface ShareButtonProps {
   title: string;
@@ -22,6 +22,16 @@ export function ShareButton({
   children,
 }: ShareButtonProps) {
   const [isSharing, setIsSharing] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (copied) {
+      const timer = setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [copied]);
 
   const handleShare = async () => {
     setIsSharing(true);
@@ -32,20 +42,22 @@ export function ShareButton({
       url: typeof window !== 'undefined' ? window.location.href : '',
     };
 
+    const canUseWebShare = navigator.share && navigator.canShare?.(shareData);
+
     try {
-      if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+      if (canUseWebShare) {
         await navigator.share(shareData);
       } else {
         // Fallback: copy to clipboard
         await navigator.clipboard.writeText(shareData.url);
-        alert('Link copied to clipboard!');
+        setCopied(true);
       }
     } catch (error) {
       console.error('Error sharing:', error);
       // Final fallback: copy to clipboard
       try {
         await navigator.clipboard.writeText(shareData.url);
-        alert('Link copied to clipboard!');
+        setCopied(true);
       } catch (clipboardError) {
         console.error('Clipboard error:', clipboardError);
       }
@@ -56,8 +68,17 @@ export function ShareButton({
 
   return (
     <Button variant={variant} size={size} className={className} onClick={handleShare} disabled={isSharing}>
-      <Share2 className='w-4 h-4 mr-2' />
-      {children || (isSharing ? 'Sharing...' : 'Share')}
+      {copied ? (
+        <>
+          <Check className='w-4 h-4 mr-2' />
+          Copied!
+        </>
+      ) : (
+        <>
+          <Share2 className='w-4 h-4 mr-2' />
+          {children || (isSharing ? 'Sharing...' : 'Share')}
+        </>
+      )}
     </Button>
   );
 }
