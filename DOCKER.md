@@ -1,337 +1,121 @@
-# Docker Setup for Borzolini
+# Docker Setup
 
-This document explains how to use Docker with the Borzolini project for both development and production environments.
-
-## Prerequisites
-
-- Docker Desktop installed and running
-- Docker Compose (usually included with Docker Desktop)
-- At least 4GB of available RAM for Docker
+Quick reference for containerized deployment. Using Alpine base images to keep things lightweight.
 
 ## Quick Start
 
-### 1. Development Environment
+Development:
 
 ```bash
-# Build and run development container
 ./scripts/docker.sh build-dev
 ./scripts/docker.sh run-dev
-
-# Or use Docker Compose
-docker-compose --profile dev up -d
+# or: docker-compose --profile dev up -d
 ```
 
-Access your app at: http://localhost:3000
-
-### 2. Production Environment
+Production:
 
 ```bash
-# Build and run production container
 ./scripts/docker.sh build-prod
 ./scripts/docker.sh run-prod
-
-# Or use Docker Compose
-docker-compose --profile prod up -d
+# or: docker-compose --profile prod up -d
 ```
 
-Access your app at: http://localhost:3000
-
-### 3. Production with Nginx Reverse Proxy
+Production with nginx:
 
 ```bash
-# Run with nginx for production deployment
 ./scripts/docker.sh run-nginx
-
-# Or use Docker Compose
-docker-compose --profile prod-nginx up -d
+# or: docker-compose --profile prod-nginx up -d
 ```
 
-Access your app at: http://localhost (nginx proxy)
+App runs on http://localhost:3000 (or http://localhost with nginx)
 
-## Docker Commands
+## Available Commands
 
-### Using the Docker Script
+Helper script commands:
 
 ```bash
-# Show all available commands
-./scripts/docker.sh help
-
-# Build images
-./scripts/docker.sh build-dev      # Development image
-./scripts/docker.sh build-prod     # Production image
-
-# Run containers
-./scripts/docker.sh run-dev        # Development container
-./scripts/docker.sh run-prod       # Production container
-./scripts/docker.sh run-nginx      # Production with nginx
-
-# Management
-./scripts/docker.sh stop           # Stop all containers
-./scripts/docker.sh clean          # Clean up all resources
-./scripts/docker.sh logs           # View logs
-./scripts/docker.sh shell          # Open shell in container
+./scripts/docker.sh help        # show all options
+./scripts/docker.sh build-dev   # build dev image
+./scripts/docker.sh build-prod  # build prod image
+./scripts/docker.sh run-dev     # run dev container
+./scripts/docker.sh run-prod    # run prod container
+./scripts/docker.sh run-nginx   # run prod with nginx
+./scripts/docker.sh stop        # stop containers
+./scripts/docker.sh clean       # clean everything
+./scripts/docker.sh logs        # view logs
+./scripts/docker.sh shell       # open shell in container
 ```
 
-### Direct Docker Commands
+Direct docker commands if you prefer:
 
 ```bash
-# Build images
 docker build -f Dockerfile.dev -t borzolini:dev .
 docker build -f Dockerfile -t borzolini:prod .
-
-# Run containers
 docker run -d --name borzolini-dev -p 3000:3000 borzolini:dev
 docker run -d --name borzolini-prod -p 3000:3000 borzolini:prod
-
-# View logs
-docker logs borzolini-dev
-docker logs borzolini-prod
-
-# Stop containers
-docker stop borzolini-dev borzolini-prod
-
-# Remove containers
-docker rm borzolini-dev borzolini-prod
-
-# Remove images
-docker rmi borzolini:dev borzolini:prod
 ```
 
-## Docker Compose Profiles
+## Profiles
 
-### Development Profile
-
-```bash
-docker-compose --profile dev up -d
-```
-
-- Hot reloading enabled
-- Source code mounted as volume
-- Development dependencies
-- Accessible at http://localhost:3000
-
-### Production Profile
-
-```bash
-docker-compose --profile prod up -d
-```
-
-- Production build
-- Optimized for performance
-- No source code mounting
-- Accessible at http://localhost:3000
-
-### Production with Nginx Profile
-
-```bash
-docker-compose --profile prod-nginx up -d
-```
-
-- Production build with nginx reverse proxy
-- Load balancing and caching
-- Security headers
-- Rate limiting
-- Accessible at http://localhost (nginx proxy)
+**dev**: Hot reloading, source mounted as volume
+**prod**: Optimized build, no source mounting
+**prod-nginx**: Production with nginx reverse proxy (caching, rate limiting, security headers)
 
 ## Environment Variables
 
-### Development
+Dev: `NODE_ENV=development`, `NEXT_TELEMETRY_DISABLED=1`
+Prod: `NODE_ENV=production`, `NEXT_TELEMETRY_DISABLED=1`, `PORT=3000`, `HOSTNAME=0.0.0.0`
 
-- `NODE_ENV=development`
-- `NEXT_TELEMETRY_DISABLED=1`
+## Files
 
-### Production
+- `Dockerfile` - Multi-stage production build (Node 20 Alpine)
+- `Dockerfile.dev` - Single-stage dev build with volume mounting
+- `docker-compose.yml` - Compose config with profiles
+- `nginx.conf` - Reverse proxy config (gzip, caching, rate limiting)
+- `scripts/docker.sh` - Helper script for common commands
 
-- `NODE_ENV=production`
-- `NEXT_TELEMETRY_DISABLED=1`
-- `PORT=3000`
-- `HOSTNAME=0.0.0.0`
+## Notes
 
-## File Structure
+Production Dockerfile uses standalone output mode for better performance. Running as non-root user for security.
 
-```
-├── Dockerfile              # Production Dockerfile
-├── Dockerfile.dev          # Development Dockerfile
-├── docker-compose.yml      # Docker Compose configuration
-├── .dockerignore          # Files to exclude from Docker build
-├── nginx.conf             # Nginx configuration
-└── scripts/
-    └── docker.sh          # Docker management script
-```
+Nginx config includes health check endpoint at `/health` and security headers. SSL support is commented out but ready to enable.
 
-## Dockerfile Details
+## Common Issues
 
-### Production Dockerfile (`Dockerfile`)
-
-- Multi-stage build for optimization
-- Uses Node.js 20 Alpine for smaller image size
-- Standalone output for better performance
-- Non-root user for security
-- Optimized for production builds
-
-### Development Dockerfile (`Dockerfile.dev`)
-
-- Single-stage build for simplicity
-- Volume mounting for hot reloading
-- Development dependencies included
-- Optimized for development workflow
-
-## Nginx Configuration
-
-The nginx configuration includes:
-
-- Reverse proxy to Next.js app
-- Gzip compression
-- Static file caching
-- Rate limiting
-- Security headers
-- Health check endpoint
-- SSL support (commented out)
-
-## Performance Optimizations
-
-### Production Build
-
-- Multi-stage Docker build
-- Standalone output mode
-- Alpine Linux base image
-- Non-root user execution
-- Optimized layer caching
-
-### Development Build
-
-- Volume mounting for fast file changes
-- Development server with hot reloading
-- Source maps enabled
-- Fast refresh support
-
-## Security Features
-
-- Non-root user execution
-- Security headers via nginx
-- Rate limiting
-- Input validation
-- Environment variable isolation
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Port already in use**
-
-   ```bash
-   # Check what's using port 3000
-   lsof -i :3000
-
-   # Stop existing containers
-   ./scripts/docker.sh stop
-   ```
-
-2. **Permission denied**
-
-   ```bash
-   # Make script executable
-   chmod +x scripts/docker.sh
-   ```
-
-3. **Build fails**
-
-   ```bash
-   # Clean up and rebuild
-   ./scripts/docker.sh clean
-   ./scripts/docker.sh build-dev
-   ```
-
-4. **Container won't start**
-
-   ```bash
-   # Check logs
-   ./scripts/docker.sh logs
-
-   # Check container status
-   docker ps -a
-   ```
-
-### Debug Commands
+Port 3000 in use:
 
 ```bash
-# View container logs
-docker logs <container-name>
-
-# Execute commands in container
-docker exec -it <container-name> /bin/sh
-
-# Inspect container
-docker inspect <container-name>
-
-# View resource usage
-docker stats
+lsof -i :3000
+./scripts/docker.sh stop
 ```
 
-## Production Deployment
-
-### Single Container
+Script not executable:
 
 ```bash
-# Build and run production container
-./scripts/docker.sh build-prod
-./scripts/docker.sh run-prod
+chmod +x scripts/docker.sh
 ```
 
-### With Nginx Reverse Proxy
+Build fails:
 
 ```bash
-# Run production with nginx
-./scripts/docker.sh run-nginx
+./scripts/docker.sh clean
+./scripts/docker.sh build-dev
 ```
 
-### Environment Variables
-
-Create a `.env` file for production:
-
-```env
-NODE_ENV=production
-NEXT_TELEMETRY_DISABLED=1
-# Add other production environment variables
-```
-
-## Monitoring and Logs
-
-### View Logs
+Container won't start - check logs:
 
 ```bash
-# All containers
 ./scripts/docker.sh logs
-
-# Specific container
-docker logs <container-name>
-
-# Follow logs in real-time
-docker logs -f <container-name>
+docker ps -a
 ```
 
-### Health Checks
+## Debug
 
-- Nginx health endpoint: http://localhost/health
-- Container health status: `docker ps`
+```bash
+docker logs <container-name>           # view logs
+docker logs -f <container-name>        # follow logs
+docker exec -it <container-name> /bin/sh  # open shell
+docker stats                           # resource usage
+```
 
-## Best Practices
-
-1. **Always use the latest stable Node.js version**
-2. **Use multi-stage builds for production**
-3. **Implement proper health checks**
-4. **Use non-root users**
-5. **Optimize layer caching**
-6. **Monitor resource usage**
-7. **Regular security updates**
-8. **Backup important data**
-
-## Support
-
-For Docker-related issues:
-
-1. Check the troubleshooting section
-2. Review Docker logs
-3. Verify Docker is running
-4. Check port availability
-5. Ensure sufficient system resources
+Health check endpoint: http://localhost/health (nginx only)

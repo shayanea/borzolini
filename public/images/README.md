@@ -1,31 +1,18 @@
-# Images Directory
+# Images
 
-## Borzolini Hero Image
+## Hero Image
 
-Please save the pet image with sunglasses as:
-`borzolini-hero.webp`
+`borzolini-hero.webp` - Main background for hero and case study sections
 
-This image will be used as the background in both the Hero and Borzolini sections of the landing page.
+Using WebP for better compression. Size: 800x600px minimum, quality 85%.
 
-### Image Requirements:
+Used in:
 
-- **Format**: WebP (for better performance and compression)
-- **Recommended size**: 800x600px or larger
-- **Quality**: 80-90% for optimal balance of size/quality
-- **Text overlay**: Should show good contrast for white text overlay
+- `src/components/sections/hero-section.tsx`
+- `src/components/sections/borzolini-section.tsx`
 
-### Current Usage:
+Convert to WebP: `cwebp input.jpg -q 85 -o borzolini-hero.webp`
 
-The image is referenced in:
+## Pets Directory
 
-- `src/components/sections/hero-section.tsx` (Early Detection Rate banner)
-- `src/components/sections/borzolini-section.tsx` (Main background)
-- Background image path: `/images/borzolini-hero.webp`
-
-### Converting to WebP:
-
-You can convert your JPG/PNG to WebP using:
-
-- **Online**: Use online converters like CloudConvert or Squoosh
-- **Command Line**: `cwebp input.jpg -q 85 -o borzolini-hero.webp`
-- **Photoshop**: Export as WebP with 85% quality
+Pet images organized by category. Add more as needed for the clinic directory feature.

@@ -1,236 +1,101 @@
-# 🐾 Borzolini - AI-Powered Pet Healthcare for All Pets.
+# Borzolini
 
-> **Named after Borzolini, our beloved companion** - Simplifying pet care through AI recommendations, easy vet scheduling, and quality clinic ratings.
+Pet healthcare platform with AI recommendations, vet scheduling, and clinic ratings. Named after Borzolini.
 
-<p align="center">
-  <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-    <img alt="Next.js" src="https://cdn.simpleicons.org/nextdotjs/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
-  </a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"></a>
-    <img alt="TypeScript" src="https://cdn.simpleicons.org/typescript/3178C6" height="28" />
-  </a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-    <img alt="Tailwind CSS" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="28" />
-  </a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.framer.com/motion/" target="_blank" rel="noreferrer">
-    <img alt="Framer" src="https://cdn.simpleicons.org/framer/0055FF" height="28" />
-  </a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-    <img alt="Docker" src="https://cdn.simpleicons.org/docker/2496ED" height="28" />
-  </a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://umami.is/" target="_blank" rel="noreferrer">
-    <img alt="Umami" src="https://cdn.simpleicons.org/umami/000000" height="28" style="background:#ffffff;border-radius:6px;padding:4px" />
-  </a>
-</p>
+## What it does
 
-## 🌟 About Borzolini
+- AI-powered health recommendations and care tips
+- Appointment scheduling with veterinary specialists
+- Video consultations
+- Clinic ratings and reviews
 
-**Borzolini** is an AI-powered pet healthcare platform designed for all pets. Named after our beloved companion **Borzolini**, this platform makes pet care simple through:
+Started this because finding a good vet for Borzolini was harder than it should be. Most platforms don't specialize in pet care or provide breed-specific guidance.
 
-- 🤖 **AI Care Recommendations** - Personalized daily care tips for pets
-- 📅 **Smart Appointment Scheduling** - Easy vet booking with pets specialists
-- 🎥 **Video Vet Consultations** - Quick health assessments and advice
-- ⭐ **Clinic Quality Scores** - Ratings focused on pets expertise
+## Stack
 
-## 🚀 Features
+- Next.js 15 (App Router)
+- TypeScript (strict mode, because we're not savages)
+- Tailwind CSS 4.0
+- Framer Motion for animations
+- Supabase for backend (database setup in separate repo)
+- pnpm (required)
 
-### MVP Core Features
-
-- **AI Health Recommendations**: Get breed-specific care tips and reminders
-- **Vet Appointment Scheduling**: Find and book with pet specialists
-- **Video Consultations**: Connect with qualified veterinarians instantly
-- **Clinic Ratings**: Quality scores and reviews from pet owners
-
-### Pet Specialization
-
-- Breed-specific health patterns and care routines for all pets
-- Dental care reminders (pets are prone to dental issues)
-- Grooming schedules and maintenance
-- Health monitoring and preventive care
-- Personalized care recommendations
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-- **Framework**: Next.js 14+ with App Router
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS 4.0
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Components**: Radix UI primitives
-
-### Development Tools
-
-- **Package Manager**: pnpm
-- **Build Tool**: Turbopack (Next.js 15)
-- **Code Quality**: ESLint + TypeScript
-- **Version Control**: Git with conventional commits
-
-## 🏁 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- pnpm (recommended package manager)
-
-### Installation
+## Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/shayanea/borzolini.git
 cd borzolini/web
-
-# Install dependencies
 pnpm install
-
-# Start development server
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the application.
+Open http://localhost:3000
 
-### Available Scripts
-
-```bash
-# Development server with Turbopack
-pnpm dev
-
-# Production build
-pnpm build
-
-# Start production server
-pnpm start
-
-# Type checking
-pnpm type-check
-```
-
-## 📁 Project Structure
-
-```
-web/
-├── src/
-│   ├── app/                 # Next.js App Router
-│   │   ├── globals.css     # Global styles
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Homepage
-│   ├── components/         # React components
-│   │   ├── ui/            # Reusable UI components
-│   │   └── sections/      # Page sections
-│   ├── constants/         # App constants
-│   ├── lib/              # Utility functions
-│   └── types/            # TypeScript definitions
-├── public/               # Static assets
-└── messages/            # Internationalization (future)
-```
-
-## 🎨 Design System
-
-### Color Palette
-
-- **Primary Navy**: `#14213d` - Trust and healthcare authority
-- **Accent Orange**: `#fca311` - Warmth and energy
-- **Pure White**: `#ffffff` - Clarity and cleanliness
-- **Success Green**: `#059669` - Health and positive outcomes
-
-### Typography
-
-- **Font**: Inter (optimized with Next.js)
-- **Headings**: 700-600 weight
-- **Body**: 400 weight
-- **Mobile-first**: Responsive font scaling
-
-## 🐾 The Borzolini Story
-
-Borzolini was inspired by **Borzolini**, a beloved companion whose healthcare journey highlighted the need for:
-
-- Breed-specific care guidance
-- Easy access to specialized veterinarians
-- Reliable clinic quality information
-- Proactive health management
-
-_"Borzolini isn't just a companion - they're the inspiration and beta tester for the future of pet healthcare!"_
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
+### Scripts
 
 ```bash
-# Deploy to Vercel
+pnpm dev         # dev server with Turbopack
+pnpm build       # production build
+pnpm start       # production server
+pnpm type-check  # TypeScript validation
+```
+
+## Structure
+
+```
+src/
+├── app/              # Next.js App Router pages
+├── components/
+│   ├── ui/          # Reusable components
+│   └── sections/    # Page sections
+├── lib/             # Utilities
+└── types/           # TypeScript types
+```
+
+## Design
+
+Colors:
+
+- Primary: `#14213d` (navy)
+- Accent: `#fca311` (orange)
+- Success: `#059669` (green)
+
+Font: Inter (via next/font)
+
+## Docker
+
+See `DOCKER.md` for containerized deployment options.
+
+## Deployment
+
+Currently deploying to Vercel:
+
+```bash
 vercel --prod
 ```
 
-### Manual Deployment
+For manual deployment:
 
 ```bash
-# Build the application
-pnpm build
-
-# Start production server
-pnpm start
+pnpm build && pnpm start
 ```
 
-## 🤝 Contributing
+## Commits
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Using conventional commits via husky pre-commit hooks:
 
-### Commit Convention
+- `feat:` new features
+- `fix:` bug fixes
+- `refactor:` code improvements
+- `docs:` documentation
 
-We use [Conventional Commits](https://www.conventionalcommits.org/):
+## TODO
 
-- `feat:` - New features
-- `fix:` - Bug fixes
-- `docs:` - Documentation updates
-- `style:` - Code formatting
-- `refactor:` - Code refactoring
-- `test:` - Adding tests
-
-## 📊 Roadmap
-
-### Phase 1 (Current) - MVP Landing Page
-
-- [x] Landing page with core features
-- [x] Responsive design
-- [x] Borzolini case study showcase
-- [x] Pet specialization messaging for all pets
-
-### Phase 2 - Core Platform
-
-- [x] User authentication
-- [x] Pet profile creation
-- [x] AI recommendation engine
-- [x] Vet appointment booking system
-
-### Phase 3 - Advanced Features
-
-- [ ] Video consultation integration
+- [ ] Video consultation feature
 - [ ] Clinic rating system
-- [ ] Mobile app development
-- [ ] Multi-language support
+- [ ] Mobile app (React Native)
+- [ ] i18n support (messages/ folder ready)
 
-## 📄 License
+## Contact
 
-This project is private and proprietary to Borzolini.
-
-## 📞 Contact
-
-- **Website**: [borzolini.com](https://borzolini.com)
-- **Email**: hello@borzolini.com
-- **GitHub**: [@shayanea](https://github.com/shayanea)
-
----
-
-<div align="center">
-  <strong>Made with ❤️ for pets everywhere</strong><br>
-  <em>Inspired by Borzolini 🐾</em>
-</div>
+hello@borzolini.com
