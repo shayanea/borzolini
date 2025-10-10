@@ -1,63 +1,116 @@
 {
   "seo": {
-    "title": "Borzolini - From clinic chaos to calm at home",
-    "description": "I started this after my kitten Fariborz got anxious at a noisy clinic. Trusted vets come to you—or meet virtually—with AI guidance tailored to your pet at home.",
-    "keywords": "pet healthcare, veterinary, all pets, dogs, appointment scheduling, clinic ratings, Borzolini",
-    "siteDescription": "Smart pet healthcare platform for all pets. Personalized care, vet scheduling, and clinic ratings."
+    "title": "Borzolini - Professional Veterinary Care at Home",
+    "description": "Professional veterinary care delivered calmly at home. Continuous monitoring + tele-consults + vetted home visits.",
+    "keywords": "pet healthcare, veterinary, all pets, dogs, appointment scheduling, clinic ratings, Borzolini, home visits, tele-consults",
+    "siteDescription": "Professional veterinary care delivered calmly at home. Continuous monitoring + tele-consults + vetted home visits."
   },
   "hero": {
-    "badge": "Calm care at home, from a real pet parent",
-    "title": "Make your pet’s care calmer at home",
-    "reactive": "Reactive",
-    "predictive": "Predictive",
-    "description": "Clinic visits can be chaotic—ours were. After Fariborz’s loud clinic visit, we built a calmer way: trusted vets come to you, with guidance tailored to your pet at home.",
-    "savings": "−20% cancellations (target)",
-    "savingsDescription": "Through predictive care vs emergency treatments",
-    "ctaPrimary": "Schedule demo",
-    "ctaSecondary": "Book home visit",
+    "badge": "Professional Veterinary Care",
+    "title": "Professional veterinary care, delivered calmly at home.",
+    "description": "Continuous monitoring + tele-consults + vetted home visits. Fewer emergencies, higher adherence, happier pets.",
+    "ctaPrimary": "Schedule Demo",
+    "ctaSecondary": "Book Home Visit",
     "trustIndicators": {
-      "hipaa": "HIPAA Compliant",
-      "vetApproved": "Vet Approved",
-      "petSpecialized": "Pet Specialized"
+      "hipaa": "HIPAA-aligned security",
+      "encrypted": "Encrypted data",
+      "audit": "Audit trails & RBAC"
     }
   },
   "features": {
-    "title": "Simple things done well",
-    "description": "Smart monitoring, quick consults, and trusted vets. Built from real experience.",
-    "aiMonitoring": {
-      "title": "24/7 Health Monitoring",
-      "description": "AI continuously analyzes your pet's health patterns, detecting subtle changes that humans might miss."
+    "title": "Comprehensive Medical Care for Your Beloved Pets",
+    "description": "From clinic chaos to care that simply works. Trusted vets come to you or meet virtually, with guidance tailored to your pet at home.",
+    "expertDiagnosis": {
+      "title": "Expert Diagnosis",
+      "description": "Professional assessment from licensed veterinarians with years of experience."
     },
-    "predictiveAnalytics": {
-      "title": "Predictive Health Analytics",
-      "description": "Forecast health issues 6-18 months before symptoms appear, enabling preventive care."
+    "teleConsults": {
+      "title": "Tele-Consults",
+      "description": "Fast answers in context, minimizing stress and unnecessary trips."
     },
-    "aiVetAssistant": {
-      "title": "AI Veterinary Assistant",
-      "description": "Get instant health consultations and triage recommendations from our AI vet assistant."
+    "homeVisits": {
+      "title": "Home Visits",
+      "description": "Trusted clinicians come to you—calm, prepared, and precise."
     },
-    "computerVision": {
-      "title": "Computer Vision Analysis",
-      "description": "AI analyzes photos and videos to detect skin conditions, eye problems, and behavioral changes."
+    "smartMonitoring": {
+      "title": "Smart Monitoring",
+      "description": "Proactive monitoring that analyzes signals to detect anomalies early and predict issues."
     },
-    "nutritionOptimization": {
-      "title": "AI Nutrition Optimization",
-      "description": "Personalized nutrition plans based on breed, age, health conditions, and activity level."
+    "medicalRecords": {
+      "title": "Medical Records",
+      "description": "Secure digital medical records management for complete pet health history."
     },
-    "smartClinicMatching": {
-      "title": "Smart Clinic Matching",
-      "description": "AI matches you with the best veterinarians based on your pet's specific needs and conditions."
+    "specialistReferrals": {
+      "title": "Specialist Referrals",
+      "description": "Access to veterinary specialists for complex medical conditions."
+    },
+    "realtimeMonitoring": {
+      "title": "Real-time Monitoring",
+      "description": "Continuous health insights and predictive alerts for your pet."
+    },
+    "available247": {
+      "title": "24/7 Available",
+      "description": "Round-the-clock support and emergency care when you need it most."
     }
   },
-  "borzolini": {
-    "badge": "🐱 Meet Our AI Pioneer",
-    "title": "Borzolini: The World's First Pet with AI Healthcare",
-    "description": "See how AI transforms pet care through real-time health monitoring and predictive insights",
-    "name": "Borzolini 🐱",
-    "details": "Beloved Companion • 8 months old",
-    "healthScore": "Overall Health Score",
-    "aiInsights": "🤖 AI Insights This Week",
-    "predictiveAlerts": "Predictive Health Alerts"
+  "howItWorks": {
+    "title": "A Modern Care Journey That Meets Owners Where They Are",
+    "description": "Proactive signals plus human expertise—so decisions are timely, informed, and simple.",
+    "step1": {
+      "number": "STEP 01",
+      "title": "Discover & Onboard",
+      "description": "Simple onboarding that centers pet calm and owner routines."
+    },
+    "step2": {
+      "number": "STEP 02",
+      "title": "Continuous Monitoring",
+      "description": "Advanced monitoring signals catch issues early—before they turn urgent."
+    },
+    "step3": {
+      "number": "STEP 03",
+      "title": "Tele-Consult First",
+      "description": "Fast answers in context, minimizing stress and unnecessary trips."
+    },
+    "step4": {
+      "number": "STEP 04",
+      "title": "Vetted Home Visit",
+      "description": "When needed, trusted clinicians come to you—calm, prepared, precise."
+    }
+  },
+  "impactGoals": {
+    "title": "Impact Goals",
+    "description": "What we aim to improve through our innovative approach to veterinary care.",
+    "cancellations": {
+      "value": "-20%",
+      "title": "Reduction in Cancellations",
+      "description": "via reminders & AI triage"
+    },
+    "homeVisit": {
+      "value": "4.6+",
+      "title": "Home Visit Satisfaction",
+      "description": "CSAT rating from pet owners"
+    },
+    "teleConsult": {
+      "value": "4.3+",
+      "title": "Tele-Consult Satisfaction",
+      "description": "CSAT rating for virtual care"
+    },
+    "treatment": {
+      "value": "+25%",
+      "title": "Treatment Adherence",
+      "description": "improved in 14 days"
+    }
+  },
+  "about": {
+    "badge": "About Borzolini",
+    "title": "Meet Borzolini, Your Pet Care Hero",
+    "description": "Borzolini represents everything we believe about pet care - it should be smart, accessible, and tailored to each unique companion. Our platform brings that vision to life.",
+    "features": {
+      "pets": "Dogs, cats, birds, reptiles, and exotic pets",
+      "professionals": "All recommendations reviewed by professionals",
+      "care": "Professional care recommendations and insights",
+      "access": "Instant access to care information and scheduling"
+    }
   },
   "pricing": {
     "title": "Choose Your Pet's AI Health Plan",
@@ -109,21 +162,34 @@
     "disclaimer": "No credit card required • Cancel anytime • HIPAA compliant"
   },
   "footer": {
-    "description": "Trusted vets come to you—or meet virtually—with AI monitoring and guidance tailored to your pet at home. Book a virtual consult or a calm home visit.",
-    "product": "Product",
-    "support": "Support",
-    "copyright": "© 2024 PetAI Health. All rights reserved.",
-    "compliance": {
-      "hipaa": "HIPAA Compliant",
-      "vetApproved": "Vet Approved",
-      "madeWithLove": "Made with ❤️ for pets"
-    }
+    "cta": {
+      "title": "Ready to Give Your Pet Expert Medical Care?",
+      "description": "Join thousands of pet owners who trust our platform for professional veterinary services.",
+      "placeholder": "Enter your email",
+      "button": "Get Started"
+    },
+    "company": {
+      "title": "Borzolini",
+      "description": "Professional veterinary care delivered calmly at home."
+    },
+    "services": {
+      "title": "Services",
+      "items": ["Tele-Consults", "Home Visits", "AI Monitoring", "Medical Records"]
+    },
+    "company_links": {
+      "title": "Company",
+      "items": ["About Us", "For Veterinarians", "Privacy Policy", "Terms of Service"]
+    },
+    "connect": {
+      "title": "Connect"
+    },
+    "copyright": "© 2025 Borzolini. All rights reserved."
   },
   "navigation": {
-    "features": "Features",
-    "howItWorks": "How it Works",
-    "pricing": "Pricing",
-    "testimonials": "Testimonials",
-    "faq": "FAQ"
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
   }
 }

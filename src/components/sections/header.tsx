@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
-import { Logo } from '@/components/ui/logo';
 import { MobileMenu } from './mobile-menu';
 import { MobileMenuButton } from './mobile-menu-button';
 import { NavLink } from './nav-link';
@@ -38,7 +37,10 @@ export function Header() {
       <Container>
         <div className='flex items-center justify-between h-20'>
           <div className='flex items-center gap-3'>
-            <Logo />
+            <div className='flex flex-col'>
+              <span className='text-lg font-bold'>Borzolini</span>
+              <span className='text-xs text-slate-500'>Professional Veterinary Care</span>
+            </div>
           </div>
 
           <div className='hidden md:flex items-center gap-8'>
@@ -62,6 +64,10 @@ export function Header() {
                 </>
               )}
             </nav>
+
+            <Button variant='secondary' size='sm' className='shadow-sm hover:shadow-md transition-all duration-300'>
+              Sign In
+            </Button>
 
             <Button
               variant='primary'

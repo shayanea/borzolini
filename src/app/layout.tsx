@@ -15,8 +15,9 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://borzolini.com'),
-  title: messages.seo.title,
-  description: messages.seo.description,
+  title: 'Borzolini - Professional Veterinary Care at Home',
+  description:
+    'Professional veterinary care delivered calmly at home. Continuous monitoring + tele-consults + vetted home visits.',
   keywords: messages.seo.keywords.split(', '),
   authors: [{ name: 'Borzolini' }],
   creator: 'Borzolini',

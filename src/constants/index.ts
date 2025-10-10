@@ -18,18 +18,15 @@ export const SITE_CONFIG = {
 } as const;
 
 export const NAVIGATION_ITEMS = [
-  { title: 'Features', href: '#features' },
-  { title: 'How it Works', href: '#how-it-works' },
-  { title: 'Why Now', href: '#why-now' },
-  { title: 'Clinic Management', href: '#clinic-management' },
-  { title: 'About Borzolini', href: '#borzolini' },
-  { title: 'Blog', href: '/blog' },
+  { title: 'Services', href: '#services' },
+  { title: 'How It Works', href: '#how-it-works' },
+  { title: 'About', href: '#about' },
 ] as const;
 
 export const SECONDARY_NAVIGATION_ITEMS = [
-  { title: 'User Stories', href: '/user-stories' },
-  { title: 'Telemedicine', href: '/telemedicine' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'Services', href: '#services' },
+  { title: 'How It Works', href: '#how-it-works' },
+  { title: 'About', href: '#about' },
 ] as const;
 
 export const FEATURES: Feature[] = [
