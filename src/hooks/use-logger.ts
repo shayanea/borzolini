@@ -60,13 +60,7 @@ export const useLogger = () => {
     [isProduction]
   );
 
-  const error = useCallback((...args: unknown[]) => {
-    try {
-      console.error(...args);
-    } catch {
-      console.log('Logger Error:', ...args);
-    }
-  }, []);
+  const error = useCallback((..._args: unknown[]) => {}, []);
 
   const group = useCallback(
     (...labels: Array<string | undefined>) => {
