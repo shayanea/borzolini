@@ -1,8 +1,9 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Check, Share2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
 
 interface ShareButtonProps {
   title: string;
@@ -42,10 +43,8 @@ export function ShareButton({
       url: typeof window !== 'undefined' ? window.location.href : '',
     };
 
-    const canUseWebShare = navigator.share && navigator.canShare?.(shareData);
-
     try {
-      if (canUseWebShare) {
+      if (navigator.share && navigator.canShare?.(shareData)) {
         await navigator.share(shareData);
       } else {
         // Fallback: copy to clipboard
